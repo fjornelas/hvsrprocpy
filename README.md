@@ -39,7 +39,7 @@ An associated example jupyter notebook should be a part this repository <a href=
 If you use hvsrprocpy (directly or as a dependency of another package) for work resulting in an academic publication or
 other instances, we would appreciate if you cite the following:
 
-> Ornleas, F.J., P. Wang, S.J. Brandenberg, J.P. Stewart. fjornelas/hvsrprocpy: hvsrprocpy (v1.0.0). Zenodo. (insert doi) 
+> Ornelas, F. J. G., Wang, P., Brandenberg, S. J., & Stewart, J. P. (2024). fjornelas/hvsrprocpy: hvsrprocpy (0.1.0). Zenodo. https://doi.org/10.5281/zenodo.11411741 
 
 # Issues
 
