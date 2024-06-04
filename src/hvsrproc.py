@@ -1,19 +1,18 @@
 # This file is part of hvsrprocpy, a Python package for horizontal-to-vertical
 # spectral ratio processing.
-# Copyright (C) 2024 Francisco Javier G. Ornelas (jornela1@g.ucla.edu)
-#
-#     This program is free software: you can redistribute it and/or modify
-#     it under the terms of the GNU General Public License as published by
-#     the Free Software Foundation, either version 3 of the License, or
-#     (at your option) any later version.
-#
-#     This program is distributed in the hope that it will be useful,
-#     but WITHOUT ANY WARRANTY; without even the implied warranty of
-#     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-#     GNU General Public License for more details.
-#
-#     You should have received a copy of the GNU General Public License
-#     along with this program.  If not, see <https: //www.gnu.org/licenses/>.
+
+# Copyright (c) 2024 Francisco Javier Ornelas (jornela1@g.ucla.edu)
+
+#     The above copyright notice and this permission notice shall be included in all
+#     copies or substantial portions of the Software.
+
+#     THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+#     IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+#     FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+#     AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+#     LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+#     OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+#     SOFTWARE.
 
 """Class definition for HvsrProc object."""
 
@@ -79,7 +78,7 @@ class HvsrProc:
             if continue_trim.lower() != 'y':
                 break
 
-            return st
+        return st
 
     @staticmethod
     def proc_mseed_data(file_direc, h1_fn, h2_fn, v_fn, trim_flag=False, time_cut=300):
@@ -96,6 +95,7 @@ class HvsrProc:
             h1 = HvsrProc.add_mseed_tool(h1)
             h2 = HvsrProc.add_mseed_tool(h2)
             v = HvsrProc.add_mseed_tool(v)
+        print(h1)
 
         dt = float(h1[0].stats.delta)
 
@@ -2061,7 +2061,7 @@ class HvsrProc:
                 ko_smooth_b=40, parzen_flag=False, parzen_bwidth=1.5, win_width=300, overlapping=0,
                 sta_lta_flag=False, short_term_len=1, long_term_len=30, sta_lta_moving_term=1,
                 deg_increment=10, resample_lin2log=True, deci_mean_factor=10, sjb_avg=False,
-                deci_polar_factor=10, output_freq_min=0.01, output_freq_max=50, plot_ts=True, plot_hvsr=True,
+                deci_polar_factor=10, output_freq_min=0.01, output_freq_max=50, resampling_length = 2000, plot_ts=True, plot_hvsr=True,
                 output_selected_ts=True, output_removed_ts=True,
                 output_selected_hvsr=True, output_removed_hvsr=True,
                 output_mean_curve=True, output_polar_curves=False, output_fas_mean_curve=True,
@@ -2161,15 +2161,17 @@ class HvsrProc:
         resample_lin2log: boolean
             Indicated whether to resample the frequencies. Default = True
         deci_mean_factor: int
-            Indicates the decimal mean factor. Default = 10
+            Indicates the decimal mean factor to apply to resampled frequency. Default = 10
         sjb_avg: boolean
             Specifies whether to take the average smoothed FAS before computing HVSR. Default = False
         deci_polar_factor: int
-            Indicates the decimal polar factor. Default = 10
+            Indicates the decimal polar factor to apply to polar frequency. Default = 10
         output_freq_min: float
             Indicates the output minimum frequency. Default =  0.01
         output_freq_max: float
             Indicates the output maximum frequency. Default = 50.0
+        resampling_length: int
+            Indicates the number of points to resample the data. Defualt = 2000
         plot_ts: boolean
             Specifies whether to plot the time series for window selection, default = True.
         plot_hvsr: boolean
@@ -2298,7 +2300,7 @@ class HvsrProc:
         if freq[0] == 0:
             freq = freq[1:]
         if resample_lin2log:
-            freq = np.logspace(np.log10(min(freq)), np.log10(max(freq)), num=int(len(freq) / 10))
+            freq = np.logspace(np.log10(min(freq)), np.log10(max(freq)), num=resampling_length)
         if deci_mean_factor > 0:
             freq_hv_mean = freq[::int(np.floor(deci_mean_factor))]
         else:
