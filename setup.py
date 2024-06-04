@@ -6,12 +6,12 @@ with open("README.md", encoding="utf8") as f:
 
 setup(
     name='hvsrprocpy',
-    version='1.0.0',
+    version='0.1.1',
     description='A package for performing horizontal-to-vertical spectral ratio (HVSR) processing',
     long_description=long_description,
     long_description_content_type='text/markdown',
     url='https://github.com/fjornelas/hvsrprocpy',
-    license='MIT',
+    license='GNU General Public License v3 or later (GPLv3+)',
     author='Francisco Javier Ornelas',
     author_email='jornela1@g.ucla.edu',
     classifiers=[
@@ -32,10 +32,10 @@ setup(
         'Programming Language :: Python :: 3.8',
         'Programming Language :: Python :: 3.9',
     ],
-    keywords='HVSR microtremor FAS ',
+    keywords='HVSR, FAS, Time Series, microtremors  ',
     packages=find_packages(),
     python_requires='>=3.8',
-    install_requires=['numpy', 'pandas', 'os', 'matplotlib', 'obspy', 'mplcursors', 'warnings'],
+    install_requires=['numpy>=1.20', 'pandas>1.4', 'matplotlib>3.8', 'os', 'obspy>1.3', 'mplcursors>0.4'],
     project_urls={
         'Bug Reports': 'https://github.com/fjornelas/hvsrprocpy/issues',
         'Source': 'https://github.com/fjornelas/hvsrprocpy/',
