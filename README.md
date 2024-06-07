@@ -10,8 +10,6 @@
 
 [![DOI](https://zenodo.org/badge/808826090.svg)](https://zenodo.org/doi/10.5281/zenodo.11515238)
 ![GitHub License](https://img.shields.io/github/license/fjornelas/hvsrprocpy)
-[![PyPI - License](https://img.shields.io/pypi/l/hvsrprocpy)](https://github.com/fjornelas/hvsrprocpy/blob/main/LICENSE)
-![PyPI - Python Version](https://img.shields.io/pypi/pyversions/hvsrprocpy)
 ![GitHub Release](https://img.shields.io/github/v/release/fjornelas/hvsrprocpy)
 
 ### Table of Contents
