@@ -35,7 +35,7 @@ logoalt:
 navigation:
 - text: Introduction
   internal: true
-  url: ./
+  url: https://github.com/fjornelas/hvsrprocpy/blob/main/README.md
 - text: Add a new page
   internal: true
   url: add-a-new-page
