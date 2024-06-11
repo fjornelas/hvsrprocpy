@@ -4,5 +4,3 @@ matplotlib
 obspy
 scipy
 parzenpy
-jupyter-book
-Pygments
