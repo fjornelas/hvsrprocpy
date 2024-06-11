@@ -1,64 +1,30 @@
-theme: jekyll-theme-minimal
-title: hvsrprocpy homepage
-description: Bookmark this to keep an eye on my project updates!
+# Book settings
+# Learn more at https://jupyterbook.org/customize/config.html
 
-# Base configuration
-markdown: kramdown
-highlighter: rouge
-permalink: pretty
-
-collections:
-  pages:
-    output: true
-    permalink: /:path/
-
-# Title
-name: DCgov Guides Template
-
-# Author/Organization info to be displayed in the templates
+title: hvsrprocpy
 author: Francisco Javier Ornelas
-  name: 
-  url: 
 
-# When using this template with a project (repository) page set the baseurl to '/project-name'
-# For user/organization pages set this to an empty string
-# When working locally use jekyll serve --baseurl '' so that you can view everything at localhost:4000
-# See http://jekyllrb.com/docs/github-pages/ for more info
-baseurl: '/hvsrprocpy'
+# Force re-execution of notebooks on each build.
+# See https://jupyterbook.org/content/execute.html
+execute:
+  execute_notebooks: "off"
 
-# Point the logo URL at a file in your repo or hosted elsewhere by your organization
-logourl:
-logoalt: 
+# Add a bibtex file so that we can create citations
 
-# Navigation
-# List links that should appear in the site sidebar here
-navigation:
-- text: Introduction
-  internal: true
-  url: https://github.com/fjornelas/hvsrprocpy/blob/main/README.md
-- text: Add a new page
-  internal: true
-  url: add-a-new-page
-- text: Configure the Guide
-  internal: true
-  url: configure-the-guide
-- text: GitHub Setup
-  internal: true
-  url: github
-- text: Create a Glossary
-  glossary: true
-- text: Edit this Repo
-  internal: false
-  url: https://github.com/DCgov/guides-template
 
-# Repo list
-# List repos that you would like to appear on the homepage here
-repos:
-- name: guides-template
-  description: 
-  url: https://github.com/DCgov/guides-template
+launch_buttons:
+  notebook_interface: "jupyterlab"
+  colab_url: "https://colab.research.google.com"
+  
+# Information about where the book exists on the web
+repository:
+  url: https://github.com/fjornelas/hvsrprocpy  # Online location of your book
+  path_to_book: docs  # Optional path to your book, relative to the repository root
+  branch: main  # Which branch of the repository should be used when creating links (optional)
 
-google_analytics_ua: 
-
-# Style Variables
-brand_color: "#DA253B"
+# Add GitHub buttons to your book
+# See https://jupyterbook.org/customize/config.html#add-a-link-to-your-repository
+html:
+  use_issues_button: true
+  use_repository_button: true
+  extra_navbar: ""
