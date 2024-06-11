@@ -1,6 +1,0 @@
-numpy>=1.20
-pandas>=1.4
-matplotlib
-obspy
-scipy
-parzenpy
