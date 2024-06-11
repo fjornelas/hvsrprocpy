@@ -1,0 +1,1404 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>&lt;no title&gt; &#8212; hvsrprocpy</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=5b4479735964841361fd" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=5b4479735964841361fd" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd" />
+  <script src="../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=5b4479735964841361fd"></script>
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'example/hvsrprocpy_example';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="../README.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">hvsrprocpy</p>
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../README.html">
+                    Introduction
+                </a>
+            </li>
+        </ul>
+        <ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Time_series_examples.html">tsproctools</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://colab.research.google.com/github/fjornelas/hvsrprocpy/blob/main/docs/example/hvsrprocpy_example.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch onColab"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img src="../_static/images/logo_colab.png">
+  </span>
+<span class="btn__text-container">Colab</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/fjornelas/hvsrprocpy" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/fjornelas/hvsrprocpy/issues/new?title=Issue%20on%20page%20%2Fexample/hvsrprocpy_example.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/example/hvsrprocpy_example.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1><no title></h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="simple visible nav section-nav flex-column">
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <h1><center> 
+     Example of hvsrprocpy Usage
+</center></h1>
+<center>
+    By: Francisco Javier G. Ornelas (jornela1@ucla.edu)<br>Originally created: Apr. 28, 2024<br>
+</center><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># pip install -i https://test.pypi.org/simple/ hvsrprocpy</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Import the hvsrprocpy package from pypi</span>
+<span class="kn">import</span> <span class="nn">hvsrprocpy</span> <span class="k">as</span> <span class="nn">hv</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Print statement to see what are the functions and inputs within hvsrProc</span>
+<span class="c1"># help(hv.hvsrfunctools.hvsr)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%time</span>
+
+<span class="c1">#Specify directory where .txt or .mseed files are stored</span>
+<span class="n">direc</span> <span class="o">=</span> <span class="sa">r</span><span class="s1">&#39;C:\Users\Javier Ornelas\OneDrive\Documents\HVSRdata_Main\mHVSR Site Inv\VSPDB Data\CA Vertical Array Data\HVSRdata\2\2.250.2\Text_File_data\Raw_ascii_PEG_HH&#39;</span>
+
+<span class="c1">#Specify filenames of .mseed or .txt files</span>
+<span class="n">h1</span> <span class="o">=</span> <span class="s1">&#39;20220907170054_NX_USC6_HHN.txt&#39;</span>
+<span class="n">h2</span> <span class="o">=</span> <span class="s1">&#39;20220907170058_NX_USC6_HHE.txt&#39;</span>
+<span class="n">v</span> <span class="o">=</span> <span class="s1">&#39;20220907170100_NX_USC6_HHZ.txt&#39;</span>
+
+<span class="c1">#specify where you want output to be stored</span>
+<span class="n">output_dir</span> <span class="o">=</span>  <span class="sa">r</span><span class="s1">&#39;C:\Users\Javier Ornelas\OneDrive\Documents\HVSRdata_Main\mHVSR Site Inv\HVSR VSPDB Data&#39;</span>
+
+<span class="n">h1</span><span class="p">,</span> <span class="n">h2</span><span class="p">,</span> <span class="n">v</span><span class="p">,</span> <span class="n">dt</span><span class="p">,</span> <span class="n">time</span> <span class="o">=</span> <span class="n">hv</span><span class="o">.</span><span class="n">_hvhelper</span><span class="o">.</span><span class="n">process_time_series</span><span class="p">(</span><span class="n">h1_fn</span><span class="o">=</span><span class="n">h1</span><span class="p">,</span> <span class="n">h2_fn</span><span class="o">=</span><span class="n">h2</span><span class="p">,</span> <span class="n">v_fn</span><span class="o">=</span><span class="n">v</span><span class="p">,</span> <span class="n">directory</span><span class="o">=</span><span class="n">direc</span><span class="p">,</span> 
+                                                       <span class="n">file_type</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">time_cut</span><span class="o">=</span><span class="mi">120</span><span class="p">)</span>
+
+<span class="c1">#Use the main function hv_proc which processes time series and hvsr</span>
+<span class="n">win_result</span><span class="p">,</span> <span class="n">fd_select</span> <span class="o">=</span> \
+<span class="n">hv</span><span class="o">.</span><span class="n">hvsrfunctools</span><span class="o">.</span><span class="n">hvsr</span><span class="p">(</span><span class="n">h1</span><span class="o">=</span><span class="n">h1</span><span class="p">,</span> <span class="n">h2</span> <span class="o">=</span><span class="n">h2</span><span class="p">,</span> <span class="n">v</span><span class="o">=</span><span class="n">v</span><span class="p">,</span> <span class="n">dt</span> <span class="o">=</span> <span class="n">dt</span><span class="p">,</span> <span class="n">time_ts</span><span class="o">=</span><span class="n">time</span><span class="p">,</span> <span class="n">output_dir</span><span class="o">=</span><span class="n">output_dir</span><span class="p">,</span> 
+                      <span class="n">win_width</span><span class="o">=</span><span class="mi">300</span><span class="p">,</span> <span class="n">overlapping</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">plot_ts</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">plot_hvsr</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">output_polar_curves</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">norm_flag</span> <span class="o">=</span> <span class="kc">False</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Pre-processing noise data is DONE!
+</pre></div>
+</div>
+<img alt="../_images/f6e4f5c72d66a6e5a96d66e8f923e5f2b8c72ebeb1d37d1a74f66b00ce860181.png" src="../_images/f6e4f5c72d66a6e5a96d66e8f923e5f2b8c72ebeb1d37d1a74f66b00ce860181.png" />
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Enter the index of the window to remove (Press q to quit): q
+Time-domain selection is DONE!
+Preparing for frequency-domain, please wait...
+</pre></div>
+</div>
+<img alt="../_images/19e33b38710445c350ecbde51b9213adf50397a8f61185f5515cfe2789485d9a.png" src="../_images/19e33b38710445c350ecbde51b9213adf50397a8f61185f5515cfe2789485d9a.png" />
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Enter the index of the curve to remove (press &#39;q&#39; to quit): q
+Frequency-domain selection is DONE!
+Everything is DONE, check out the results in the output folder!
+CPU times: total: 12 s
+Wall time: 1min 15s
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Plot Polar Curve from output of hvsrProc</span>
+<span class="kn">import</span> <span class="nn">pymysql</span><span class="o">,</span> <span class="nn">json</span>
+<span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+
+<span class="c1">#specify directory where polar curve data is stored</span>
+<span class="n">POLAR</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">output_dir</span><span class="p">,</span><span class="s1">&#39;Test_hvsr_polar.csv&#39;</span><span class="p">))</span>
+
+<span class="c1">#specify where json file of frequencies is stored</span>
+<span class="n">standard_freqs</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="nb">open</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;C:\Users\Javier Ornelas\OneDrive\Documents\HVSRdata_Main\Site Response Modelling Inv\GMDB OSAKA INV\mean_curves/HVSR_VSPDB_standard_frequencies.json&#39;</span><span class="p">))</span>
+
+<span class="c1">#specify degree increment</span>
+<span class="n">deg_increment</span> <span class="o">=</span> <span class="mi">10</span>
+
+<span class="c1">#Specify azimuth</span>
+<span class="n">AZIMUTHS</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">180</span><span class="p">,</span> <span class="n">deg_increment</span><span class="p">))</span>
+
+<span class="c1">#Process polar curve data</span>
+<span class="n">processed_pol_data</span> <span class="o">=</span> <span class="n">hv</span><span class="o">.</span><span class="n">hvsrplot</span><span class="o">.</span><span class="n">process_polar_curve</span><span class="p">(</span><span class="n">polar_data</span> <span class="o">=</span> <span class="n">POLAR</span><span class="p">,</span> <span class="n">azimuths</span> <span class="o">=</span> <span class="n">AZIMUTHS</span><span class="p">,</span> <span class="n">standard_freqs</span> <span class="o">=</span> <span class="n">standard_freqs</span><span class="p">)</span>
+
+<span class="c1">#Plot the polar curve</span>
+<span class="n">fig</span> <span class="o">=</span> <span class="n">hv</span><span class="o">.</span><span class="n">hvsrplot</span><span class="o">.</span><span class="n">plot_polar_ratio</span><span class="p">(</span><span class="n">processed_pol_data</span><span class="p">)</span>
+
+<span class="c1"># fig.savefig(r&#39;C:\Users\Javier Ornelas\OneDrive\Documents\HVSRdata_Main\mHVSR Site Inv\HVSR VSPDB Data/test.png&#39;, dpi =500)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/78d6274f6bc3f982413099991d9b27fbc3674227346c2aed7ca1c6804f69daad.png" src="../_images/78d6274f6bc3f982413099991d9b27fbc3674227346c2aed7ca1c6804f69daad.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Specify directory where mean hvsr curve is stored</span>
+<span class="n">Mean_df</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">output_dir</span><span class="p">,</span><span class="s1">&#39;Test_hvsr_mean.csv&#39;</span><span class="p">)</span>
+
+<span class="c1">#Specify directory where metadata is stored</span>
+<span class="n">metadata_csv_filepath</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">output_dir</span><span class="p">,</span><span class="s1">&#39;Test_metadata.csv&#39;</span><span class="p">)</span>
+
+<span class="c1">#Plot the mean curve</span>
+<span class="n">fig</span> <span class="o">=</span> <span class="n">hv</span><span class="o">.</span><span class="n">hvsrplot</span><span class="o">.</span><span class="n">plot_mean_hvsr</span><span class="p">(</span><span class="n">csv_file_path</span><span class="o">=</span><span class="n">Mean_df</span><span class="p">,</span> <span class="n">metadata_csv_path</span><span class="o">=</span><span class="n">metadata_csv_filepath</span><span class="p">,</span> <span class="n">xlim_m</span> <span class="o">=</span> <span class="mi">65</span><span class="p">,</span> <span class="n">ylim_m</span> <span class="o">=</span> <span class="mi">2</span><span class="p">,</span>
+                              <span class="n">xlim</span><span class="o">=</span><span class="p">(</span><span class="mf">0.1</span><span class="p">,</span> <span class="mi">50</span><span class="p">),</span> <span class="n">ylim</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">4</span><span class="p">),</span> <span class="n">robust_est</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">metadata_flag</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/3f9796f80a75269064dbef6d3f1d995bd2b3b06b2cea6a9e0e092fa883ada06b.png" src="../_images/3f9796f80a75269064dbef6d3f1d995bd2b3b06b2cea6a9e0e092fa883ada06b.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Plot selected and unselected time series from output of hvsrProc</span>
+
+<span class="c1">#Specify directory where the time series is stored</span>
+<span class="n">ts_df</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">output_dir</span><span class="p">,</span><span class="s1">&#39;Test_ts_sel.csv&#39;</span><span class="p">)</span>
+
+<span class="c1">#Plot the time series</span>
+<span class="n">fig</span> <span class="o">=</span> <span class="n">hv</span><span class="o">.</span><span class="n">hvsrplot</span><span class="o">.</span><span class="n">plot_selected_time_series</span><span class="p">(</span><span class="n">csv_file_path</span> <span class="o">=</span> <span class="n">ts_df</span><span class="p">)</span>
+
+<span class="c1"># fig.savefig(r&#39;C:\Users\Javier Ornelas\OneDrive\Documents\HVSRdata_Main\mHVSR Site Inv\HVSR VSPDB Data/test.png&#39;, dpi =500)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/336b70eb1481d54a3527f3896cd01a64976b50a0f19be62d223a66d7fdecd2d2.png" src="../_images/336b70eb1481d54a3527f3896cd01a64976b50a0f19be62d223a66d7fdecd2d2.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Plot selected time series from output of hvsrProc</span>
+
+<span class="c1">#Specify where the directory for the selected hvsr curves are located</span>
+<span class="n">sel_curve_dir</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">output_dir</span><span class="p">,</span><span class="s1">&#39;Test_hvsr_sel.csv&#39;</span><span class="p">)</span>
+
+<span class="c1">#Plot the selected hvsr curves</span>
+<span class="n">fig</span> <span class="o">=</span> <span class="n">hv</span><span class="o">.</span><span class="n">hvsrplot</span><span class="o">.</span><span class="n">plot_selected_hvsr</span><span class="p">(</span><span class="n">sel_curve_dir</span><span class="p">,</span><span class="n">xlim</span><span class="o">=</span><span class="p">(</span><span class="mf">0.1</span><span class="p">,</span> <span class="mi">50</span><span class="p">),</span> <span class="n">ylim</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">8</span><span class="p">))</span>
+
+<span class="c1"># fig.savefig(r&#39;C:\Users\Javier Ornelas\OneDrive\Documents\HVSRdata_Main\mHVSR Site Inv\HVSR VSPDB Data/test.png&#39;, dpi =500)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/eac2b1cb1ab87286c8b8039a9ca61fddda25b10eafb94624430e1700515a58d7.png" src="../_images/eac2b1cb1ab87286c8b8039a9ca61fddda25b10eafb94624430e1700515a58d7.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">csv_path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">output_dir</span><span class="p">,</span><span class="s1">&#39;Test_FAS_mean.csv&#39;</span><span class="p">)</span>
+
+<span class="n">fig</span> <span class="o">=</span> <span class="n">hv</span><span class="o">.</span><span class="n">hvsrplot</span><span class="o">.</span><span class="n">plot_fas</span><span class="p">(</span><span class="n">csv_path</span><span class="p">,</span> <span class="n">xlim</span><span class="o">=</span><span class="p">(</span><span class="mf">0.01</span><span class="p">,</span> <span class="mi">50</span><span class="p">),</span> <span class="n">ylim</span><span class="o">=</span><span class="p">(</span><span class="mf">10e3</span><span class="p">,</span> <span class="mf">10e7</span><span class="p">))</span>
+
+<span class="c1"># fig.savefig(r&#39;C:\Users\Javier Ornelas\OneDrive\Documents\HVSRdata_Main\mHVSR Site Inv\HVSR VSPDB Data/test.png&#39;, dpi =500)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/b4319a1fed380ab1ce10b81b9be0a3536d81384e97b30061c49673fb94231b12.png" src="../_images/b4319a1fed380ab1ce10b81b9be0a3536d81384e97b30061c49673fb94231b12.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Example of using tools to process metadata for station xml files</span>
+
+<span class="c1"># Example usage for multi site:</span>
+
+<span class="c1">#Specify the static metadata</span>
+<span class="n">field_crew</span> <span class="o">=</span> <span class="kc">None</span>
+<span class="n">user</span> <span class="o">=</span> <span class="s1">&#39;francisco javier ornelas&#39;</span>
+<span class="n">weather</span> <span class="o">=</span> <span class="kc">None</span>
+<span class="n">ground_type</span> <span class="o">=</span> <span class="kc">None</span>
+<span class="n">sensor_ground_coupling</span> <span class="o">=</span> <span class="kc">None</span>
+<span class="n">monochromatic</span> <span class="o">=</span> <span class="kc">None</span>
+<span class="n">building</span> <span class="o">=</span> <span class="kc">None</span>
+<span class="n">transients</span> <span class="o">=</span> <span class="kc">None</span>
+<span class="n">data_type</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">sensor_corner_frequency</span> <span class="o">=</span> <span class="mf">0.0083</span>
+<span class="n">gain</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">comments</span> <span class="o">=</span> <span class="kc">None</span>
+
+<span class="c1">#Specify the directory where the stations are stored</span>
+<span class="n">directory</span> <span class="o">=</span> <span class="sa">r</span><span class="s1">&#39;C:\Users\Javier Ornelas\OneDrive\Documents\HVSRdata_Main\mHVSR Site Inv\10&#39;</span>
+
+<span class="c1">#Run the tool</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">hv</span><span class="o">.</span><span class="n">HvsrMetaTools</span><span class="o">.</span><span class="n">process_hvsr_metadata</span><span class="p">(</span><span class="n">field_crew</span><span class="p">,</span> <span class="n">user</span><span class="p">,</span> <span class="n">weather</span><span class="p">,</span> <span class="n">ground_type</span><span class="p">,</span> <span class="n">sensor_ground_coupling</span><span class="p">,</span>
+                                            <span class="n">monochromatic</span><span class="p">,</span> <span class="n">building</span><span class="p">,</span> <span class="n">transients</span><span class="p">,</span> <span class="n">data_type</span><span class="p">,</span>
+                                            <span class="n">sensor_corner_frequency</span><span class="p">,</span> <span class="n">gain</span><span class="p">,</span> <span class="n">comments</span><span class="p">,</span> <span class="n">directory</span><span class="p">)</span>
+
+<span class="c1">#Save the dataframe (df) if needed</span>
+<span class="c1"># df.to_csv(os.path.join(directory,&#39;gmdb_query_metadata.csv&#39;),header =True, index=False)</span>
+
+<span class="c1">#Visualize the df</span>
+<span class="n">df</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>name</th>
+      <th>longitude</th>
+      <th>latitude</th>
+      <th>elevation</th>
+      <th>start_date</th>
+      <th>end_date</th>
+      <th>start_time</th>
+      <th>end_time</th>
+      <th>field_crew</th>
+      <th>seismic_recorder</th>
+      <th>...</th>
+      <th>building</th>
+      <th>transients</th>
+      <th>azimuth</th>
+      <th>user</th>
+      <th>comments</th>
+      <th>data_type</th>
+      <th>mass_position_w</th>
+      <th>mass_position_v</th>
+      <th>mass_position_u</th>
+      <th>mag_dec</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>10.0.0</td>
+      <td>-118.178297</td>
+      <td>34.037050</td>
+      <td>83.7</td>
+      <td>2024-05-30</td>
+      <td>None</td>
+      <td>18:43:35.00000</td>
+      <td></td>
+      <td>None</td>
+      <td>Pegasus Portable Digital Recorder PGS-140</td>
+      <td>...</td>
+      <td>None</td>
+      <td>None</td>
+      <td>0</td>
+      <td>francisco javier ornelas</td>
+      <td>None</td>
+      <td>0</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>10.250.1</td>
+      <td>-118.175745</td>
+      <td>34.036540</td>
+      <td>120.7</td>
+      <td>2024-05-30</td>
+      <td>2024-05-30</td>
+      <td>17:01:35.00000</td>
+      <td>18:13:26.00000</td>
+      <td>None</td>
+      <td>Pegasus Portable Digital Recorder PGS-140</td>
+      <td>...</td>
+      <td>None</td>
+      <td>None</td>
+      <td>0</td>
+      <td>francisco javier ornelas</td>
+      <td>None</td>
+      <td>0</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>10.250.2</td>
+      <td>-118.176393</td>
+      <td>34.038562</td>
+      <td>94.0</td>
+      <td>2024-05-30</td>
+      <td>None</td>
+      <td>20:04:07.00000</td>
+      <td></td>
+      <td>None</td>
+      <td>Pegasus Portable Digital Recorder PGS-140</td>
+      <td>...</td>
+      <td>None</td>
+      <td>None</td>
+      <td>0</td>
+      <td>francisco javier ornelas</td>
+      <td>None</td>
+      <td>0</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>10.250.3</td>
+      <td>-118.178783</td>
+      <td>34.034881</td>
+      <td>78.8</td>
+      <td>2024-05-30</td>
+      <td>2024-05-30</td>
+      <td>17:26:54.00000</td>
+      <td>18:42:16.00000</td>
+      <td>None</td>
+      <td>Pegasus Portable Digital Recorder PGS-140</td>
+      <td>...</td>
+      <td>None</td>
+      <td>None</td>
+      <td>0</td>
+      <td>francisco javier ornelas</td>
+      <td>None</td>
+      <td>0</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>10.250.4</td>
+      <td>-118.180522</td>
+      <td>34.036645</td>
+      <td>104.5</td>
+      <td>2024-05-30</td>
+      <td>2024-05-30</td>
+      <td>17:22:35.00000</td>
+      <td>18:44:36.00000</td>
+      <td>None</td>
+      <td>Pegasus Portable Digital Recorder PGS-140</td>
+      <td>...</td>
+      <td>None</td>
+      <td>None</td>
+      <td>0</td>
+      <td>francisco javier ornelas</td>
+      <td>None</td>
+      <td>0</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>10.50.1</td>
+      <td>-118.177850</td>
+      <td>34.037202</td>
+      <td>86.4</td>
+      <td>2024-05-30</td>
+      <td>None</td>
+      <td>18:49:51.00000</td>
+      <td></td>
+      <td>None</td>
+      <td>Pegasus Portable Digital Recorder PGS-140</td>
+      <td>...</td>
+      <td>None</td>
+      <td>None</td>
+      <td>0</td>
+      <td>francisco javier ornelas</td>
+      <td>None</td>
+      <td>0</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>10.50.2</td>
+      <td>-118.177863</td>
+      <td>34.036742</td>
+      <td>89.6</td>
+      <td>2024-05-30</td>
+      <td>2024-05-30</td>
+      <td>18:14:44.00000</td>
+      <td>19:27:07.00000</td>
+      <td>None</td>
+      <td>Pegasus Portable Digital Recorder PGS-140</td>
+      <td>...</td>
+      <td>None</td>
+      <td>None</td>
+      <td>0</td>
+      <td>francisco javier ornelas</td>
+      <td>None</td>
+      <td>0</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>10.50.4</td>
+      <td>-118.178158</td>
+      <td>34.037463</td>
+      <td>92.2</td>
+      <td>2024-05-30</td>
+      <td>None</td>
+      <td>19:28:27.00000</td>
+      <td></td>
+      <td>None</td>
+      <td>Pegasus Portable Digital Recorder PGS-140</td>
+      <td>...</td>
+      <td>None</td>
+      <td>None</td>
+      <td>0</td>
+      <td>francisco javier ornelas</td>
+      <td>None</td>
+      <td>0</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>10.500.1</td>
+      <td>-118.177868</td>
+      <td>34.041472</td>
+      <td>94.8</td>
+      <td>2024-05-30</td>
+      <td>2024-05-30</td>
+      <td>18:45:54.00000</td>
+      <td>20:02:42.00000</td>
+      <td>None</td>
+      <td>Pegasus Portable Digital Recorder PGS-140</td>
+      <td>...</td>
+      <td>None</td>
+      <td>None</td>
+      <td>0</td>
+      <td>francisco javier ornelas</td>
+      <td>None</td>
+      <td>0</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>10.500.2</td>
+      <td>-118.183667</td>
+      <td>34.036168</td>
+      <td>103.1</td>
+      <td>2024-05-30</td>
+      <td>2024-05-30</td>
+      <td>16:06:20.00000</td>
+      <td>17:21:32.00000</td>
+      <td>None</td>
+      <td>Pegasus Portable Digital Recorder PGS-140</td>
+      <td>...</td>
+      <td>None</td>
+      <td>None</td>
+      <td>0</td>
+      <td>francisco javier ornelas</td>
+      <td>None</td>
+      <td>0</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <th>10</th>
+      <td>10.500.3</td>
+      <td>-118.180107</td>
+      <td>34.032753</td>
+      <td>75.6</td>
+      <td>2024-05-30</td>
+      <td>2024-05-30</td>
+      <td>16:01:52.00000</td>
+      <td>17:25:25.00000</td>
+      <td>None</td>
+      <td>Pegasus Portable Digital Recorder PGS-140</td>
+      <td>...</td>
+      <td>None</td>
+      <td>None</td>
+      <td>0</td>
+      <td>francisco javier ornelas</td>
+      <td>None</td>
+      <td>0</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <th>11</th>
+      <td>10.500.4</td>
+      <td>-118.172808</td>
+      <td>34.037084</td>
+      <td>100.2</td>
+      <td>2024-05-29</td>
+      <td>2024-05-30</td>
+      <td>06:57:12.00000</td>
+      <td>17:00:33.00000</td>
+      <td>None</td>
+      <td>Pegasus Portable Digital Recorder PGS-140</td>
+      <td>...</td>
+      <td>None</td>
+      <td>None</td>
+      <td>0</td>
+      <td>francisco javier ornelas</td>
+      <td>None</td>
+      <td>0</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+    </tr>
+  </tbody>
+</table>
+<p>12 rows × 31 columns</p>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Example of using a tool to combine all metadata files</span>
+
+<span class="c1">#Specify the folder path where the stations are stored</span>
+<span class="n">folder_path</span> <span class="o">=</span> <span class="sa">r</span><span class="s1">&#39;C:\Users\Javier Ornelas\OneDrive\Documents\HVSRdata_Main\mHVSR Site Inv\10&#39;</span>
+
+<span class="c1">#Specify a unique set of folders thats contained in all station folders</span>
+<span class="n">add_sim_path</span> <span class="o">=</span> <span class="s1">&#39;Text_File_data/Raw_mseed_PEG_HH&#39;</span>
+
+<span class="c1">#Run the metadata tool</span>
+<span class="n">combined_metadata</span> <span class="o">=</span> <span class="n">hv</span><span class="o">.</span><span class="n">HvsrMetaTools</span><span class="o">.</span><span class="n">combine_metadata</span><span class="p">(</span><span class="n">folder_path</span><span class="p">,</span><span class="n">add_sim_path</span><span class="p">)</span>
+
+<span class="c1">#Visualize the dataframe (combined_metadata)</span>
+<span class="n">combined_metadata</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>name</th>
+      <th>sample freq (Hz)</th>
+      <th>record duration (min)</th>
+      <th>pre_proc_applied</th>
+      <th>weighted_mean_removal</th>
+      <th>pre_proc_high_pass_filter_type</th>
+      <th>pre_proc_high_pass_corner_frequency</th>
+      <th>pre_proc_taper_type</th>
+      <th>pre_proc_taper_width_percent</th>
+      <th>detrend_type</th>
+      <th>...</th>
+      <th>number of windows (total)</th>
+      <th>number of windows (selected)</th>
+      <th>high pass filter</th>
+      <th>high pass filter corner frequency (Hz)</th>
+      <th>high pass filter type</th>
+      <th>smoothing type</th>
+      <th>smoothing constant</th>
+      <th>data type</th>
+      <th>distribution</th>
+      <th>processing_comments</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>10.0.0</td>
+      <td>200.0</td>
+      <td>69.5918</td>
+      <td>1</td>
+      <td>1</td>
+      <td>Butterworth</td>
+      <td>0.042</td>
+      <td>Tukey</td>
+      <td>10</td>
+      <td>mean removal</td>
+      <td>...</td>
+      <td>13</td>
+      <td>13</td>
+      <td>1</td>
+      <td>0.0083</td>
+      <td>Butterworth</td>
+      <td>KonnoOhmachi</td>
+      <td>20</td>
+      <td>0</td>
+      <td>normal</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>10.250.1</td>
+      <td>200.0</td>
+      <td>55.9685</td>
+      <td>1</td>
+      <td>1</td>
+      <td>Butterworth</td>
+      <td>0.042</td>
+      <td>Tukey</td>
+      <td>10</td>
+      <td>mean removal</td>
+      <td>...</td>
+      <td>11</td>
+      <td>11</td>
+      <td>1</td>
+      <td>0.0083</td>
+      <td>Butterworth</td>
+      <td>KonnoOhmachi</td>
+      <td>20</td>
+      <td>0</td>
+      <td>normal</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>10.250.2</td>
+      <td>200.0</td>
+      <td>40.8580</td>
+      <td>1</td>
+      <td>1</td>
+      <td>Butterworth</td>
+      <td>0.042</td>
+      <td>Tukey</td>
+      <td>10</td>
+      <td>mean removal</td>
+      <td>...</td>
+      <td>8</td>
+      <td>8</td>
+      <td>1</td>
+      <td>0.0083</td>
+      <td>Butterworth</td>
+      <td>KonnoOhmachi</td>
+      <td>20</td>
+      <td>0</td>
+      <td>normal</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>10.250.3</td>
+      <td>200.0</td>
+      <td>57.9887</td>
+      <td>1</td>
+      <td>1</td>
+      <td>Butterworth</td>
+      <td>0.042</td>
+      <td>Tukey</td>
+      <td>10</td>
+      <td>mean removal</td>
+      <td>...</td>
+      <td>11</td>
+      <td>11</td>
+      <td>1</td>
+      <td>0.0083</td>
+      <td>Butterworth</td>
+      <td>KonnoOhmachi</td>
+      <td>20</td>
+      <td>0</td>
+      <td>normal</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>10.250.4</td>
+      <td>200.0</td>
+      <td>56.3427</td>
+      <td>1</td>
+      <td>1</td>
+      <td>Butterworth</td>
+      <td>0.042</td>
+      <td>Tukey</td>
+      <td>10</td>
+      <td>mean removal</td>
+      <td>...</td>
+      <td>11</td>
+      <td>11</td>
+      <td>1</td>
+      <td>0.0083</td>
+      <td>Butterworth</td>
+      <td>KonnoOhmachi</td>
+      <td>20</td>
+      <td>0</td>
+      <td>normal</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>10.50.1</td>
+      <td>200.0</td>
+      <td>57.0213</td>
+      <td>1</td>
+      <td>1</td>
+      <td>Butterworth</td>
+      <td>0.042</td>
+      <td>Tukey</td>
+      <td>10</td>
+      <td>mean removal</td>
+      <td>...</td>
+      <td>11</td>
+      <td>11</td>
+      <td>1</td>
+      <td>0.0083</td>
+      <td>Butterworth</td>
+      <td>KonnoOhmachi</td>
+      <td>20</td>
+      <td>0</td>
+      <td>normal</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>10.50.2</td>
+      <td>200.0</td>
+      <td>58.4673</td>
+      <td>1</td>
+      <td>1</td>
+      <td>Butterworth</td>
+      <td>0.042</td>
+      <td>Tukey</td>
+      <td>10</td>
+      <td>mean removal</td>
+      <td>...</td>
+      <td>11</td>
+      <td>11</td>
+      <td>1</td>
+      <td>0.0083</td>
+      <td>Butterworth</td>
+      <td>KonnoOhmachi</td>
+      <td>20</td>
+      <td>0</td>
+      <td>normal</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>10.50.4</td>
+      <td>200.0</td>
+      <td>58.5172</td>
+      <td>1</td>
+      <td>1</td>
+      <td>Butterworth</td>
+      <td>0.042</td>
+      <td>Tukey</td>
+      <td>10</td>
+      <td>mean removal</td>
+      <td>...</td>
+      <td>11</td>
+      <td>11</td>
+      <td>1</td>
+      <td>0.0083</td>
+      <td>Butterworth</td>
+      <td>KonnoOhmachi</td>
+      <td>20</td>
+      <td>0</td>
+      <td>normal</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>10.500.1</td>
+      <td>200.0</td>
+      <td>55.7752</td>
+      <td>1</td>
+      <td>1</td>
+      <td>Butterworth</td>
+      <td>0.042</td>
+      <td>Tukey</td>
+      <td>10</td>
+      <td>mean removal</td>
+      <td>...</td>
+      <td>11</td>
+      <td>11</td>
+      <td>1</td>
+      <td>0.0083</td>
+      <td>Butterworth</td>
+      <td>KonnoOhmachi</td>
+      <td>20</td>
+      <td>0</td>
+      <td>normal</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>10.500.2</td>
+      <td>200.0</td>
+      <td>56.0643</td>
+      <td>1</td>
+      <td>1</td>
+      <td>Butterworth</td>
+      <td>0.042</td>
+      <td>Tukey</td>
+      <td>10</td>
+      <td>mean removal</td>
+      <td>...</td>
+      <td>11</td>
+      <td>11</td>
+      <td>1</td>
+      <td>0.0083</td>
+      <td>Butterworth</td>
+      <td>KonnoOhmachi</td>
+      <td>20</td>
+      <td>0</td>
+      <td>normal</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>10</th>
+      <td>10.500.3</td>
+      <td>200.0</td>
+      <td>58.6710</td>
+      <td>1</td>
+      <td>1</td>
+      <td>Butterworth</td>
+      <td>0.042</td>
+      <td>Tukey</td>
+      <td>10</td>
+      <td>mean removal</td>
+      <td>...</td>
+      <td>11</td>
+      <td>10</td>
+      <td>1</td>
+      <td>0.0083</td>
+      <td>Butterworth</td>
+      <td>KonnoOhmachi</td>
+      <td>20</td>
+      <td>0</td>
+      <td>normal</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>11</th>
+      <td>10.500.4</td>
+      <td>200.0</td>
+      <td>54.5717</td>
+      <td>1</td>
+      <td>1</td>
+      <td>Butterworth</td>
+      <td>0.042</td>
+      <td>Tukey</td>
+      <td>10</td>
+      <td>mean removal</td>
+      <td>...</td>
+      <td>10</td>
+      <td>10</td>
+      <td>1</td>
+      <td>0.0083</td>
+      <td>Butterworth</td>
+      <td>KonnoOhmachi</td>
+      <td>20</td>
+      <td>0</td>
+      <td>normal</td>
+      <td>NaN</td>
+    </tr>
+  </tbody>
+</table>
+<p>12 rows × 26 columns</p>
+</div></div></div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./example"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="simple visible nav section-nav flex-column">
+</ul>
+
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Francisco Javier Ornelas
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=5b4479735964841361fd"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
