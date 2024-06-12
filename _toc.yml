@@ -3,7 +3,6 @@
 
 format: jb-book
 root: README
-title: About
 parts:
   - caption: Code Documentation
     chapters:
