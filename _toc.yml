@@ -3,6 +3,10 @@
 
 format: jb-book
 root: README
+title: About
 chapters:
 - file: Time_series_examples
 - file: freq_tools
+- file: hvhelp
+- file: hvplt
+- file: hvt
