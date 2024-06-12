@@ -5,3 +5,4 @@ format: jb-book
 root: README
 chapters:
 - file: Time_series_examples
+- file: freq_tools
