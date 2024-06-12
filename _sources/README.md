@@ -25,7 +25,7 @@
 <sup>1</sup> University of California, Los Angeles (UCLA) <br> 
 <sup>2</sup> Old Dominion University<br>
 
-<div style="text-align: center;">
+<div align="center">
     <h3 style=" font-size: 25px;">Table of Contents</h3>
 </div>
 
