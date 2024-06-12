@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>&lt;no title&gt; &#8212; hvsrprocpy</title>
+    <title>tsproctools &#8212; hvsrprocpy</title>
   
   
   
@@ -161,7 +161,10 @@ const thebe_selector_output = ".output, .cell_output"
                 </a>
             </li>
         </ul>
-        
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">tsproctools</a></li>
+</ul>
+
     </div>
 </nav></div>
     </div>
@@ -345,7 +348,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1><no title></h1>
+    <h1>tsproctools</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -354,9 +357,14 @@ document.write(`
                 <h2> Contents </h2>
             </div>
             <nav aria-label="Page">
-                <ul class="simple visible nav section-nav flex-column">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#detrend-ts">detrend_ts</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tukey-window">tukey_window</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#apply-filter">apply_filter</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#apply-normalization">apply_normalization</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sta-lta-calc">sta_lta_calc</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#split-into-windows">split_into_windows</a></li>
 </ul>
-
             </nav>
         </div>
     </div>
@@ -367,191 +375,99 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <p>{
-“cells”: [
-{
-“cell_type”: “markdown”,
-“id”: “7e360450”,
-“metadata”: {},
-“source”: [
-“# tsproctools\n”,
-“\n”,
-“A tool containing multiple functions which perform time series processing.\n”,
-“\n”,
-“## detrend_ts\n”,
-“\n”,
-“A function which applies detrending to time series\n”,
-“\n”,
-“<code class="docutils literal notranslate"><span class="pre">detrend_ts(ts,</span> <span class="pre">**kwargs)</span></code>\n”,
-“\n”,
-“Detrends a time series based on the specified method.\n”,
-“\n”,
-“<code class="docutils literal notranslate"><span class="pre">Parameters</span></code>\n”,
-“\n”,
-“<strong>ts</strong> (ndarray) - The input time series.\n”,
-“\n”,
-“<code class="docutils literal notranslate"><span class="pre">kwargs</span></code>:\n”,
-“\n”,
-“<strong>detrend_type</strong> (int):\n”,
-“- 0: No detrending.\n”,
-“- 1: Weighted mean detrending. (default)\n”,
-“- 2: Linear detrending.\n”,
-“- 6: 5th degree polynomial detrending.\n”,
-“\n”,
-“<strong>t_front</strong> (int) - Percentage of data to be tapered at the beginning for Tukey window. Default is 5.\n”,
-“\n”,
-“<strong>t_end</strong> (int) - Percentage of data to be tapered at the end for Tukey window. Default is 5.\n”,
-“\n”,
-“<code class="docutils literal notranslate"><span class="pre">returns:</span></code>\n”,
-“\n”,
-“Array of detrended time series.\n”,
-“\n”,
-“## tukey_window\n”,
-“\n”,
-“Applies Tukey window to the given time series.\n”,
-“\n”,
-“<code class="docutils literal notranslate"><span class="pre">tukey_window(ts,</span> <span class="pre">**kwargs)</span></code>\n”,
-“\n”,
-“<code class="docutils literal notranslate"><span class="pre">Parameters:</span></code>\n”,
-“\n”,
-“<strong>ts</strong> (ndarray) - The input time series.\n”,
-“\n”,
-“<code class="docutils literal notranslate"><span class="pre">kwargs</span></code>:\n”,
-“\n”,
-“<strong>t_front</strong> (int) -Percentage of data to be tapered at the beginning for Tukey window. Default is 5.\n”,
-“\n”,
-“<strong>t_end</strong> (int) - Percentage of data to be tapered at the end for Tukey window. Default is 5.\n”,
-“\n”,
-“<strong>sym</strong> (boolean) - generates a symmetric window.\n”,
-“\n”,
-“<code class="docutils literal notranslate"><span class="pre">returns:</span></code>\n”,
-“\n”,
-“An array of the tapered time series.\n”,
-“\n”,
-“## apply_filter\n”,
-“\n”,
-“Calculate filter based on given parameters.\n”,
-“\n”,
-“<code class="docutils literal notranslate"><span class="pre">apply_filter(ts,</span> <span class="pre">**kwargs)</span></code>\n”,
-“\n”,
-“<code class="docutils literal notranslate"><span class="pre">Parameters:</span></code>\n”,
-“\n”,
-“<strong>ts</strong> (ndarray) - An array representing the time series data.\n”,
-“\n”,
-“<code class="docutils literal notranslate"><span class="pre">kwargs:</span></code>\n”,
-“\n”,
-“<strong>ts_dt</strong> (float) - Time step of ts\n”,
-“\n”,
-“<strong>fc</strong> (float) - The filtering frequency to be applied.\n”,
-“\n”,
-“<strong>npole</strong> (int) - A value specifying low pass or high pass, a value less than 0 applies to a high pass filter, default = -5.\n”,
-“\n”,
-“<strong>is_causal</strong> (boolean) - Indicates whether to apply a causal or acausal filter to the time series.\n”,
-“\n”,
-“<strong>order_zero_padding</strong> (int) - Indicates what order of zero padding to be applied.\n”,
-“\n”,
-“<code class="docutils literal notranslate"><span class="pre">returns</span></code>\n”,
-“\n”,
-“<strong>ts</strong> (ndarray) - Time series data after applying the filter.\n”,
-“\n”,
-“<strong>res</strong>  (dict) - A dictionary of results from computing the fft of the time series, containing:\n”,
-“\n”,
-“- flt_ts: filtered time series\n”,
-“- flt_amp: amplitude of filtered FAS\n”,
-“- flt_resp: filter response\n”,
-“- flt_fft: filtered fft containing imaginary values\n”,
-“\n”,
-“## apply_normalization\n”,
-“\n”,
-“A function to normalize time series.\n”,
-“\n”,
-“<code class="docutils literal notranslate"><span class="pre">apply_normalization(ts)</span></code>\n”,
-“\n”,
-“<code class="docutils literal notranslate"><span class="pre">Parameters:</span></code>\n”,
-”  \n”,
-“<strong>ts</strong> (ndarray) - Time series array.\n”,
-“\n”,
-“<code class="docutils literal notranslate"><span class="pre">returns:</span></code> \n”,
-“\n”,
-“normalized time series.\n”,
-“\n”,
-“## sta_lta_calc\n”,
-“\n”,
-“Function that computes the sta/lta ratio.\n”,
-“\n”,
-“<code class="docutils literal notranslate"><span class="pre">sta_lta_calc(ts,</span> <span class="pre">**kwargs)</span></code>\n”,
-“\n”,
-“<code class="docutils literal notranslate"><span class="pre">Parameters:</span></code>\n”,
-“\n”,
-“<strong>ts</strong> (ndarray) - Time series array of microtremor/earthquake amplitudes\n”,
-“\n”,
-“<code class="docutils literal notranslate"><span class="pre">kwargs:</span></code>\n”,
-“\n”,
-“<strong>short_term</strong> (int) - Short term average length\n”,
-“\n”,
-“<strong>long_term</strong> (int) - Long term average length\n”,
-“\n”,
-“<strong>moving_term</strong> (int) - Moving term of the sta/lta length\n”,
-“\n”,
-“<code class="docutils literal notranslate"><span class="pre">returns:</span></code> \n”,
-“\n”,
-“The ratio of the sta and lta\n”,
-“\n”,
-“## split_into_windows\n”,
-“\n”,
-“Function to split time series into individual discrete windows.\n”,
-“\n”,
-“<code class="docutils literal notranslate"><span class="pre">split_into_windows(ts,</span> <span class="pre">dt,</span> <span class="pre">win_width,</span> <span class="pre">overlapping)</span></code>\n”,
-“\n”,
-“<code class="docutils literal notranslate"><span class="pre">Parameters:</span></code>\n”,
-“\n”,
-“<strong>ts</strong> (ndarray) - Array of time series data.\n”,
-“\n”,
-“<strong>dt</strong> (float) - Time step of time series.\n”,
-“\n”,
-“<strong>win_width</strong> (int) - Length of each individual window.\n”,
-“\n”,
-“<strong>overlapping</strong> (int) - Length of overlapping between each window.\n”,
-“\n”,
-“<code class="docutils literal notranslate"><span class="pre">returns:</span></code> \n”,
-“\n”,
-“A windowed time series\n”,
-“\n”,
-“\n”,
-“\n”,
-“\n”,
-“\n”
-]
-},
-{
-“cell_type”: “markdown”,
-“id”: “cf18280c”,
-“metadata”: {},
-“source”: []
-}
-],
-“metadata”: {
-“kernelspec”: {
-“display_name”: “Python 3 (ipykernel)”,
-“language”: “python”,
-“name”: “python3”
-},
-“language_info”: {
-“codemirror_mode”: {
-“name”: “ipython”,
-“version”: 3
-},
-“file_extension”: “.py”,
-“mimetype”: “text/x-python”,
-“name”: “python”,
-“nbconvert_exporter”: “python”,
-“pygments_lexer”: “ipython3”,
-“version”: “3.10.9”
-}
-},
-“nbformat”: 4,
-“nbformat_minor”: 5
-}</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="tsproctools">
+<h1>tsproctools<a class="headerlink" href="#tsproctools" title="Permalink to this heading">#</a></h1>
+<p>A tool containing multiple functions which perform time series processing.</p>
+<section id="detrend-ts">
+<h2>detrend_ts<a class="headerlink" href="#detrend-ts" title="Permalink to this heading">#</a></h2>
+<p>A function which applies detrending to time series</p>
+<p><code class="docutils literal notranslate"><span class="pre">detrend_ts(ts,</span> <span class="pre">**kwargs)</span></code></p>
+<p>Detrends a time series based on the specified method.</p>
+<p><code class="docutils literal notranslate"><span class="pre">Parameters</span></code></p>
+<p><strong>ts</strong> (ndarray) - The input time series.</p>
+<p><code class="docutils literal notranslate"><span class="pre">kwargs</span></code>:</p>
+<p><strong>detrend_type</strong> (int):</p>
+<ul class="simple">
+<li><p>0: No detrending.</p></li>
+<li><p>1: Weighted mean detrending. (default)</p></li>
+<li><p>2: Linear detrending.</p></li>
+<li><p>6: 5th degree polynomial detrending.</p></li>
+</ul>
+<p><strong>t_front</strong> (int) - Percentage of data to be tapered at the beginning for Tukey window. Default is 5.</p>
+<p><strong>t_end</strong> (int) - Percentage of data to be tapered at the end for Tukey window. Default is 5.</p>
+<p><code class="docutils literal notranslate"><span class="pre">returns:</span></code></p>
+<p>Array of detrended time series.</p>
+</section>
+<section id="tukey-window">
+<h2>tukey_window<a class="headerlink" href="#tukey-window" title="Permalink to this heading">#</a></h2>
+<p>Applies Tukey window to the given time series.</p>
+<p><code class="docutils literal notranslate"><span class="pre">tukey_window(ts,</span> <span class="pre">**kwargs)</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">Parameters:</span></code></p>
+<p><strong>ts</strong> (ndarray) - The input time series.</p>
+<p><code class="docutils literal notranslate"><span class="pre">kwargs</span></code>:</p>
+<p><strong>t_front</strong> (int) -Percentage of data to be tapered at the beginning for Tukey window. Default is 5.</p>
+<p><strong>t_end</strong> (int) - Percentage of data to be tapered at the end for Tukey window. Default is 5.</p>
+<p><strong>sym</strong> (boolean) - generates a symmetric window.</p>
+<p><code class="docutils literal notranslate"><span class="pre">returns:</span></code></p>
+<p>An array of the tapered time series.</p>
+</section>
+<section id="apply-filter">
+<h2>apply_filter<a class="headerlink" href="#apply-filter" title="Permalink to this heading">#</a></h2>
+<p>Calculate filter based on given parameters.</p>
+<p><code class="docutils literal notranslate"><span class="pre">apply_filter(ts,</span> <span class="pre">**kwargs)</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">Parameters:</span></code></p>
+<p><strong>ts</strong> (ndarray) - An array representing the time series data.</p>
+<p><code class="docutils literal notranslate"><span class="pre">kwargs:</span></code></p>
+<p><strong>ts_dt</strong> (float) - Time step of ts</p>
+<p><strong>fc</strong> (float) - The filtering frequency to be applied.</p>
+<p><strong>npole</strong> (int) - A value specifying low pass or high pass, a value less than 0 applies to a high pass filter, default = -5.</p>
+<p><strong>is_causal</strong> (boolean) - Indicates whether to apply a causal or acausal filter to the time series.</p>
+<p><strong>order_zero_padding</strong> (int) - Indicates what order of zero padding to be applied.</p>
+<p><code class="docutils literal notranslate"><span class="pre">returns</span></code></p>
+<p><strong>ts</strong> (ndarray) - Time series data after applying the filter.</p>
+<p><strong>res</strong>  (dict) - A dictionary of results from computing the fft of the time series, containing:</p>
+<ul class="simple">
+<li><p>flt_ts: filtered time series</p></li>
+<li><p>flt_amp: amplitude of filtered FAS</p></li>
+<li><p>flt_resp: filter response</p></li>
+<li><p>flt_fft: filtered fft containing imaginary values</p></li>
+</ul>
+</section>
+<section id="apply-normalization">
+<h2>apply_normalization<a class="headerlink" href="#apply-normalization" title="Permalink to this heading">#</a></h2>
+<p>A function to normalize time series.</p>
+<p><code class="docutils literal notranslate"><span class="pre">apply_normalization(ts)</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">Parameters:</span></code></p>
+<p><strong>ts</strong> (ndarray) - Time series array.</p>
+<p><code class="docutils literal notranslate"><span class="pre">returns:</span></code></p>
+<p>normalized time series.</p>
+</section>
+<section id="sta-lta-calc">
+<h2>sta_lta_calc<a class="headerlink" href="#sta-lta-calc" title="Permalink to this heading">#</a></h2>
+<p>Function that computes the sta/lta ratio.</p>
+<p><code class="docutils literal notranslate"><span class="pre">sta_lta_calc(ts,</span> <span class="pre">**kwargs)</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">Parameters:</span></code></p>
+<p><strong>ts</strong> (ndarray) - Time series array of microtremor/earthquake amplitudes</p>
+<p><code class="docutils literal notranslate"><span class="pre">kwargs:</span></code></p>
+<p><strong>short_term</strong> (int) - Short term average length</p>
+<p><strong>long_term</strong> (int) - Long term average length</p>
+<p><strong>moving_term</strong> (int) - Moving term of the sta/lta length</p>
+<p><code class="docutils literal notranslate"><span class="pre">returns:</span></code></p>
+<p>The ratio of the sta and lta</p>
+</section>
+<section id="split-into-windows">
+<h2>split_into_windows<a class="headerlink" href="#split-into-windows" title="Permalink to this heading">#</a></h2>
+<p>Function to split time series into individual discrete windows.</p>
+<p><code class="docutils literal notranslate"><span class="pre">split_into_windows(ts,</span> <span class="pre">dt,</span> <span class="pre">win_width,</span> <span class="pre">overlapping)</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">Parameters:</span></code></p>
+<p><strong>ts</strong> (ndarray) - Array of time series data.</p>
+<p><strong>dt</strong> (float) - Time step of time series.</p>
+<p><strong>win_width</strong> (int) - Length of each individual window.</p>
+<p><strong>overlapping</strong> (int) - Length of overlapping between each window.</p>
+<p><code class="docutils literal notranslate"><span class="pre">returns:</span></code></p>
+<p>A windowed time series</p>
+</section>
+</section>
 
     <script type="text/x-thebe-config">
     {
@@ -606,9 +522,14 @@ document.write(`
     <i class="fa-solid fa-list"></i> Contents
   </div>
   <nav class="bd-toc-nav page-toc">
-    <ul class="simple visible nav section-nav flex-column">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#detrend-ts">detrend_ts</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tukey-window">tukey_window</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#apply-filter">apply_filter</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#apply-normalization">apply_normalization</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sta-lta-calc">sta_lta_calc</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#split-into-windows">split_into_windows</a></li>
 </ul>
-
   </nav></div>
 
 </div></div>
