@@ -1,6 +1,6 @@
 <!-- Our title -->
 <div align="center">
-  <h3 style="font-size: 25px;">hvsrprocpy</h3>
+  <h3 style="font-size: 40px;">hvsrprocpy</h3>
 </div>
 
 <!-- Short description -->
@@ -13,7 +13,7 @@
 ![GitHub Release](https://img.shields.io/github/v/release/fjornelas/hvsrprocpy)
 
 <div align="center">
-    <h3 style=" font-size: 25px;">Authors</h3>
+    <h3 style=" font-size: 40px;">Authors</h3>
 </div>
 
 <!-- Short description -->
@@ -26,7 +26,7 @@
 <sup>2</sup> Old Dominion University<br>
 
 <div align="center">
-    <h3 style=" font-size: 25px;">Table of Contents</h3>
+    <h3 style=" font-size: 40px;">Table of Contents</h3>
 </div>
 
 
