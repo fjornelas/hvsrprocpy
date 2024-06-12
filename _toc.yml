@@ -4,9 +4,14 @@
 format: jb-book
 root: README
 title: About
-chapters:
-- file: Time_series_examples
-- file: freq_tools
-- file: hvhelp
-- file: hvplt
-- file: hvt
+parts:
+  - caption: Code Documentation
+    chapters:
+    - file: https://github.com/fjornelas/hvsrprocpy/blob/main/docs/hvt.md
+    - file: https://github.com/fjornelas/hvsrprocpy/blob/main/docs/tdt.md
+    - file: https://github.com/fjornelas/hvsrprocpy/blob/main/docs/fdt.md
+    - file: https://github.com/fjornelas/hvsrprocpy/blob/main/docs/hvhelp.md
+    - file: https://github.com/fjornelas/hvsrprocpy/blob/main/docs/hvplt.md
+  - caption: Examples
+    chapters:
+    - file: https://github.com/fjornelas/hvsrprocpy/blob/main/example/hvsrprocpy_example.ipynb
