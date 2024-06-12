@@ -1,8 +1,8 @@
-# _fdt_
+# _fdt_ (Frequency Domain Tools)
 
 ---
 
-This contains a set of functions that 
+This file contains a set of functions that 
 can be used to process Fourier Amplitude Spectra (FAS)
 and Horizontal-to-Vertical Spectral Ratio (HVSR), such as smoothing
 and performing Fast Fourier Transforms (FFT).
