@@ -367,7 +367,7 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-of-manual-window-selection-on-hvsr">Example of manual  window selection on HVSR</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-of-azimuthal-plots">Example of azimuthal plots</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-of-mean-curve-plot-with-metadata">Example of Mean Curve plot with Metadata</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-comparisons-of-konno-and-ohmachi-and-parzen-smoothing-on-fas">Example comparisons of Konno and Ohmachi and Parzen smoothing on FAS</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-comparisons-of-konno-and-ohmachi-left-and-parzen-smoothing-right-on-fas">Example comparisons of Konno and Ohmachi (left) and Parzen smoothing (right) on FAS</a></li>
 </ul>
 </li>
 </ul>
@@ -398,7 +398,10 @@ document.write(`
 <p align="center">
    A python library that performs Horizontal-to-Vertical Spectral Ratio (HVSR) processing.
 </p>
-<div style="text-align: center;">
+<p><a class="reference external" href="https://zenodo.org/doi/10.5281/zenodo.11515238"><img alt="DOI" src="https://zenodo.org/badge/808826090.svg" /></a>
+<img alt="GitHub License" src="https://img.shields.io/github/license/fjornelas/hvsrprocpy" />
+<img alt="GitHub Release" src="https://img.shields.io/github/v/release/fjornelas/hvsrprocpy" /></p>
+<div align="center">
     <h3 style=" font-size: 25px;">Authors</h3>
 </div>
 <!-- Short description -->
@@ -407,44 +410,23 @@ document.write(`
 </p>
 <p><sup>1</sup> University of California, Los Angeles (UCLA) <br>
 <sup>2</sup> Old Dominion University<br></p>
-<p><a class="reference external" href="https://zenodo.org/doi/10.5281/zenodo.11515238"><img alt="DOI" src="https://zenodo.org/badge/808826090.svg" /></a>
-<img alt="GitHub License" src="https://img.shields.io/github/license/fjornelas/hvsrprocpy" />
-<img alt="GitHub Release" src="https://img.shields.io/github/v/release/fjornelas/hvsrprocpy" /></p>
 <div style="text-align: center;">
     <h3 style=" font-size: 25px;">Table of Contents</h3>
 </div>
-<hr class="docutils" />
-<table class="table">
-<thead>
-<tr class="row-odd"><th class="head"><p>Section</p></th>
-<th class="head"><p>Description</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p><span class="xref myst">Introduction</span></p></td>
-<td><p>Description of the project</p></td>
-</tr>
-<tr class="row-odd"><td><p><span class="xref myst">Background</span></p></td>
-<td><p>Background the Horizontal-to-Vertical Spectral Ratio (HVSR)</p></td>
-</tr>
-<tr class="row-even"><td><p><span class="xref myst">Getting started</span></p></td>
-<td><p>Description of different usages with <em>hvsrprocpy</em> and how to install the package</p></td>
-</tr>
-<tr class="row-odd"><td><p><span class="xref myst">Citation</span></p></td>
-<td><p>Description of the citation for this work</p></td>
-</tr>
-<tr class="row-even"><td><p><span class="xref myst">Issues</span></p></td>
-<td><p>Link showing where to report issues</p></td>
-</tr>
-</tbody>
-</table>
+<ul class="simple">
+<li><p><span class="xref myst">Introduction</span></p></li>
+<li><p><span class="xref myst">Background</span></p></li>
+<li><p><span class="xref myst">Getting started</span></p></li>
+<li><p><span class="xref myst">Citation</span></p></li>
+<li><p><span class="xref myst">Issues</span></p></li>
+</ul>
 <section class="tex2jax_ignore mathjax_ignore" id="introduction">
 <h1>Introduction<a class="headerlink" href="#introduction" title="Permalink to this heading">#</a></h1>
 <hr class="docutils" />
 <p>A python library that can perform Horizontal-to-Vertical Spectral
 Ratio (HVSR) processing from recordings of microtremors or earthquakes from 3-component
 seismometers. This library was developed by Francisco Javier G. Ornelas under the supervision
-of Dr. Jonathan P. Stewart and Dr. Scott J. Brandenberg at University of California, Los Angeles (UCLA).
+of Dr. Jonathan P. Stewart and Dr. Scott J. Brandenberg at the University of California, Los Angeles (UCLA).
 Other contributions came from Dr. Pengfei Wang a professor at Old Dominion University, who wrote <code class="docutils literal notranslate"><span class="pre">hvsrProc</span></code>
 a rstudio package, which this python library is based on. That work can be found here:</p>
 <blockquote>
@@ -456,7 +438,7 @@ a rstudio package, which this python library is based on. That work can be found
 <hr class="docutils" />
 <p>HVSR is derived from ratios of the horizontal and vertical components
 of a Fourier Amplitude Spectrum (FAS) from a 3-component recording of
-microtremors or earthquakes. This can be done by recording ground vibrations either from
+microtremors or earthquakes. This is done by recording ground vibrations either from
 temporarily-deployed or permanently-installed seismometers, for a relatively short
 period of time (~1-2 hrs) or a longer period of time.</p>
 <p>This method or technique was first proposed by Nogoshi and Igarashi (1971)
@@ -466,7 +448,7 @@ The method works by assuming that the horizontal wavefield is amplified as seism
 through the soil deposits compared to the vertical wavefield.</p>
 <p>HVSR can be useful in site characterization since it can identify resonant frequencies at sites, through peaks in
 an HVSR spectrum. Studies have also found that the lowest peak in HVSR spectra can be associated with the fundamental
-frequency of a site.</p>
+frequency of a site (e.g., <a href="https://link.springer.com/article/10.1007/s10518-012-9413-4" target="_blank">[ABSTRACT]</a>).</p>
 </section>
 <section class="tex2jax_ignore mathjax_ignore" id="getting-started">
 <h1>Getting started<a class="headerlink" href="#getting-started" title="Permalink to this heading">#</a></h1>
@@ -487,8 +469,9 @@ frequency of a site.</p>
 <ul class="simple">
 <li><p>Manual selection of windows in the time domain and the frequency domain.</p></li>
 <li><p>Rotated HVSR to see the azimuthal variability of HVSR.</p></li>
-<li><p>Different distibutions such as normal or log-normal</p></li>
-<li><p>Different smoothing functions such as Konno and Ohmachi and Parzen smoothing</p></li>
+<li><p>Different distibutions such as normal or log-normal.</p></li>
+<li><p>Different smoothing functions such as Konno and Ohmachi and Parzen smoothing.</p></li>
+<li><p>Different type of horizontal combinations, such as geometric mean, squared average, and RotD50.</p></li>
 <li><p>Various outputs such as mean FAS and HVSR, selected HVSR and ts, and rotated HVSR.</p></li>
 </ul>
 <p>Examples of these can be found under the examples folder in the Github repository <a href="https://github.com/fjornelas/hvsrprocpy" target="_blank">[GIT]</a></p>
@@ -508,11 +491,11 @@ frequency of a site.</p>
 <h3>Example of Mean Curve plot with Metadata<a class="headerlink" href="#example-of-mean-curve-plot-with-metadata" title="Permalink to this heading">#</a></h3>
 <img src="https://github.com/fjornelas/hvsrprocpy/blob/main/figs/hvsr_mean_curve_and_meta_example.png?raw=true" width="775">
 </section>
-<section id="example-comparisons-of-konno-and-ohmachi-and-parzen-smoothing-on-fas">
-<h3>Example comparisons of Konno and Ohmachi and Parzen smoothing on FAS<a class="headerlink" href="#example-comparisons-of-konno-and-ohmachi-and-parzen-smoothing-on-fas" title="Permalink to this heading">#</a></h3>
+<section id="example-comparisons-of-konno-and-ohmachi-left-and-parzen-smoothing-right-on-fas">
+<h3>Example comparisons of Konno and Ohmachi (left) and Parzen smoothing (right) on FAS<a class="headerlink" href="#example-comparisons-of-konno-and-ohmachi-left-and-parzen-smoothing-right-on-fas" title="Permalink to this heading">#</a></h3>
 <div style="display: flex; flex-direction: row;">
-    <img src="https://github.com/fjornelas/hvsrprocpy/blob/main/figs/fas_ko_smoothing_example.png?raw=true" width="400" style="margin-right: 10px;">
-    <img src="https://github.com/fjornelas/hvsrprocpy/blob/main/figs/fas_parzen_smoothing_example.png?raw=true" width="400">
+    <img src="https://github.com/fjornelas/hvsrprocpy/blob/main/figs/fas_ko_smoothing_example.png?raw=true" width="400" style="margin-right: 10px;" title="FAS KO Smoothing Example">
+    <img src="https://github.com/fjornelas/hvsrprocpy/blob/main/figs/fas_parzen_smoothing_example.png?raw=true" width="400" title="FAS Parzen Smoothing Example">
 </div>
 </section>
 </section>
@@ -533,11 +516,19 @@ other instances, we would appreciate if you cite the following:</p>
 <section id="license">
 <h2>License<a class="headerlink" href="#license" title="Permalink to this heading">#</a></h2>
 <p>This project has been licensed under <a class="reference external" href="https://www.gnu.org/licenses/gpl-3.0.en.html"><img alt="The GNU General Public License v3.0" src="https://www.gnu.org/graphics/gplv3-88x31.png" /></a>
-more information about the license can be found here <a href="https://github.com/fjornelas/hvsrprocpy/blob/0.1.0/LICENSE" target="_blank">[LICENSE]</a></p>
+more information about the license can be found here <a href="https://github.com/fjornelas/hvsrprocpy/blob/0.1.0/LICENSE" target="_blank">[LICENSE]</a>.</p>
 </section>
 <section id="acknowledgements">
 <h2>Acknowledgements<a class="headerlink" href="#acknowledgements" title="Permalink to this heading">#</a></h2>
 <p>We would also like to thank the many others who aided in the development of this python library, these are:</p>
+<ul class="simple">
+<li><p>John Stapleton</p></li>
+<li><p>Chukwuma Okonkwo</p></li>
+<li><p>Chukwuebuka C. Nweke</p></li>
+<li><p>Tristan Buckreis</p></li>
+<li><p>Christopher de la Torre</p></li>
+</ul>
+<p>for their support in helping develop this python library.</p>
 </section>
 <div class="toctree-wrapper compound">
 </div>
@@ -606,7 +597,7 @@ more information about the license can be found here <a href="https://github.com
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-of-manual-window-selection-on-hvsr">Example of manual  window selection on HVSR</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-of-azimuthal-plots">Example of azimuthal plots</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-of-mean-curve-plot-with-metadata">Example of Mean Curve plot with Metadata</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-comparisons-of-konno-and-ohmachi-and-parzen-smoothing-on-fas">Example comparisons of Konno and Ohmachi and Parzen smoothing on FAS</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-comparisons-of-konno-and-ohmachi-left-and-parzen-smoothing-right-on-fas">Example comparisons of Konno and Ohmachi (left) and Parzen smoothing (right) on FAS</a></li>
 </ul>
 </li>
 </ul>
