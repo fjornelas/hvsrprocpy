@@ -1,13 +1,13 @@
 # Book settings
 # Learn more at https://jupyterbook.org/customize/config.html
 
-title: hello
+title: hvsrprocpy
 author: Francisco Javier Ornelas
 
 # Force re-execution of notebooks on each build.
 # See https://jupyterbook.org/content/execute.html
 execute:
-  execute_notebooks: "off"
+  execute_notebooks: "on"
 
 # Add a bibtex file so that we can create citations
 
