@@ -3,11 +3,12 @@
 
 title: hvsrprocpy
 author: Francisco Javier Ornelas
+copyright: "2024"
 
 # Force re-execution of notebooks on each build.
 # See https://jupyterbook.org/content/execute.html
 execute:
-  execute_notebooks: "auto"
+  execute_notebooks: "off"
 
 # Add a bibtex file so that we can create citations
 
