@@ -7,7 +7,7 @@ author: Francisco Javier Ornelas
 # Force re-execution of notebooks on each build.
 # See https://jupyterbook.org/content/execute.html
 execute:
-  execute_notebooks: "on"
+  execute_notebooks: "auto"
 
 # Add a bibtex file so that we can create citations
 
