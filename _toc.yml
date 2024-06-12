@@ -4,7 +4,7 @@
 format: jb-book
 root: README
 parts:
-  - caption: Code Documentation
+  - caption: Documentation
     chapters:
     - file: docs/hvt
     - file: docs/tdt
@@ -13,4 +13,4 @@ parts:
     - file: docs/hvplt
   - caption: Examples
     chapters:
-    - file: example/hvsrprocpy_example.ipynb
+    - file: example/hvsrprocpy_example
