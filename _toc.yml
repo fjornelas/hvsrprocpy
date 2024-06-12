@@ -6,11 +6,11 @@ root: README
 parts:
   - caption: Code Documentation
     chapters:
-    - file: https://github.com/fjornelas/hvsrprocpy/blob/main/docs/hvt.md
-    - file: https://github.com/fjornelas/hvsrprocpy/blob/main/docs/tdt.md
-    - file: https://github.com/fjornelas/hvsrprocpy/blob/main/docs/fdt.md
-    - file: https://github.com/fjornelas/hvsrprocpy/blob/main/docs/hvhelp.md
-    - file: https://github.com/fjornelas/hvsrprocpy/blob/main/docs/hvplt.md
+    - file: docs/hvt
+    - file: docs/tdt
+    - file: docs/fdt
+    - file: docs/hvhelp
+    - file: docs/hvplt
   - caption: Examples
     chapters:
-    - file: https://github.com/fjornelas/hvsrprocpy/blob/main/example/hvsrprocpy_example.ipynb
+    - file: example/hvsrprocpy_example.ipynb
