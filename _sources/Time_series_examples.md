@@ -1,4 +1,4 @@
-# tsproctools
+# tdt (Time Domain Processing Tools)
 
 A tool containing multiple functions which perform time series processing.
 
