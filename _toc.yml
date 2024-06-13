@@ -11,6 +11,7 @@ parts:
     - file: docs/fdt
     - file: docs/hvhelp
     - file: docs/hvplt
+    - file: docs/hvsrmetatools
   - caption: Examples
     chapters:
     - file: example/hvsrprocpy_example
