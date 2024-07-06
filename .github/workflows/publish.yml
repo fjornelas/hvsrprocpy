@@ -37,7 +37,7 @@ jobs:
 
     #Run tests and get coverage
     - name: Run tests and collect coverage
-      run: pytest --cov app hvsrprocpy.hvsrprocpy
+      run: pytest --cov app hvsrprocpy
 
     #get codecov report
     - name: Upload coverage reports to Codecov
