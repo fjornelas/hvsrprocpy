@@ -2,6 +2,10 @@ Pygments
 jupyter-book
 matplotlib
 numpy
+pandas
+obspy
+scipy
+parzenpy
 attrs==23.2.0
 coverage==7.5.4
 iniconfig==2.0.0
