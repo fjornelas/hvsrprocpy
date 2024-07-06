@@ -1,5 +1,8 @@
 name: Workflow for Codecov example-python
-on: [push, pull_request]
+on:
+  push:
+    branches:
+    - main
 jobs:
   run:
     runs-on: ubuntu-latest
@@ -18,7 +21,5 @@ jobs:
         run: pytest --cov app ${{ env.CODECOV_ATS_TESTS }}
       - name: Upload coverage to Codecov
         uses: codecov/codecov-action@v4
-        with:
-          verbose: true
         env:
           CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
