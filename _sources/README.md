@@ -1,6 +1,6 @@
 <!-- Our title -->
 <div align="center">
-  <h3 style="font-size: 40px;">hvsrprocpy</h3>
+  <h3 style="font-size: 25px;">hvsrprocpy</h3>
 </div>
 
 <!-- Short description -->
@@ -9,11 +9,15 @@
 </p>
 
 [![DOI](https://zenodo.org/badge/808826090.svg)](https://zenodo.org/doi/10.5281/zenodo.11515238)
+![pypi - version](https://img.shields.io/pypi/v/hvsrprocpy)
+[![Codacy Badge](https://app.codacy.com/project/badge/Grade/80fc3884310249019b8508415f516f53)](https://app.codacy.com/gh/fjornelas/hvsrprocpy/dashboard?utm_source=gh&utm_medium=referral&utm_content=&utm_campaign=Badge_grade)
 ![GitHub License](https://img.shields.io/github/license/fjornelas/hvsrprocpy)
-![GitHub Release](https://img.shields.io/github/v/release/fjornelas/hvsrprocpy)
+[![Report Issues!](https://img.shields.io/badge/Report%20Issues-Here-1abc9c.svg)](https://github.com/fjornelas/hvsrprocpy/issues)
+[![Open Source?
+Yes!](https://img.shields.io/badge/Open%20Source-Yes-green.svg)](https://github.com/fjornelas/hvsrprocpy)
 
 <div align="center">
-    <h3 style=" font-size: 40px;">Authors</h3>
+    <h3 style=" font-size: 25px;">Authors</h3>
 </div>
 
 <!-- Short description -->
@@ -25,8 +29,8 @@
 <sup>1</sup> University of California, Los Angeles (UCLA) <br> 
 <sup>2</sup> Old Dominion University<br>
 
-<div align="center">
-    <h3 style=" font-size: 40px;">Table of Contents</h3>
+<div style="text-align: center;">
+    <h3 style=" font-size: 25px;">Table of Contents</h3>
 </div>
 
 
@@ -126,7 +130,7 @@ Examples of these can be found under the examples folder in the Github repositor
 If you use hvsrprocpy (directly or as a dependency of another package) for work resulting in an academic publication or
 other instances, we would appreciate if you cite the following:
 
-> Ornelas, F. J. G., Wang, P., Brandenberg, S. J., & Stewart, J. P. (2024). fjornelas/hvsrprocpy: v0.3.0 (v0.3.0). Zenodo. https://doi.org/10.5281/zenodo.11556202
+> Ornelas, F. J. G., Wang, P., Brandenberg, S. J., & Stewart, J. P. (2024). fjornelas/hvsrprocpy: hvsrprocpy (v1.0.0). Zenodo. https://doi.org/10.5281/zenodo.12672550
 
 # Issues
 
