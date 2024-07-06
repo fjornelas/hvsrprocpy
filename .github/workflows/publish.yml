@@ -25,7 +25,7 @@ jobs:
 
     #Run tests and get coverage
     - name: Run tests and collect coverage
-      run: pytest --cov app 
+      run: pytest --cov app ${{ env.CODECOV_ATS_TESTS }}
 
     #get codecov report
     - name: Upload coverage reports to Codecov
