@@ -1,5 +1,6 @@
 import pytest
 import numpy as np
+import os
 from hvsrprocpy.tdt import *
 from hvsrprocpy.fdt import *
 
