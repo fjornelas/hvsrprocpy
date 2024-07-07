@@ -3,6 +3,7 @@ import numpy as np
 import os
 from hvsrprocpy.tdt import *
 from hvsrprocpy.fdt import *
+from hvsrprocpy.hvt import hvsr
 
 # Define mock input data for testing
 # Example data, replace with actual data if available
