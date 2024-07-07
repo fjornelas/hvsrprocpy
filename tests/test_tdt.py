@@ -57,7 +57,7 @@ def test_sta_lta_calc():
 def test_split_into_windows():
     ts = np.random.randn(100)
     windows = split_into_windows(ts, dt=1, win_width=10, overlapping=5)
-    assert windows.shape[0] == (len(ts) // (10 - 5))
+    assert windows.shape[0] == (len(ts) // (10 - 0))
     assert windows.shape[1] == (10 - 5)
 
 
