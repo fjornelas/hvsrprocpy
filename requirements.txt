@@ -1,3 +1,4 @@
+hvsrprocpy
 Pygments
 jupyter-book
 matplotlib
