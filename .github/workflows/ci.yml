@@ -21,6 +21,12 @@ jobs:
       run: |
         pip install pytest pytest-cov
 
+    - name: List directory contents
+      run: ls -R
+
+    - name: Run tests without coverage
+      run: pytest
+
     - name: Run tests and generate coverage report
       run: |
         pytest --cov=./hvsrprocpy/ --cov-report=xml
