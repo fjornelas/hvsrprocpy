@@ -7,7 +7,7 @@ from hvsrprocpy.tdt import detrend_ts, tukey_window, apply_filter, apply_normali
 
 
 def test_detrend_ts():
-    ts = np.linspace(1, 100, 200)
+    ts = np.linspace(1, 100, 100)
 
     detrended = detrend_ts(ts, detrend_type=1)
     win = tukey(len(ts), alpha=((10 + 10) / 200))  # Default Tukey window with 10% taper on each side
