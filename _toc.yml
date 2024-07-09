@@ -14,5 +14,4 @@ parts:
     - file: docs/hvsrmetatools
   - caption: Examples
     chapters:
-    - name: hvsrprocpy Example
     - file: example/hvsrprocpy_example
