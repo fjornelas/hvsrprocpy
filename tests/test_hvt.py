@@ -1,3 +1,4 @@
+import os
 from unittest.mock import patch, MagicMock
 
 import numpy as np
@@ -123,7 +124,8 @@ def mock_inputs():
     v = np.linspace(0, 100, 10000)
     dt = 0.1
     time_ts = np.linspace(0, 100, 10000)
-    output_dir = r'C:\Users\Javier Ornelas\OneDrive\Documents\HVSRdata_Main\mHVSR Site Inv\HVSR VSPDB Data'
+    output_dir = 'test_outputs'
+    os.makedirs(output_dir, exist_ok=True)
 
     kwargs = {
         'output_selected_ts': True,
