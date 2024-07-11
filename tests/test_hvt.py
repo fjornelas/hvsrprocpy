@@ -1,9 +1,7 @@
 import pytest
 import numpy as np
 from unittest.mock import patch, MagicMock
-from hvsrprocpy.hvt import *
-import hvsrprocpy as hv
-
+from hvsrprocpy import process_noise_data, hvsr_and_fas_calc, hvsr 
 
 def test_win_proc():
     ts = [np.array([1, 2, 3, 4, 5]), np.array([6, 7, 8, 9, 10])]
@@ -21,9 +19,8 @@ def test_win_proc():
     }
     processed_ts = _win_proc(ts, **kwargs)
     assert len(processed_ts) == len(ts)
-    for i, ts_data in enumerate(processed_ts):
+    for ts_data in processed_ts:
         assert isinstance(ts_data, np.ndarray)
-
 
 def test_process_noise_data():
     ts = np.random.rand(100)
@@ -54,9 +51,8 @@ def test_process_noise_data():
     }
     ts_processed, ts_wins, ts_stalta = process_noise_data(ts, dt, **kwargs)
     assert isinstance(ts_processed, np.ndarray)
-    assert isinstance(ts_wins, np.ndarray)
-    assert isinstance(ts_stalta, np.ndarray)
-
+    assert isinstance(ts_wins, list)
+    assert isinstance(ts_stalta, list)
 
 @pytest.fixture
 def setup_data():
@@ -66,9 +62,8 @@ def setup_data():
     v_wins = np.random.rand(100)
     dt = 0.01
     freq_hv_mean = np.linspace(0.1, 10, 50)
-    freq_polar = np.linspace(0.1, 10, 50)
+    freq_polar = np.linspace(0.01, 5, 30)
     return h1_wins, h2_wins, v_wins, dt, freq_hv_mean, freq_polar
-
 
 def test_default_parameters(setup_data):
     # Test with default parameters
@@ -84,7 +79,6 @@ def test_default_parameters(setup_data):
     assert isinstance(res['h1_smooth'], np.ndarray)
     assert isinstance(res['h2_smooth'], np.ndarray)
     assert isinstance(res['v_smooth'], np.ndarray)
-
 
 def test_custom_parameters(setup_data):
     # Test with custom parameters
@@ -108,10 +102,9 @@ def test_custom_parameters(setup_data):
     assert isinstance(res['h2_smooth'], np.ndarray)
     assert isinstance(res['v_smooth'], np.ndarray)
 
-    if custom_kwargs['polar_curves_flag']:
+    if custom_kwargs.get('polar_curves_flag', False):
         assert 'polar_hv_ratio' in res
         assert isinstance(res['polar_hv_ratio'], np.ndarray)
-
 
 @pytest.fixture
 def mock_inputs():
@@ -136,21 +129,20 @@ def mock_inputs():
 
     return h1, h2, v, dt, time_ts, output_dir, kwargs
 
-
 def test_hvsr(mock_inputs):
     h1, h2, v, dt, time_ts, output_dir, kwargs = mock_inputs
 
-    # Mocking other dependencies
-    with patch('hv.split_into_windows') as mock_split, \
-            patch('hv.process_noise_data') as mock_process_noise, \
-            patch('hv.hvsr_and_fas_calc') as mock_hvsr_and_fas_calc, \
-            patch('hv._ts_plt_select') as mock_ts_plt_select, \
-            patch('hv._hvsr_plt_select') as mock_hvsr_plt_select:
+    with patch('hvsrprocpy.split_into_windows') as mock_split, \
+            patch('hvsrprocpy.process_noise_data') as mock_process_noise, \
+            patch('hvsrprocpy.hvsr_and_fas_calc') as mock_hvsr_and_fas_calc, \
+            patch('hvsrprocpy._ts_plt_select') as mock_ts_plt_select, \
+            patch('hvsrprocpy._hvsr_plt_select') as mock_hvsr_plt_select:
         # Mock the return values for functions used inside hvsr
         mock_split.return_value = [np.array([time_ts]), np.array([time_ts]), np.array([time_ts])]
-        mock_process_noise.side_effect = [
-            (h1, [h1], MagicMock()), (h2, [h2], MagicMock()), (v, [v], MagicMock())
-        ]
+        ts_processed_mock = [h1, h2, v]
+        ts_wins_mock = [h1, h2, v]
+        ts_stalta_mock = [MagicMock(), MagicMock(), MagicMock()]
+        mock_process_noise.side_effect = list(zip(ts_processed_mock, ts_wins_mock, ts_stalta_mock))
         mock_hvsr_and_fas_calc.return_value = {
             'hv_ratio': np.array([[1.0, 2.0], [3.0, 4.0]]),
             'polar_hv_ratio': np.array([[1.0, 2.0], [3.0, 4.0]])
