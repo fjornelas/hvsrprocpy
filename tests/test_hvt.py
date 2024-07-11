@@ -130,11 +130,11 @@ def mock_inputs():
     kwargs = {
         'output_selected_ts': True,
         'output_removed_ts': False,
-        'output_selected_hvsr': True,
+        'output_selected_hvsr': False,
         'output_removed_hvsr': False,
         'output_mean_curve': False,
         'output_polar_curves': False,
-        'output_fas_mean_curve': True,
+        'output_fas_mean_curve': False,
         'output_metadata': True
     }
 
