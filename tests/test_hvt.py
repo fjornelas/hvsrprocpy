@@ -63,10 +63,10 @@ def test_process_noise_data():
 @pytest.fixture
 def setup_data():
     # Fixture to set up common test data
-    h1 = np.random.rand(10000)
-    h2 = np.random.rand(10000)
-    v = np.random.rand(10000)
-    dt = 0.01
+    h1 = np.linspace(0, 100, 10000)
+    h2 = np.linspace(0, 100, 10000)
+    v = np.linspace(0, 100, 10000)
+    dt = 0.1
     h1_wins = hvsrprocpy.tdt.split_into_windows(h1, dt,win_width=300, overlapping=0)
     h2_wins = hvsrprocpy.tdt.split_into_windows(h2, dt, win_width=300,  overlapping=0)
     v_wins = hvsrprocpy.tdt.split_into_windows(v, dt, win_width=300, overlapping=0)
