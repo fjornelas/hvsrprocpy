@@ -132,7 +132,7 @@ def mock_inputs():
         'output_removed_ts': False,
         'output_selected_hvsr': True,
         'output_removed_hvsr': False,
-        'output_mean_curve': True,
+        'output_mean_curve': False,
         'output_polar_curves': False,
         'output_fas_mean_curve': True,
         'output_metadata': True
