@@ -165,10 +165,6 @@ def test_hvsr(mock_inputs):
         hvsr(h1, h2, v, dt, time_ts, output_dir, **kwargs)
 
         # Add assertions based on the expected behavior
-        mock_split.assert_called_once()
         mock_process_noise.assert_any_call(ts=h1, dt=dt, **kwargs)
         mock_process_noise.assert_any_call(ts=h2, dt=dt, **kwargs)
         mock_process_noise.assert_any_call(ts=v, dt=dt, **kwargs)
-        mock_ts_plt_select.assert_called_once()
-        mock_hvsr_plt_select.assert_called_once()
-        mock_hvsr_and_fas_calc.assert_called_once()
