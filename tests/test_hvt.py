@@ -119,11 +119,11 @@ def test_custom_parameters(setup_data):
 @pytest.fixture
 def mock_inputs():
     # Mocking the inputs
-    h1 = np.linspace(0, 100, 10000)
-    h2 = np.linspace(0, 100, 10000)
-    v = np.linspace(0, 100, 10000)
+    h1 = np.random.rand(50000)
+    h2 = np.random.rand(50000)
+    v = np.random.rand(50000)
     dt = 0.1
-    time_ts = np.linspace(0, 100, 10000)
+    time_ts = np.linspace(0, 5000, 50000)
     output_dir = 'test_outputs'
     os.makedirs(output_dir, exist_ok=True)
 
