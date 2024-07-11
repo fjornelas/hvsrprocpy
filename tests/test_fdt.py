@@ -2,6 +2,7 @@
 
 import pytest
 import numpy as np
+import hvsrprocpy as hv
 from hvsrprocpy.fdt import *
 
 
@@ -35,17 +36,20 @@ def test_smoothed_fas_ko():
 
 
 def test_smooth_fas():
-    fc = np.linspace(0.01, 50, 100)
-    h1 = np.random.rand(100)
-    fas = np.fft.rfft(h1)
-    dt = 1
-    freq = np.fft.rfftfreq(len(h1),dt)
-
-    smoothed = smooth_fas(fc, np.abs(fas), freq, ko_smooth_flag=True, parzen_flag=False, ko_smooth_b=40, parzen_bwidth=1.5)
-    assert smoothed.shape == (100)
-
-    smoothed = smooth_fas(fc, np.abs(fas), freq, ko_smooth_flag=False, parzen_flag=True, ko_smooth_b=40, parzen_bwidth=1.5)
-    assert smoothed.shape == (100)
+    fc = np.linspace(0.01, 50, 200)
+    h1 = np.random.rand(10000)
+    dt = 0.1
+    
+    h1_win = hv.split_into_windows(h1,dt, win_width=300, overlapping =0)
+    fas = np.fft.rfft(h1_win)
+    freq = np.fft.rfftfreq(len(h1_win[0]),dt)
+    
+    
+    smoothed = hv.smooth_fas(fc, np.abs(fas), freq, ko_smooth_flag=True, parzen_flag=False, ko_smooth_b=40, parzen_bwidth=1.5)
+    assert smoothed.shape == (3,200)
+    
+    smoothed = hv.smooth_fas(fc, np.abs(fas), freq, ko_smooth_flag=False, parzen_flag=True, ko_smooth_b=40, parzen_bwidth=1.5)
+    assert smoothed.shape == (3,200)
 
 
 def test_fas_cal():
