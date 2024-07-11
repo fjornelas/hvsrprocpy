@@ -1,7 +1,11 @@
-import pytest
-import numpy as np
 from unittest.mock import patch, MagicMock
-from hvsrprocpy import process_noise_data, hvsr_and_fas_calc, hvsr 
+
+import numpy as np
+import pytest
+
+import hvsrprocpy.tdt
+from hvsrprocpy.hvt import _win_proc, process_noise_data, hvsr_and_fas_calc, hvsr
+
 
 def test_win_proc():
     ts = [np.array([1, 2, 3, 4, 5]), np.array([6, 7, 8, 9, 10])]
@@ -51,16 +55,19 @@ def test_process_noise_data():
     }
     ts_processed, ts_wins, ts_stalta = process_noise_data(ts, dt, **kwargs)
     assert isinstance(ts_processed, np.ndarray)
-    assert isinstance(ts_wins, list)
+    assert isinstance(ts_wins, np.ndarray)
     assert isinstance(ts_stalta, list)
 
 @pytest.fixture
 def setup_data():
     # Fixture to set up common test data
-    h1_wins = np.random.rand(100)
-    h2_wins = np.random.rand(100)
-    v_wins = np.random.rand(100)
+    h1 = np.random.rand(100)
+    h2 = np.random.rand(100)
+    v = np.random.rand(100)
     dt = 0.01
+    h1_wins = hvsrprocpy.tdt.split_into_windows(h1,dt,win_width=5, overlapping=0)
+    h2_wins = hvsrprocpy.tdt.split_into_windows(h2, dt, win_width=5,  overlapping=0)
+    v_wins = hvsrprocpy.tdt.split_into_windows(v, dt, win_width=5, overlapping=0)
     freq_hv_mean = np.linspace(0.1, 10, 50)
     freq_polar = np.linspace(0.01, 5, 30)
     return h1_wins, h2_wins, v_wins, dt, freq_hv_mean, freq_polar
