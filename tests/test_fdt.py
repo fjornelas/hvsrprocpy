@@ -35,15 +35,17 @@ def test_smoothed_fas_ko():
 
 
 def test_smooth_fas():
-    fc = np.linspace(0.1, 25, 200)
-    fas = np.random.rand(5, 200)
-    freq = np.linspace(0.01, 50, 200)
+    fc = np.linspace(0.01, 50, 100)
+    h1 = np.random.rand(100)
+    fas = np.fft.rfft(h1)
+    dt = 0.01
+    freq = np.fft.freqrfft(len(h1),dt)
 
-    smoothed = smooth_fas(fc, fas, freq, ko_smooth_flag=True, parzen_flag=False, ko_smooth_b=40, parzen_bwidth=1.5)
-    assert smoothed.shape == (5, 200)
+    smoothed = smooth_fas(fc, np.abs(fas), freq, ko_smooth_flag=True, parzen_flag=False, ko_smooth_b=40, parzen_bwidth=1.5)
+    assert smoothed.shape == (100)
 
-    smoothed = smooth_fas(fc, fas, freq, ko_smooth_flag=False, parzen_flag=True, ko_smooth_b=40, parzen_bwidth=1.5)
-    assert smoothed.shape == (5, 200)
+    smoothed = smooth_fas(fc, np.abs(fas), freq, ko_smooth_flag=False, parzen_flag=True, ko_smooth_b=40, parzen_bwidth=1.5)
+    assert smoothed.shape == (100)
 
 
 def test_fas_cal():
