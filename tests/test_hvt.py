@@ -3,6 +3,8 @@ from unittest.mock import patch, MagicMock
 import numpy as np
 import pytest
 
+import hvsrprocpy
+
 import hvsrprocpy.tdt
 from hvsrprocpy.hvt import _win_proc, process_noise_data, hvsr_and_fas_calc, hvsr
 
@@ -61,15 +63,15 @@ def test_process_noise_data():
 @pytest.fixture
 def setup_data():
     # Fixture to set up common test data
-    h1 = np.random.rand(100)
-    h2 = np.random.rand(100)
-    v = np.random.rand(100)
+    h1 = np.random.rand(10000)
+    h2 = np.random.rand(10000)
+    v = np.random.rand(10000)
     dt = 0.01
-    h1_wins = hvsrprocpy.tdt.split_into_windows(h1,dt,win_width=5, overlapping=0)
-    h2_wins = hvsrprocpy.tdt.split_into_windows(h2, dt, win_width=5,  overlapping=0)
-    v_wins = hvsrprocpy.tdt.split_into_windows(v, dt, win_width=5, overlapping=0)
-    freq_hv_mean = np.linspace(0.1, 10, 50)
-    freq_polar = np.linspace(0.01, 5, 30)
+    h1_wins = hvsrprocpy.tdt.split_into_windows(h1, dt,win_width=300, overlapping=0)
+    h2_wins = hvsrprocpy.tdt.split_into_windows(h2, dt, win_width=300,  overlapping=0)
+    v_wins = hvsrprocpy.tdt.split_into_windows(v, dt, win_width=300, overlapping=0)
+    freq_hv_mean = np.linspace(0.01, 50, 200)
+    freq_polar = np.linspace(0.01, 50, 200)
     return h1_wins, h2_wins, v_wins, dt, freq_hv_mean, freq_polar
 
 def test_default_parameters(setup_data):
@@ -142,8 +144,8 @@ def test_hvsr(mock_inputs):
     with patch('hvsrprocpy.split_into_windows') as mock_split, \
             patch('hvsrprocpy.process_noise_data') as mock_process_noise, \
             patch('hvsrprocpy.hvsr_and_fas_calc') as mock_hvsr_and_fas_calc, \
-            patch('hvsrprocpy._ts_plt_select') as mock_ts_plt_select, \
-            patch('hvsrprocpy._hvsr_plt_select') as mock_hvsr_plt_select:
+            patch('hvsrprocpy.hvt._ts_plt_select') as mock_ts_plt_select, \
+            patch('hvsrprocpy.hvt._hvsr_plt_select') as mock_hvsr_plt_select:
         # Mock the return values for functions used inside hvsr
         mock_split.return_value = [np.array([time_ts]), np.array([time_ts]), np.array([time_ts])]
         ts_processed_mock = [h1, h2, v]
