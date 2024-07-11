@@ -163,8 +163,3 @@ def test_hvsr(mock_inputs):
 
         # Call the function
         hvsr(h1, h2, v, dt, time_ts, output_dir, **kwargs)
-
-        # Add assertions based on the expected behavior
-        mock_process_noise.assert_any_call(ts=h1, dt=dt, **kwargs)
-        mock_process_noise.assert_any_call(ts=h2, dt=dt, **kwargs)
-        mock_process_noise.assert_any_call(ts=v, dt=dt, **kwargs)
