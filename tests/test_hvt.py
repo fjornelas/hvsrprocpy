@@ -2,6 +2,7 @@ import pytest
 import numpy as np
 from unittest.mock import patch, MagicMock
 from hvsrprocpy.hvt import *
+import hvsrprocpy as hv
 
 
 def test_win_proc():
@@ -53,8 +54,8 @@ def test_process_noise_data():
     }
     ts_processed, ts_wins, ts_stalta = process_noise_data(ts, dt, **kwargs)
     assert isinstance(ts_processed, np.ndarray)
-    assert isinstance(ts_wins, list)
-    assert isinstance(ts_stalta, list)
+    assert isinstance(ts_wins, np.ndarray)
+    assert isinstance(ts_stalta, np.ndarray)
 
 
 @pytest.fixture
@@ -65,7 +66,7 @@ def setup_data():
     v_wins = np.random.rand(100)
     dt = 0.01
     freq_hv_mean = np.linspace(0.1, 10, 50)
-    freq_polar = np.linspace(0.01, 5, 30)
+    freq_polar = np.linspace(0.1, 10, 50)
     return h1_wins, h2_wins, v_wins, dt, freq_hv_mean, freq_polar
 
 
@@ -140,11 +141,11 @@ def test_hvsr(mock_inputs):
     h1, h2, v, dt, time_ts, output_dir, kwargs = mock_inputs
 
     # Mocking other dependencies
-    with patch('your_module.split_into_windows') as mock_split, \
-            patch('your_module.process_noise_data') as mock_process_noise, \
-            patch('your_module.hvsr_and_fas_calc') as mock_hvsr_and_fas_calc, \
-            patch('your_module._ts_plt_select') as mock_ts_plt_select, \
-            patch('your_module._hvsr_plt_select') as mock_hvsr_plt_select:
+    with patch('hv.split_into_windows') as mock_split, \
+            patch('hv.process_noise_data') as mock_process_noise, \
+            patch('hv.hvsr_and_fas_calc') as mock_hvsr_and_fas_calc, \
+            patch('hv._ts_plt_select') as mock_ts_plt_select, \
+            patch('hv._hvsr_plt_select') as mock_hvsr_plt_select:
         # Mock the return values for functions used inside hvsr
         mock_split.return_value = [np.array([time_ts]), np.array([time_ts]), np.array([time_ts])]
         mock_process_noise.side_effect = [
