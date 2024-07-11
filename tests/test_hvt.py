@@ -118,11 +118,11 @@ def test_custom_parameters(setup_data):
 @pytest.fixture
 def mock_inputs():
     # Mocking the inputs
-    h1 = np.array([1.0, 2.0, 3.0])
-    h2 = np.array([1.0, 2.0, 3.0])
-    v = np.array([1.0, 2.0, 3.0])
+    h1 = np.linspace(0, 100, 10000)
+    h2 = np.linspace(0, 100, 10000)
+    v = np.linspace(0, 100, 10000)
     dt = 0.1
-    time_ts = np.array([0.0, 0.1, 0.2, 0.3])
+    time_ts = np.linspace(0, 100, 10000)
     output_dir = '/mock/output/dir'
 
     kwargs = {
