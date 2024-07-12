@@ -1,86 +1,23 @@
 version: 2.1
-
 orbs:
-  coverage-reporter: codacy/coverage-reporter@7.6.7
-  codecov: codecov/codecov@4.0.1
-
-workflows:
-  build:
-    jobs:
-      - test-38:
-          context:
-            - docker
-      - test-39:
-          context:
-            - docker
-      - test-310:
-          context:
-            - docker
+  codecov: codecov/codecov@4
 
 jobs:
-  test-38: &test-template
+  build:
     docker:
-      - image: cimg/python:3.8.13
-        auth:
-          username: fjornelas
-          password: $DOCKER_PASS
-    working_directory: ~/repo
+      - image: cimg/python:3.10
     steps:
       - checkout
       - run:
-          name: Create virtualenv
-          command: |
-            virtualenv venv
-            . venv/bin/activate
-            mkdir test-results
+          name: Install dependencies
+          command: pip install -r requirements.txt
       - run:
-          name: Install numpy
-          command: |
-            . venv/bin/activate
-            pip install numpy
-      - run:
-          name: Install parzenpy
-          command: |
-            . venv/bin/activate
-            pip install git+ssh://git@github.com/fjornelas/parzenpy.git
-      - run:
-          name: Install hvsrprocpy and dependencies
-          command: |
-            . venv/bin/activate
-            pip install -e .[circleci-project-setup]
-      - run:
-          name: Run tests
-          command: |
-            . venv/bin/activate
-            cd test
-            coverage run --source=../hvsrprocpy -m unittest
-      - run:
-          name: Create coverage xml
-          command: |
-            . venv/bin/activate
-            mv test/.coverage test-results
-            cd test-results
-            coverage xml -o cobertura.xml
-      - store_test_results:
-          path: test-results
-      - store_artifacts:
-          path: test-results
-      - codecov/upload:
-          file: test-results/cobertura.xml
-      - coverage-reporter/send_report
+          name: Run tests and collect coverage
+          command: pytest --cov app
+      - codecov/upload
 
-  test-39:
-    <<: *test-template
-    docker:
-      - image: cimg/python:3.9.13
-        auth:
-          username: fjornelas
-          password: $DOCKER_PASS
-
-  test-310:
-    <<: *test-template
-    docker:
-      - image: cimg/python:3.10.6
-        auth:
-          username: fjornelas
-          password: $DOCKER_PASS
+workflow:
+  version: 2.1
+  build-test:
+    jobs:
+      - build
