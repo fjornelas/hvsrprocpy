@@ -1,12 +1,14 @@
-cli:
-  plugins:
-    pycoverage:
-      report_type: json
-flag_management:
-  individual_flags:
-  - carryforward: true
-    carryforward_mode: labels
-    name: smart-tests
-    statuses:
-    - type: project
-    - type: patch
+codecov:
+  require_ci_to_pass: yes
+  coverage:
+    precision: 2
+    round: down
+    range: "70...100"
+    status:
+      project:
+        default:
+          target: 90%
+          threshold: 1%
+          paths:
+            - "hvsrprocpy/"
+            - "tests/"
