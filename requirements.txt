@@ -17,3 +17,4 @@ pyparsing
 pytest
 pytest-cov
 tomli
+xcrun
