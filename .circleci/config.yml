@@ -16,10 +16,11 @@ jobs:
           command: |
             cd tests
             pytest --cov app
-            
       - codecov/upload
+      - store_test_results:
+          path: tests/results  # Path where test results are located
 
-workflow:
+workflows:
   version: 2.1
   build-test:
     jobs:
