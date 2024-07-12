@@ -1,7 +1,4 @@
 version: 2.1
-orbs:
-  codecov: codecov/codecov@4.1.0
-
 jobs:
   build:
     docker:
@@ -12,11 +9,13 @@ jobs:
           name: Install dependencies
           command: pip install -r requirements.txt
       - run:
-          name: Run tests and collect coverage
-          command: pytest --cov app
-      - codecov/upload
+          name: Run tests
+          command: pytest tests/ --cov app
+      - run:
+          name: Upload coverage to Codecov
+          command: codecov/upload
 
-workflow:
+workflows:
   version: 2.1
   build-test:
     jobs:
