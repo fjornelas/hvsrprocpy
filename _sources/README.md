@@ -15,6 +15,7 @@
 [![Report Issues!](https://img.shields.io/badge/Report%20Issues-Here-1abc9c.svg)](https://github.com/fjornelas/hvsrprocpy/issues)
 [![Open Source?
 Yes!](https://img.shields.io/badge/Open%20Source-Yes-green.svg)](https://github.com/fjornelas/hvsrprocpy)
+[![pages-build-deployment](https://github.com/fjornelas/hvsrprocpy/actions/workflows/pages/pages-build-deployment/badge.svg)](https://github.com/fjornelas/hvsrprocpy/actions/workflows/pages/pages-build-deployment)
 
 <div align="center">
     <h3 style=" font-size: 25px;">Authors</h3>
