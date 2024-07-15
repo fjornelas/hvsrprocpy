@@ -9,13 +9,13 @@
 </p>
 
 [![DOI](https://zenodo.org/badge/808826090.svg)](https://zenodo.org/doi/10.5281/zenodo.11515238)
+[![Pages](https://github.com/fjornelas/hvsrprocpy/actions/workflows/pages/pages-build-deployment/badge.svg)](https://github.com/fjornelas/hvsrprocpy/actions/workflows/pages/pages-build-deployment)
 ![pypi - version](https://img.shields.io/pypi/v/hvsrprocpy)
 [![Codacy Badge](https://app.codacy.com/project/badge/Grade/80fc3884310249019b8508415f516f53)](https://app.codacy.com/gh/fjornelas/hvsrprocpy/dashboard?utm_source=gh&utm_medium=referral&utm_content=&utm_campaign=Badge_grade)
 ![GitHub License](https://img.shields.io/github/license/fjornelas/hvsrprocpy)
 [![Report Issues!](https://img.shields.io/badge/Report%20Issues-Here-1abc9c.svg)](https://github.com/fjornelas/hvsrprocpy/issues)
 [![Open Source?
 Yes!](https://img.shields.io/badge/Open%20Source-Yes-green.svg)](https://github.com/fjornelas/hvsrprocpy)
-[![pages-build-deployment](https://github.com/fjornelas/hvsrprocpy/actions/workflows/pages/pages-build-deployment/badge.svg)](https://github.com/fjornelas/hvsrprocpy/actions/workflows/pages/pages-build-deployment)
 
 <div align="center">
     <h3 style=" font-size: 25px;">Authors</h3>
