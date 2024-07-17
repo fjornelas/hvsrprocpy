@@ -15,6 +15,5 @@ pluggy
 py
 pyparsing
 pytest
-pytest-cov
 tomli
 xcrun
