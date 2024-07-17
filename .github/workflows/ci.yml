@@ -10,9 +10,11 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
-
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          
       - name: Setup Python
         uses: actions/setup-python@v2
         with:
@@ -25,7 +27,7 @@ jobs:
 
       - name: Run tests with coverage
         run: |
-          pytest --cov=app
+          pytest --cov app ${{ env.CODECOV_ATS_TESTS }}
 
       - name: Upload coverage to Codecov
         uses: codecov/codecov-action@v4
