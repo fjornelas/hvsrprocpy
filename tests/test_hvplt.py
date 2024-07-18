@@ -2,6 +2,7 @@ import os
 import pytest
 import pandas as pd
 import matplotlib.pyplot as plt
+import pymysql, json
 from hvsrprocpy import hvsrplot  # Assuming your module is named hvsrprocpy and the file is hvsrplot.py
 
 # Fixture to set up test data directory
@@ -16,14 +17,12 @@ def setup_test_data():
 @pytest.fixture
 def test_data(setup_test_data):
     file_paths = {
-        'polar_data': os.path.join(setup_test_data, 'test_polar_data.csv'),
-        'azimuths': os.path.join(setup_test_data, 'test_azimuths.csv'),
-        'standard_freqs': os.path.join(setup_test_data, 'test_standard_freqs.csv'),
-        'mean_hvsr': os.path.join(setup_test_data, 'test_mean_hvsr.csv'),
-        'metadata': os.path.join(setup_test_data, 'test_metadata.csv'),
-        'time_series': os.path.join(setup_test_data, 'test_time_series.csv'),
-        'selected_hvsr': os.path.join(setup_test_data, 'test_selected_hvsr.csv'),
-        'fas_data': os.path.join(setup_test_data, 'test_fas_data.csv')
+        'polar_data': os.path.join(setup_test_data, 'Test_hvsr_polar.csv'),
+        'mean_hvsr': os.path.join(setup_test_data, 'Test_hvsr_mean.csv'),
+        'metadata': os.path.join(setup_test_data, 'Test_metadata.csv'),
+        'time_series': os.path.join(setup_test_data, 'Test_ts_sel.csv'),
+        'selected_hvsr': os.path.join(setup_test_data, 'Test_hvsr_sel.csv'),
+        'fas_data': os.path.join(setup_test_data, 'Test_FAS_mean.csv')
     }
     
     # Load test data into a dictionary of DataFrames
@@ -35,8 +34,9 @@ def test_data(setup_test_data):
 # Tests using fixtures
 def test_process_polar_curve(test_data):
     polar_data = test_data['polar_data']
-    azimuths = test_data['azimuths']['azimuths'].values
-    standard_freqs = test_data['standard_freqs']['standard_freqs'].values
+    deg_increment = 10
+    azimuths = AZIMUTHS = list(range(0, 180, deg_increment))
+    standard_freqs = json.load(open(os.path.join(setup_test_data, 'HVSR_VSPDB_standard_frequencies.json'))
 
     result = hvsrplot.process_polar_curve(polar_data, azimuths, standard_freqs)
     assert isinstance(result, pd.DataFrame)
@@ -46,8 +46,9 @@ def test_process_polar_curve(test_data):
 
 def test_plot_polar_ratio(test_data):
     polar_data = test_data['polar_data']
-    azimuths = test_data['azimuths']['azimuths'].values
-    standard_freqs = test_data['standard_freqs']['standard_freqs'].values
+    deg_increment = 10
+    azimuths = AZIMUTHS = list(range(0, 180, deg_increment))
+    standard_freqs = json.load(open(os.path.join(setup_test_data, 'HVSR_VSPDB_standard_frequencies.json'))
 
     processed_data = hvsrplot.process_polar_curve(polar_data, azimuths, standard_freqs)
     fig = hvsrplot.plot_polar_ratio(processed_data)
