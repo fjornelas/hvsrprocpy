@@ -11,7 +11,7 @@ def setup_test_data():
     yield test_data_dir
 
 def test_process_xml_file(setup_test_data):
-    xml_file = 'example.xml'  # Located in the test_data directory
+    xml_file = 'NX.USC3_20240530T184335Z.xml'  # Located in the test_data directory
     xml_file_path = os.path.join(setup_test_data, xml_file)
     sta, cha = HvsrMetaTools.process_xml_file(xml_file_path)
     assert sta is not None
