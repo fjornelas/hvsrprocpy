@@ -1,0 +1,2 @@
+"sample freq (Hz)","record duration (min)","detrend","time window (sec)","window overlap (sec)","taper type","front taper width (percentage)","end taper width (percentage)","horizontal combination","number of windows (total)","number of windows (selected)","high pass filter","high pass filter corner frequency (Hz)","high pass filter type","smoothing type","smoothing constant","data type","distribution"
+200,73.5919166666667,"mean removal",300,0,"Tukey",5,5,"ps_RotD50",14,13,0,0.0083,"Butterworth","KonnoOhmachi",40,0,"normal"
