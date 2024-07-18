@@ -14,6 +14,7 @@ from hvsrprocpy.tdt import *
 from hvsrprocpy.hvhelp import *
 from hvsrprocpy.hvt import (process_noise_data, hvsr_and_fas_calc, hvsr)
 from hvsrprocpy.hvsrmetatools import HvsrMetaTools
+from hvsrprocpy.hvsrprocall import HvsrProcAll
 
 __version__ = __version__
 
