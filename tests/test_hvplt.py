@@ -3,7 +3,7 @@ import pytest
 import pandas as pd
 import matplotlib.pyplot as plt
 import pymysql, json
-from hvsrprocpy import hvsrplot  # Assuming your module is named hvsrprocpy and the file is hvsrplot.py
+from hvsrprocpy import hvplt as hvsrplot
 
 # Fixture to set up test data directory
 @pytest.fixture
