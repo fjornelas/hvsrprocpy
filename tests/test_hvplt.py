@@ -3,7 +3,6 @@ import pytest
 import os
 import pandas as pd
 import matplotlib.pyplot as plt
-import json
 import hvsrprocpy as hv
 
 # Fixture to set up test data directory
@@ -36,8 +35,15 @@ def test_data(setup_test_data):
 def test_process_polar_curve(setup_test_data, test_data):
     polar_data = test_data['polar_data']
     deg_increment = 10
-    azimuths = AZIMUTHS = list(range(0, 180, deg_increment))
-    standard_freqs = json.load(open(os.path.join(setup_test_data, 'HVSR_VSPDB_standard_frequencies.json'))
+    azimuths = list(range(0, 180, deg_increment))
+    start_freq_polar = 0.100121
+    stop_freq_polar = 49.9838
+    num_samples_polar = 200  # Adjust this number as per your requirement
+    unique_mean_freqs = np.linspace(start_freq_polar, stop_freq_polar, num_samples_polar).tolist()
+    data = {
+        'unique_mean_freqs': unique_polar_freqs,
+    }
+    standard_freqs = data
     result = hv.process_polar_curve(polar_data=polar_data, azimuths=azimuths, standard_freqs=standard_freqs)
     assert isinstance(result, pd.DataFrame)
     assert 'frequency' in result.columns
@@ -47,9 +53,15 @@ def test_process_polar_curve(setup_test_data, test_data):
 def test_plot_polar_ratio(setup_test_data, test_data):
     polar_data = test_data['polar_data']
     deg_increment = 10
-    azimuths = AZIMUTHS = list(range(0, 180, deg_increment))
-    standard_freqs = json.load(open(os.path.join(setup_test_data, 'HVSR_VSPDB_standard_frequencies.json'))
-
+    azimuths = list(range(0, 180, deg_increment))
+    start_freq_polar = 0.100121
+    stop_freq_polar = 49.9838
+    num_samples_polar = 200  # Adjust this number as per your requirement
+    unique_mean_freqs = np.linspace(start_freq_polar, stop_freq_polar, num_samples_polar).tolist()
+    data = {
+        'unique_mean_freqs': unique_mean_freqs,
+    }
+    standard_freqs = data
     processed_data = hv.process_polar_curve(polar_data, azimuths, standard_freqs)
     fig = hvsrplot.plot_polar_ratio(processed_data)
     assert isinstance(fig, plt.Figure)
