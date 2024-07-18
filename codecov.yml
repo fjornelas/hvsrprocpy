@@ -7,6 +7,9 @@ flag_management:
         - type: "project"
         - type: "patch"
 
+ignore:
+  - hvsrprocall.py
+
 cli:
   plugins:
     pycoverage:
