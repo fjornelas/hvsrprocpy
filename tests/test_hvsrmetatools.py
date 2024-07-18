@@ -54,13 +54,13 @@ def test_process_hvsr_metadata_for_a_single_site(setup_test_data):
     assert len(df) == 1
 
 def test_create_mean_curves_csv(setup_test_data):
-    add_sim_path = 'additional_path'
+    add_sim_path = 'Text_File_data/Raw_mseed_PEG_HH'
     df = HvsrMetaTools.create_mean_curves_csv(setup_test_data, 'Test_hvsr_mean.csv', add_sim_path)
     assert df is not None
     assert isinstance(df, pd.DataFrame)
 
-# def test_combine_metadata(setup_test_data):
-#     add_sim_path = 'additional_path'
-#     df = HvsrMetaTools.combine_metadata(setup_test_data, add_sim_path)
-#     assert df is not None
-#     assert isinstance(df, pd.DataFrame)
+def test_combine_metadata(setup_test_data):
+    add_sim_path = 'Text_File_data/Raw_mseed_PEG_HH'
+    df = HvsrMetaTools.combine_metadata(setup_test_data, add_sim_path)
+    assert df is not None
+    assert isinstance(df, pd.DataFrame)
