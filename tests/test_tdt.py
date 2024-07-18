@@ -22,6 +22,11 @@ def test_detrend_ts():
     expected = ts - np.polyval(np.polyfit(x, ts, 1), x)
     assert np.allclose(detrended, expected)
 
+    detrended = detrend_ts(ts, detrend_type=5)
+    x = np.arange(1, 101)
+    expected = ts - np.polyval(np.polyfit(x, ts, 5), x)
+    assert np.allclose(detrended, expected)
+
     with pytest.raises(ValueError):
         detrend_ts(ts, detrend_type=99)
 
