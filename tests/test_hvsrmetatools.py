@@ -27,15 +27,16 @@ def test_add_to_dataframe():
                                'user', 'comments', 'data_type', 'mass_position_w', 'mass_position_v',
                                'mass_position_u', 'mag_dec'])
 
+
     sta = {'description': 'Test Station', 'site': None, 'code': 'TS1'}
     cha = {'longitude': 0.0, 'latitude': 0.0, 'elevation': 100.0, 'start_date': '2024-07-18', 'end_date': '2024-07-18',
            'data_logger': None, 'sensor': None}
-    df = HvsrMetaTools.add_to_dataframe(df, sta, cha, 'John Doe', 'Weather', 'Ground', 'Buried', 'Yes', 'No',
+    df = HvsrMetaTools.add_to_dataframe(df, sta, cha, 'John Doe','DOE', 'Weather', 'Ground', 'Buried', 'Yes', 'No','No',
                                         0, 0.0083, 1, 'No comments')
     assert len(df) == 1
 
 def test_process_hvsr_metadata_single_site():
-    df = HvsrMetaTools.process_hvsr_metadata_single_site('John Doe', 'Weather', 'Ground', 'Buried')
+    df = HvsrMetaTools.process_hvsr_metadata_single_site('John Doe','Doe','Weather', 'Ground', 'Buried')
     assert len(df) == 1
 
 def test_create_mean_curves_csv(setup_test_data):
