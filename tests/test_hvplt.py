@@ -1,8 +1,9 @@
-import os
+
 import pytest
+import os
 import pandas as pd
 import matplotlib.pyplot as plt
-import pymysql, json
+import json
 import hvsrprocpy as hv
 
 # Fixture to set up test data directory
@@ -32,19 +33,18 @@ def test_data(setup_test_data):
     return data
 
 # Tests using fixtures
-def test_process_polar_curve(test_data):
+def test_process_polar_curve(setup_test_data, test_data):
     polar_data = test_data['polar_data']
     deg_increment = 10
     azimuths = AZIMUTHS = list(range(0, 180, deg_increment))
     standard_freqs = json.load(open(os.path.join(setup_test_data, 'HVSR_VSPDB_standard_frequencies.json'))
-
-    result = hv.process_polar_curve(polar_data = polar_data, azimuths =  azimuths,standard_freqs =  standard_freqs)
+    result = hv.process_polar_curve(polar_data=polar_data, azimuths=azimuths, standard_freqs=standard_freqs)
     assert isinstance(result, pd.DataFrame)
     assert 'frequency' in result.columns
     assert 'ratio' in result.columns
     assert 'standard_deviation' in result.columns
 
-def test_plot_polar_ratio(test_data):
+def test_plot_polar_ratio(setup_test_data, test_data):
     polar_data = test_data['polar_data']
     deg_increment = 10
     azimuths = AZIMUTHS = list(range(0, 180, deg_increment))
