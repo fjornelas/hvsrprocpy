@@ -4,10 +4,14 @@ import numpy as np
 from hvsrprocpy import _add_mseed_tool, proc_mseed_data, proc_txt_data, process_time_series
 
 # Define test data directory and files
-TEST_DATA_DIR = 'test_data'
-os.chdir(TEST_DATA_DIR)
+@pytest.fixture
+def setup_test_data():
+    # Determine the path to the current directory where this test file is located
+    current_dir = os.path.dirname(os.path.abspath(__file__))
+    test_data_dir = os.path.join(current_dir, 'test_data')
+    yield test_data_dir
 
-def test_proc_mseed_data():
+def test_proc_mseed_data(setup_test_data):
     H1_FN = 'NX.USC3.HHE.20240530_000000'
     H2_FN = 'NX.USC3.HHN.20240530_000000'
     V_FN = 'NX.USC3.HHZ.20240530_000000'
@@ -16,7 +20,7 @@ def test_proc_mseed_data():
     assert isinstance(dt, float)
     assert isinstance(time, np.ndarray)
 
-def test_proc_txt_data():
+def test_proc_txt_data(setup_test_data):
     H1_FN = '20240530184343_NX_USC3_HHE.txt'
     H2_FN = '20240530184343_NX_USC3_HHN.txt'
     V_FN = '20240530184343_NX_USC3_HHZ.txt'
@@ -25,7 +29,7 @@ def test_proc_txt_data():
     assert isinstance(dt, float)
     assert isinstance(time, np.ndarray)
 
-def test_process_time_series_mseed():
+def test_process_time_series_mseed(setup_test_data):
     H1_FN = 'NX.USC3.HHE.20240530_000000'
     H2_FN = 'NX.USC3.HHN.20240530_000000'
     V_FN = 'NX.USC3.HHZ.20240530_000000'
@@ -34,7 +38,7 @@ def test_process_time_series_mseed():
     assert isinstance(dt, float)
     assert isinstance(time, np.ndarray)
 
-def test_process_time_series_txt():
+def test_process_time_series_txt(setup_test_data):
     H1_FN = '20240530184343_NX_USC3_HHE.txt'
     H2_FN = '20240530184343_NX_USC3_HHN.txt'
     V_FN = '20240530184343_NX_USC3_HHZ.txt'
@@ -43,7 +47,7 @@ def test_process_time_series_txt():
     assert isinstance(dt, float)
     assert isinstance(time, np.ndarray)
 
-def test_process_time_series_invalid_file_type():
+def test_process_time_series_invalid_file_type(setup_test_data):
     H1_FN = '20240530184343_NX_USC3_HHE.txt'
     H2_FN = '20240530184343_NX_USC3_HHN.txt'
     V_FN = '20240530184343_NX_USC3_HHZ.txt'
