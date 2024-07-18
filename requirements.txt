@@ -17,4 +17,3 @@ pyparsing
 pytest
 tomli
 xcrun
-json
