@@ -1,3 +1,6 @@
+ignore:
+  - "**/hvsrprocall.py"
+
 flag_management:
   individual_flags:
     - name: smart-tests
@@ -11,6 +14,3 @@ cli:
   plugins:
     pycoverage:
       report_type: "json"
-      
-  ignore:
-    - "**/hvsrprocall.py"
