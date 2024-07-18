@@ -8,7 +8,7 @@ flag_management:
         - type: "patch"
 
 ignore:
-  - hvsrprocall.py
+	- "**/hvsrprocall.py"
 
 cli:
   plugins:
