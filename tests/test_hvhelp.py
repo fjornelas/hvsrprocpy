@@ -15,7 +15,10 @@ def test_proc_mseed_data(setup_test_data):
     H1_FN = 'NX.USC3.HHE.20240530_000000'
     H2_FN = 'NX.USC3.HHN.20240530_000000'
     V_FN = 'NX.USC3.HHZ.20240530_000000'
-    h1, h2, v, dt, time = proc_mseed_data(file_direc=TEST_DATA_DIR, h1_fn=H1_FN, h2_fn=H2_FN, v_fn=V_FN)
+    H1 = os.path.join(setup_test_data, H1_FN)
+    H2 = os.path.join(setup_test_data, H2_FN)
+    V = os.path.join(setup_test_data, V_FN)
+    h1, h2, v, dt, time = proc_mseed_data(file_direc=TEST_DATA_DIR, h1_fn=H1, h2_fn=H2, v_fn=V)
     assert isinstance(h1, np.ndarray)
     assert isinstance(dt, float)
     assert isinstance(time, np.ndarray)
@@ -24,7 +27,10 @@ def test_proc_txt_data(setup_test_data):
     H1_FN = '20240530184343_NX_USC3_HHE.txt'
     H2_FN = '20240530184343_NX_USC3_HHN.txt'
     V_FN = '20240530184343_NX_USC3_HHZ.txt'
-    h1, h2, v, dt, time = proc_txt_data(file_direc=TEST_DATA_DIR, h1_fn=H1_FN, h2_fn=H2_FN, v_fn=V_FN)
+    H1 = os.path.join(setup_test_data, H1_FN)
+    H2 = os.path.join(setup_test_data, H2_FN)
+    V = os.path.join(setup_test_data, V_FN)
+    h1, h2, v, dt, time = proc_txt_data(file_direc=TEST_DATA_DIR, h1_fn=H1, h2_fn=H2, v_fn=V)
     assert isinstance(h1, np.ndarray)
     assert isinstance(dt, float)
     assert isinstance(time, np.ndarray)
@@ -33,7 +39,10 @@ def test_process_time_series_mseed(setup_test_data):
     H1_FN = 'NX.USC3.HHE.20240530_000000'
     H2_FN = 'NX.USC3.HHN.20240530_000000'
     V_FN = 'NX.USC3.HHZ.20240530_000000'
-    h1, h2, v, dt, time = process_time_series(h1_fn=H1_FN, h2_fn=H2_FN, v_fn=V_FN, directory=TEST_DATA_DIR, file_type=1)
+    H1 = os.path.join(setup_test_data, H1_FN)
+    H2 = os.path.join(setup_test_data, H2_FN)
+    V = os.path.join(setup_test_data, V_FN)
+    h1, h2, v, dt, time = process_time_series(h1_fn=H1, h2_fn=H2, v_fn=V, directory=TEST_DATA_DIR, file_type=1)
     assert isinstance(h1, np.ndarray)
     assert isinstance(dt, float)
     assert isinstance(time, np.ndarray)
@@ -42,7 +51,10 @@ def test_process_time_series_txt(setup_test_data):
     H1_FN = '20240530184343_NX_USC3_HHE.txt'
     H2_FN = '20240530184343_NX_USC3_HHN.txt'
     V_FN = '20240530184343_NX_USC3_HHZ.txt'
-    h1, h2, v, dt, time = process_time_series(h1_fn=H1_FN, h2_fn=H2_FN, v_fn=V_FN, directory=TEST_DATA_DIR, file_type=2)
+    H1 = os.path.join(setup_test_data, H1_FN)
+    H2 = os.path.join(setup_test_data, H2_FN)
+    V = os.path.join(setup_test_data, V_FN)
+    h1, h2, v, dt, time = process_time_series(h1_fn=H1, h2_fn=H2, v_fn=V, directory=TEST_DATA_DIR, file_type=2)
     assert isinstance(h1, np.ndarray)
     assert isinstance(dt, float)
     assert isinstance(time, np.ndarray)
@@ -51,6 +63,9 @@ def test_process_time_series_invalid_file_type(setup_test_data):
     H1_FN = '20240530184343_NX_USC3_HHE.txt'
     H2_FN = '20240530184343_NX_USC3_HHN.txt'
     V_FN = '20240530184343_NX_USC3_HHZ.txt'
+    H1 = os.path.join(setup_test_data, H1_FN)
+    H2 = os.path.join(setup_test_data, H2_FN)
+    V = os.path.join(setup_test_data, V_FN)
     with pytest.raises(ValueError):
-        process_time_series(h1_fn=H1_FN, h2_fn=H2_FN, v_fn=V_FN, directory=TEST_DATA_DIR, file_type=3)
+        process_time_series(h1_fn=H1, h2_fn=H2, v_fn=V, directory=TEST_DATA_DIR, file_type=3)
 
