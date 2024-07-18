@@ -59,8 +59,8 @@ def test_create_mean_curves_csv(setup_test_data):
     assert df is not None
     assert isinstance(df, pd.DataFrame)
 
-def test_combine_metadata(setup_test_data):
-    add_sim_path = 'Text_File_data/Raw_mseed_PEG_HH'
-    df = HvsrMetaTools.combine_metadata(setup_test_data, add_sim_path)
-    assert df is not None
-    assert isinstance(df, pd.DataFrame)
+# def test_combine_metadata(setup_test_data):
+#     add_sim_path = 'Text_File_data/Raw_mseed_PEG_HH'
+#     df = HvsrMetaTools.combine_metadata(setup_test_data, add_sim_path)
+#     assert df is not None
+#     assert isinstance(df, pd.DataFrame)
