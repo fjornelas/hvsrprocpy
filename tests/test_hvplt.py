@@ -64,7 +64,7 @@ def test_plot_polar_ratio(setup_test_data, test_data):
     }
     standard_freqs = data
     processed_data = hv.process_polar_curve(polar_data, azimuths, standard_freqs)
-    fig = hvsrplot.plot_polar_ratio(processed_data)
+    fig = hv.plot_polar_ratio(processed_data)
     assert isinstance(fig, plt.Figure)
 
 def test_plot_mean_hvsr(setup_test_data):
