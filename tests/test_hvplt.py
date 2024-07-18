@@ -3,6 +3,7 @@ import pytest
 import os
 import pandas as pd
 import matplotlib.pyplot as plt
+import numpy as np
 import hvsrprocpy as hv
 
 # Fixture to set up test data directory
@@ -66,24 +67,24 @@ def test_plot_polar_ratio(setup_test_data, test_data):
     fig = hvsrplot.plot_polar_ratio(processed_data)
     assert isinstance(fig, plt.Figure)
 
-def test_plot_mean_hvsr(test_data):
-    mean_hvsr_data = test_data['mean_hvsr']
-    metadata_data = test_data['metadata']
+def test_plot_mean_hvsr(setup_test_data):
+    mean_hvsr_data = os.path.join(setup_test_data, 'Test_hvsr_mean.csv')
+    metadata_data = os.path.join(setup_test_data, 'Test_metadata.csv')
 
     fig = hv.plot_mean_hvsr(mean_hvsr_data, metadata_data)
     assert isinstance(fig, plt.Figure)
 
-def test_plot_selected_time_series(test_data):
-    time_series_data = test_data['time_series']
+def test_plot_selected_time_series(setup_test_data):
+    time_series_data = os.path.join(setup_test_data, 'Test_ts_sel.csv')
     fig = hv.plot_selected_time_series(time_series_data)
     assert isinstance(fig, plt.Figure)
 
-def test_plot_selected_hvsr(test_data):
-    selected_hvsr_data = test_data['selected_hvsr']
+def test_plot_selected_hvsr(setup_test_data):
+    selected_hvsr_data =  os.path.join(setup_test_data, 'Test_hvsr_sel.csv')
     fig = hv.plot_selected_hvsr(selected_hvsr_data)
     assert isinstance(fig, plt.Figure)
 
-def test_plot_fas(test_data):
-    fas_data = test_data['fas_data']
+def test_plot_fas(setup_test_data):
+    fas_data = os.path.join(setup_test_data, 'Test_FAS_mean.csv')
     fig = hv.plot_fas(fas_data)
     assert isinstance(fig, plt.Figure)
