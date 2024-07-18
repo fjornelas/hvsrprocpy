@@ -42,7 +42,7 @@ def test_process_polar_curve(setup_test_data, test_data):
     num_samples_polar = 200  # Adjust this number as per your requirement
     unique_mean_freqs = np.linspace(start_freq_polar, stop_freq_polar, num_samples_polar).tolist()
     data = {
-        'unique_mean_freqs': unique_mean_freqs,
+        'unique_polar_freqs': unique_mean_freqs,
     }
     standard_freqs = data
     result = hv.process_polar_curve(polar_data=polar_data, azimuths=azimuths, standard_freqs=standard_freqs)
@@ -60,7 +60,7 @@ def test_plot_polar_ratio(setup_test_data, test_data):
     num_samples_polar = 200  # Adjust this number as per your requirement
     unique_mean_freqs = np.linspace(start_freq_polar, stop_freq_polar, num_samples_polar).tolist()
     data = {
-        'unique_mean_freqs': unique_mean_freqs,
+        'unique_polar_freqs': unique_mean_freqs,
     }
     standard_freqs = data
     processed_data = hv.process_polar_curve(polar_data, azimuths, standard_freqs)
