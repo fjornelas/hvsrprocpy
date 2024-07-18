@@ -3,7 +3,7 @@ import pytest
 import pandas as pd
 import matplotlib.pyplot as plt
 import pymysql, json
-from hvsrprocpy import hvplt as hvsrplot
+from hvsrprocpy as hv
 
 # Fixture to set up test data directory
 @pytest.fixture
@@ -38,7 +38,7 @@ def test_process_polar_curve(test_data):
     azimuths = AZIMUTHS = list(range(0, 180, deg_increment))
     standard_freqs = json.load(open(os.path.join(setup_test_data, 'HVSR_VSPDB_standard_frequencies.json'))
 
-    result = hvsrplot.process_polar_curve(polar_data, azimuths, standard_freqs)
+    result = hv.process_polar_curve(polar_data = polar_data, azimuths =  azimuths,standard_freqs =  standard_freqs)
     assert isinstance(result, pd.DataFrame)
     assert 'frequency' in result.columns
     assert 'ratio' in result.columns
@@ -50,7 +50,7 @@ def test_plot_polar_ratio(test_data):
     azimuths = AZIMUTHS = list(range(0, 180, deg_increment))
     standard_freqs = json.load(open(os.path.join(setup_test_data, 'HVSR_VSPDB_standard_frequencies.json'))
 
-    processed_data = hvsrplot.process_polar_curve(polar_data, azimuths, standard_freqs)
+    processed_data = hv.process_polar_curve(polar_data, azimuths, standard_freqs)
     fig = hvsrplot.plot_polar_ratio(processed_data)
     assert isinstance(fig, plt.Figure)
 
@@ -58,20 +58,20 @@ def test_plot_mean_hvsr(test_data):
     mean_hvsr_data = test_data['mean_hvsr']
     metadata_data = test_data['metadata']
 
-    fig = hvsrplot.plot_mean_hvsr(mean_hvsr_data, metadata_data)
+    fig = hv.plot_mean_hvsr(mean_hvsr_data, metadata_data)
     assert isinstance(fig, plt.Figure)
 
 def test_plot_selected_time_series(test_data):
     time_series_data = test_data['time_series']
-    fig = hvsrplot.plot_selected_time_series(time_series_data)
+    fig = hv.plot_selected_time_series(time_series_data)
     assert isinstance(fig, plt.Figure)
 
 def test_plot_selected_hvsr(test_data):
     selected_hvsr_data = test_data['selected_hvsr']
-    fig = hvsrplot.plot_selected_hvsr(selected_hvsr_data)
+    fig = hv.plot_selected_hvsr(selected_hvsr_data)
     assert isinstance(fig, plt.Figure)
 
 def test_plot_fas(test_data):
     fas_data = test_data['fas_data']
-    fig = hvsrplot.plot_fas(fas_data)
+    fig = hv.plot_fas(fas_data)
     assert isinstance(fig, plt.Figure)
