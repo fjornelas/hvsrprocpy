@@ -1,0 +1,3372 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FDSNStationXML xmlns="http://www.fdsn.org/xml/station/1" schemaVersion="1.1" xsi:schemaLocation="http://www.fdsn.org/xml/station/fdsn-station-1.1.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+ <Source>Nanometrics Inc.</Source>
+ <Module>PegasusHarvester 2.1.4</Module>
+ <Created>2024-05-30T20:16:41.1412039Z</Created>
+ <Network code="NX" startDate="2024-05-30T18:43:35Z">
+  <Station code="USC3" startDate="2024-05-30T18:43:35Z">
+   <Description>10.0.0</Description>
+   <Latitude>34.03705</Latitude>
+   <Longitude>-118.178297</Longitude>
+   <Elevation>83.7</Elevation>
+   <Site>
+    <Name></Name>
+   </Site>
+   <CreationDate>2024-05-30T20:16:41.1412039Z</CreationDate>
+   <Channel locationCode="L0" code="HHZ" startDate="2024-05-30T18:43:35Z">
+    <Latitude>34.03705</Latitude>
+    <Longitude>-118.178297</Longitude>
+    <Elevation>83.7</Elevation>
+    <Depth>0</Depth>
+    <Azimuth>0</Azimuth>
+    <Dip>-90</Dip>
+    <SampleRate>200</SampleRate>
+    <Sensor>
+     <Description>Nanometrics TCH120-1 009275</Description>
+     <Manufacturer>Nanometrics</Manufacturer>
+     <Model>TCH120-1</Model>
+     <SerialNumber>009275</SerialNumber>
+    </Sensor>
+    <DataLogger>
+     <Description>Pegasus Portable Digital Recorder</Description>
+     <Manufacturer>Nanometrics</Manufacturer>
+     <Model>PGS-140</Model>
+     <SerialNumber>000697</SerialNumber>
+    </DataLogger>
+    <Response>
+     <InstrumentSensitivity>
+      <Value>2.994697576134245e+08</Value>
+      <Frequency>1</Frequency>
+      <InputUnits>
+       <Name>m/s</Name>
+       <Description>velocity in metres per second</Description>
+      </InputUnits>
+      <OutputUnits>
+       <Name>count</Name>
+       <Description>digital counts</Description>
+      </OutputUnits>
+     </InstrumentSensitivity>
+     <Stage number="1">
+      <PolesZeros>
+       <InputUnits>
+        <Name>m/s</Name>
+        <Description>velocity in metres per second</Description>
+       </InputUnits>
+       <OutputUnits>
+        <Name>V</Name>
+        <Description>voltage in volts</Description>
+       </OutputUnits>
+       <PzTransferFunctionType>LAPLACE (RADIANS/SECOND)</PzTransferFunctionType>
+       <NormalizationFactor>4.34492814617714e+17</NormalizationFactor>
+       <NormalizationFrequency>1</NormalizationFrequency>
+       <Zero number="0">
+        <Real plusError="0" minusError="0">0</Real>
+        <Imaginary plusError="0" minusError="0">0</Imaginary>
+       </Zero>
+       <Zero number="1">
+        <Real plusError="0" minusError="0">0</Real>
+        <Imaginary plusError="0" minusError="0">0</Imaginary>
+       </Zero>
+       <Zero number="2">
+        <Real plusError="0" minusError="0">-392</Real>
+        <Imaginary plusError="0" minusError="0">0</Imaginary>
+       </Zero>
+       <Zero number="3">
+        <Real plusError="0" minusError="0">-1960</Real>
+        <Imaginary plusError="0" minusError="0">0</Imaginary>
+       </Zero>
+       <Zero number="4">
+        <Real plusError="0" minusError="0">-1490</Real>
+        <Imaginary plusError="0" minusError="0">1740</Imaginary>
+       </Zero>
+       <Zero number="5">
+        <Real plusError="0" minusError="0">-1490</Real>
+        <Imaginary plusError="0" minusError="0">-1740</Imaginary>
+       </Zero>
+       <Pole number="0">
+        <Real plusError="0" minusError="0">-0.03691</Real>
+        <Imaginary plusError="0" minusError="0">0.03702</Imaginary>
+       </Pole>
+       <Pole number="1">
+        <Real plusError="0" minusError="0">-0.03691</Real>
+        <Imaginary plusError="0" minusError="0">-0.03702</Imaginary>
+       </Pole>
+       <Pole number="2">
+        <Real plusError="0" minusError="0">-343</Real>
+        <Imaginary plusError="0" minusError="0">0</Imaginary>
+       </Pole>
+       <Pole number="3">
+        <Real plusError="0" minusError="0">-370</Real>
+        <Imaginary plusError="0" minusError="0">467</Imaginary>
+       </Pole>
+       <Pole number="4">
+        <Real plusError="0" minusError="0">-370</Real>
+        <Imaginary plusError="0" minusError="0">-467</Imaginary>
+       </Pole>
+       <Pole number="5">
+        <Real plusError="0" minusError="0">-836</Real>
+        <Imaginary plusError="0" minusError="0">1522</Imaginary>
+       </Pole>
+       <Pole number="6">
+        <Real plusError="0" minusError="0">-836</Real>
+        <Imaginary plusError="0" minusError="0">-1522</Imaginary>
+       </Pole>
+       <Pole number="7">
+        <Real plusError="0" minusError="0">-4900</Real>
+        <Imaginary plusError="0" minusError="0">4700</Imaginary>
+       </Pole>
+       <Pole number="8">
+        <Real plusError="0" minusError="0">-4900</Real>
+        <Imaginary plusError="0" minusError="0">-4700</Imaginary>
+       </Pole>
+       <Pole number="9">
+        <Real plusError="0" minusError="0">-6900</Real>
+        <Imaginary plusError="0" minusError="0">0</Imaginary>
+       </Pole>
+       <Pole number="10">
+        <Real plusError="0" minusError="0">-15000</Real>
+        <Imaginary plusError="0" minusError="0">0</Imaginary>
+       </Pole>
+      </PolesZeros>
+      <StageGain>
+       <Value>754.3</Value>
+       <Frequency>1</Frequency>
+      </StageGain>
+     </Stage>
+     <Stage number="2">
+      <PolesZeros>
+       <InputUnits>
+        <Name>V</Name>
+        <Description>voltage in volts</Description>
+       </InputUnits>
+       <OutputUnits>
+        <Name>V</Name>
+        <Description>voltage in volts</Description>
+       </OutputUnits>
+       <PzTransferFunctionType>LAPLACE (RADIANS/SECOND)</PzTransferFunctionType>
+       <NormalizationFactor>1</NormalizationFactor>
+       <NormalizationFrequency>1</NormalizationFrequency>
+      </PolesZeros>
+      <StageGain>
+       <Value>0.9925419515226849</Value>
+       <Frequency>1</Frequency>
+      </StageGain>
+     </Stage>
+     <Stage number="3">
+      <PolesZeros>
+       <InputUnits>
+        <Name>V</Name>
+        <Description>voltage in volts</Description>
+       </InputUnits>
+       <OutputUnits>
+        <Name>V</Name>
+        <Description>voltage in volts</Description>
+       </OutputUnits>
+       <PzTransferFunctionType>LAPLACE (RADIANS/SECOND)</PzTransferFunctionType>
+       <NormalizationFactor>1</NormalizationFactor>
+       <NormalizationFrequency>1</NormalizationFrequency>
+      </PolesZeros>
+      <StageGain>
+       <Value>1</Value>
+       <Frequency>1</Frequency>
+      </StageGain>
+     </Stage>
+     <Stage number="4">
+      <Coefficients>
+       <InputUnits>
+        <Name>V</Name>
+        <Description>voltage in volts</Description>
+       </InputUnits>
+       <OutputUnits>
+        <Name>count</Name>
+        <Description>digital counts</Description>
+       </OutputUnits>
+       <CfTransferFunctionType>DIGITAL</CfTransferFunctionType>
+       <Numerator number="0" plusError="0" minusError="0">1</Numerator>
+      </Coefficients>
+      <Decimation>
+       <InputSampleRate>30000</InputSampleRate>
+       <Factor>1</Factor>
+       <Offset>0</Offset>
+       <Delay>0</Delay>
+       <Correction>0</Correction>
+      </Decimation>
+      <StageGain>
+       <Value>400000</Value>
+       <Frequency>1</Frequency>
+      </StageGain>
+     </Stage>
+     <Stage number="5">
+      <Coefficients>
+       <InputUnits>
+        <Name>count</Name>
+        <Description>digital counts</Description>
+       </InputUnits>
+       <OutputUnits>
+        <Name>count</Name>
+        <Description>digital counts</Description>
+       </OutputUnits>
+       <CfTransferFunctionType>DIGITAL</CfTransferFunctionType>
+       <Numerator number="0" plusError="0" minusError="0">-1.1915242202324819e-07</Numerator>
+       <Numerator number="1" plusError="0" minusError="0">-4.046015420990873e-07</Numerator>
+       <Numerator number="2" plusError="0" minusError="0">-1.0644228791158324e-06</Numerator>
+       <Numerator number="3" plusError="0" minusError="0">-2.394161512430574e-06</Numerator>
+       <Numerator number="4" plusError="0" minusError="0">-4.851174834157078e-06</Numerator>
+       <Numerator number="5" plusError="0" minusError="0">-9.100537397384457e-06</Numerator>
+       <Numerator number="6" plusError="0" minusError="0">-1.6068717835664678e-05</Numerator>
+       <Numerator number="7" plusError="0" minusError="0">-2.6996527455282132e-05</Numerator>
+       <Numerator number="8" plusError="0" minusError="0">-4.348637278945783e-05</Numerator>
+       <Numerator number="9" plusError="0" minusError="0">-6.75361420867615e-05</Numerator>
+       <Numerator number="10" plusError="0" minusError="0">-0.00010155107047352763</Numerator>
+       <Numerator number="11" plusError="0" minusError="0">-0.00014832399680325353</Numerator>
+       <Numerator number="12" plusError="0" minusError="0">-0.00021097403524294786</Numerator>
+       <Numerator number="13" plusError="0" minusError="0">-0.00029283381464063717</Numerator>
+       <Numerator number="14" plusError="0" minusError="0">-0.0003972771738782312</Numerator>
+       <Numerator number="15" plusError="0" minusError="0">-0.000527481731099103</Numerator>
+       <Numerator number="16" plusError="0" minusError="0">-0.0006861240457726855</Numerator>
+       <Numerator number="17" plusError="0" minusError="0">-0.0008750101045347955</Numerator>
+       <Numerator number="18" plusError="0" minusError="0">-0.0010946495550331352</Numerator>
+       <Numerator number="19" plusError="0" minusError="0">-0.001343788373225608</Numerator>
+       <Numerator number="20" plusError="0" minusError="0">-0.0016189210250243773</Numerator>
+       <Numerator number="21" plusError="0" minusError="0">-0.001913809949356775</Numerator>
+       <Numerator number="22" plusError="0" minusError="0">-0.0022190455152164192</Numerator>
+       <Numerator number="23" plusError="0" minusError="0">-0.0025216838859549798</Numerator>
+       <Numerator number="24" plusError="0" minusError="0">-0.002805002376935507</Numerator>
+       <Numerator number="25" plusError="0" minusError="0">-0.003048412029383815</Numerator>
+       <Numerator number="26" plusError="0" minusError="0">-0.003227563767715692</Numerator>
+       <Numerator number="27" plusError="0" minusError="0">-0.003314678638358309</Numerator>
+       <Numerator number="28" plusError="0" minusError="0">-0.003279123251384672</Numerator>
+       <Numerator number="29" plusError="0" minusError="0">-0.0030882397350994054</Numerator>
+       <Numerator number="30" plusError="0" minusError="0">-0.0027084247847946976</Numerator>
+       <Numerator number="31" plusError="0" minusError="0">-0.002106436519679319</Numerator>
+       <Numerator number="32" plusError="0" minusError="0">-0.0012508906744635347</Numerator>
+       <Numerator number="33" plusError="0" minusError="0">-0.00011389137816926379</Numerator>
+       <Numerator number="34" plusError="0" minusError="0">0.001327273494049315</Numerator>
+       <Numerator number="35" plusError="0" minusError="0">0.0030884544854313145</Numerator>
+       <Numerator number="36" plusError="0" minusError="0">0.005177071081971649</Numerator>
+       <Numerator number="37" plusError="0" minusError="0">0.007590744696366738</Numerator>
+       <Numerator number="38" plusError="0" minusError="0">0.010316226557882741</Numerator>
+       <Numerator number="39" plusError="0" minusError="0">0.013328704952193925</Numerator>
+       <Numerator number="40" plusError="0" minusError="0">0.016591562880926742</Numerator>
+       <Numerator number="41" plusError="0" minusError="0">0.020056637752646673</Numerator>
+       <Numerator number="42" plusError="0" minusError="0">0.023665011306124244</Numerator>
+       <Numerator number="43" plusError="0" minusError="0">0.027348330626526397</Numerator>
+       <Numerator number="44" plusError="0" minusError="0">0.031030632466561254</Numerator>
+       <Numerator number="45" plusError="0" minusError="0">0.03463061376277661</Numerator>
+       <Numerator number="46" plusError="0" minusError="0">0.038064264252337235</Numerator>
+       <Numerator number="47" plusError="0" minusError="0">0.041247753060231915</Numerator>
+       <Numerator number="48" plusError="0" minusError="0">0.044100442917447163</Numerator>
+       <Numerator number="49" plusError="0" minusError="0">0.04654789347766623</Numerator>
+       <Numerator number="50" plusError="0" minusError="0">0.048524711139413756</Numerator>
+       <Numerator number="51" plusError="0" minusError="0">0.049977106226086136</Numerator>
+       <Numerator number="52" plusError="0" minusError="0">0.05086503050731746</Numerator>
+       <Numerator number="53" plusError="0" minusError="0">0.05116378705747257</Numerator>
+       <Numerator number="54" plusError="0" minusError="0">0.05086503050731746</Numerator>
+       <Numerator number="55" plusError="0" minusError="0">0.049977106226086136</Numerator>
+       <Numerator number="56" plusError="0" minusError="0">0.048524711139413756</Numerator>
+       <Numerator number="57" plusError="0" minusError="0">0.04654789347766623</Numerator>
+       <Numerator number="58" plusError="0" minusError="0">0.044100442917447163</Numerator>
+       <Numerator number="59" plusError="0" minusError="0">0.041247753060231915</Numerator>
+       <Numerator number="60" plusError="0" minusError="0">0.038064264252337235</Numerator>
+       <Numerator number="61" plusError="0" minusError="0">0.03463061376277661</Numerator>
+       <Numerator number="62" plusError="0" minusError="0">0.031030632466561254</Numerator>
+       <Numerator number="63" plusError="0" minusError="0">0.027348330626526397</Numerator>
+       <Numerator number="64" plusError="0" minusError="0">0.023665011306124244</Numerator>
+       <Numerator number="65" plusError="0" minusError="0">0.020056637752646673</Numerator>
+       <Numerator number="66" plusError="0" minusError="0">0.016591562880926742</Numerator>
+       <Numerator number="67" plusError="0" minusError="0">0.013328704952193925</Numerator>
+       <Numerator number="68" plusError="0" minusError="0">0.010316226557882741</Numerator>
+       <Numerator number="69" plusError="0" minusError="0">0.007590744696366738</Numerator>
+       <Numerator number="70" plusError="0" minusError="0">0.005177071081971649</Numerator>
+       <Numerator number="71" plusError="0" minusError="0">0.0030884544854313145</Numerator>
+       <Numerator number="72" plusError="0" minusError="0">0.001327273494049315</Numerator>
+       <Numerator number="73" plusError="0" minusError="0">-0.00011389137816926379</Numerator>
+       <Numerator number="74" plusError="0" minusError="0">-0.0012508906744635347</Numerator>
+       <Numerator number="75" plusError="0" minusError="0">-0.002106436519679319</Numerator>
+       <Numerator number="76" plusError="0" minusError="0">-0.0027084247847946976</Numerator>
+       <Numerator number="77" plusError="0" minusError="0">-0.0030882397350994054</Numerator>
+       <Numerator number="78" plusError="0" minusError="0">-0.003279123251384672</Numerator>
+       <Numerator number="79" plusError="0" minusError="0">-0.003314678638358309</Numerator>
+       <Numerator number="80" plusError="0" minusError="0">-0.003227563767715692</Numerator>
+       <Numerator number="81" plusError="0" minusError="0">-0.003048412029383815</Numerator>
+       <Numerator number="82" plusError="0" minusError="0">-0.002805002376935507</Numerator>
+       <Numerator number="83" plusError="0" minusError="0">-0.0025216838859549798</Numerator>
+       <Numerator number="84" plusError="0" minusError="0">-0.0022190455152164192</Numerator>
+       <Numerator number="85" plusError="0" minusError="0">-0.001913809949356775</Numerator>
+       <Numerator number="86" plusError="0" minusError="0">-0.0016189210250243773</Numerator>
+       <Numerator number="87" plusError="0" minusError="0">-0.001343788373225608</Numerator>
+       <Numerator number="88" plusError="0" minusError="0">-0.0010946495550331352</Numerator>
+       <Numerator number="89" plusError="0" minusError="0">-0.0008750101045347955</Numerator>
+       <Numerator number="90" plusError="0" minusError="0">-0.0006861240457726855</Numerator>
+       <Numerator number="91" plusError="0" minusError="0">-0.000527481731099103</Numerator>
+       <Numerator number="92" plusError="0" minusError="0">-0.0003972771738782312</Numerator>
+       <Numerator number="93" plusError="0" minusError="0">-0.00029283381464063717</Numerator>
+       <Numerator number="94" plusError="0" minusError="0">-0.00021097403524294786</Numerator>
+       <Numerator number="95" plusError="0" minusError="0">-0.00014832399680325353</Numerator>
+       <Numerator number="96" plusError="0" minusError="0">-0.00010155107047352763</Numerator>
+       <Numerator number="97" plusError="0" minusError="0">-6.75361420867615e-05</Numerator>
+       <Numerator number="98" plusError="0" minusError="0">-4.348637278945783e-05</Numerator>
+       <Numerator number="99" plusError="0" minusError="0">-2.6996527455282132e-05</Numerator>
+       <Numerator number="100" plusError="0" minusError="0">-1.6068717835664678e-05</Numerator>
+       <Numerator number="101" plusError="0" minusError="0">-9.100537397384457e-06</Numerator>
+       <Numerator number="102" plusError="0" minusError="0">-4.851174834157078e-06</Numerator>
+       <Numerator number="103" plusError="0" minusError="0">-2.394161512430574e-06</Numerator>
+       <Numerator number="104" plusError="0" minusError="0">-1.0644228791158324e-06</Numerator>
+       <Numerator number="105" plusError="0" minusError="0">-4.046015420990873e-07</Numerator>
+       <Numerator number="106" plusError="0" minusError="0">-1.1915242202324819e-07</Numerator>
+      </Coefficients>
+      <Decimation>
+       <InputSampleRate>30000</InputSampleRate>
+       <Factor>15</Factor>
+       <Offset>0</Offset>
+       <Delay>0.0017666666666666666</Delay>
+       <Correction>0.0017666666666666666</Correction>
+      </Decimation>
+      <StageGain>
+       <Value>1</Value>
+       <Frequency>1</Frequency>
+      </StageGain>
+     </Stage>
+     <Stage number="6">
+      <Coefficients>
+       <InputUnits>
+        <Name>count</Name>
+        <Description>digital counts</Description>
+       </InputUnits>
+       <OutputUnits>
+        <Name>count</Name>
+        <Description>digital counts</Description>
+       </OutputUnits>
+       <CfTransferFunctionType>DIGITAL</CfTransferFunctionType>
+       <Numerator number="0" plusError="0" minusError="0">6.250457528974879e-07</Numerator>
+       <Numerator number="1" plusError="0" minusError="0">4.066353025622599e-06</Numerator>
+       <Numerator number="2" plusError="0" minusError="0">1.5237733992851714e-05</Numerator>
+       <Numerator number="3" plusError="0" minusError="0">4.147346621445046e-05</Numerator>
+       <Numerator number="4" plusError="0" minusError="0">8.869816170879125e-05</Numerator>
+       <Numerator number="5" plusError="0" minusError="0">0.00015273020826333982</Numerator>
+       <Numerator number="6" plusError="0" minusError="0">0.00020766988217781285</Numerator>
+       <Numerator number="7" plusError="0" minusError="0">0.00019845369991786696</Numerator>
+       <Numerator number="8" plusError="0" minusError="0">4.8800814923088754e-05</Numerator>
+       <Numerator number="9" plusError="0" minusError="0">-0.00030560446155512296</Numerator>
+       <Numerator number="10" plusError="0" minusError="0">-0.000859429270176589</Numerator>
+       <Numerator number="11" plusError="0" minusError="0">-0.0014751718768686206</Numerator>
+       <Numerator number="12" plusError="0" minusError="0">-0.0018548757210812283</Numerator>
+       <Numerator number="13" plusError="0" minusError="0">-0.0015914377648684234</Numerator>
+       <Numerator number="14" plusError="0" minusError="0">-0.00032502372609524726</Numerator>
+       <Numerator number="15" plusError="0" minusError="0">0.002018903783987657</Numerator>
+       <Numerator number="16" plusError="0" minusError="0">0.0049971940851897215</Numerator>
+       <Numerator number="17" plusError="0" minusError="0">0.007556747221955823</Numerator>
+       <Numerator number="18" plusError="0" minusError="0">0.008211272985739121</Numerator>
+       <Numerator number="19" plusError="0" minusError="0">0.005536131701332664</Numerator>
+       <Numerator number="20" plusError="0" minusError="0">-0.00111134362124062</Numerator>
+       <Numerator number="21" plusError="0" minusError="0">-0.01089038054167128</Numerator>
+       <Numerator number="22" plusError="0" minusError="0">-0.02112460175485532</Numerator>
+       <Numerator number="23" plusError="0" minusError="0">-0.02758436656772834</Numerator>
+       <Numerator number="24" plusError="0" minusError="0">-0.025494684028686446</Numerator>
+       <Numerator number="25" plusError="0" minusError="0">-0.011069430176427076</Numerator>
+       <Numerator number="26" plusError="0" minusError="0">0.016900991469107333</Numerator>
+       <Numerator number="27" plusError="0" minusError="0">0.05600881579938804</Numerator>
+       <Numerator number="28" plusError="0" minusError="0">0.1002310572179174</Numerator>
+       <Numerator number="29" plusError="0" minusError="0">0.14114267357947802</Numerator>
+       <Numerator number="30" plusError="0" minusError="0">0.17006716456603635</Numerator>
+       <Numerator number="31" plusError="0" minusError="0">0.18051027383258295</Numerator>
+       <Numerator number="32" plusError="0" minusError="0">0.17006716456603635</Numerator>
+       <Numerator number="33" plusError="0" minusError="0">0.14114267357947802</Numerator>
+       <Numerator number="34" plusError="0" minusError="0">0.1002310572179174</Numerator>
+       <Numerator number="35" plusError="0" minusError="0">0.05600881579938804</Numerator>
+       <Numerator number="36" plusError="0" minusError="0">0.016900991469107333</Numerator>
+       <Numerator number="37" plusError="0" minusError="0">-0.011069430176427076</Numerator>
+       <Numerator number="38" plusError="0" minusError="0">-0.025494684028686446</Numerator>
+       <Numerator number="39" plusError="0" minusError="0">-0.02758436656772834</Numerator>
+       <Numerator number="40" plusError="0" minusError="0">-0.02112460175485532</Numerator>
+       <Numerator number="41" plusError="0" minusError="0">-0.01089038054167128</Numerator>
+       <Numerator number="42" plusError="0" minusError="0">-0.00111134362124062</Numerator>
+       <Numerator number="43" plusError="0" minusError="0">0.005536131701332664</Numerator>
+       <Numerator number="44" plusError="0" minusError="0">0.008211272985739121</Numerator>
+       <Numerator number="45" plusError="0" minusError="0">0.007556747221955823</Numerator>
+       <Numerator number="46" plusError="0" minusError="0">0.0049971940851897215</Numerator>
+       <Numerator number="47" plusError="0" minusError="0">0.002018903783987657</Numerator>
+       <Numerator number="48" plusError="0" minusError="0">-0.00032502372609524726</Numerator>
+       <Numerator number="49" plusError="0" minusError="0">-0.0015914377648684234</Numerator>
+       <Numerator number="50" plusError="0" minusError="0">-0.0018548757210812283</Numerator>
+       <Numerator number="51" plusError="0" minusError="0">-0.0014751718768686206</Numerator>
+       <Numerator number="52" plusError="0" minusError="0">-0.000859429270176589</Numerator>
+       <Numerator number="53" plusError="0" minusError="0">-0.00030560446155512296</Numerator>
+       <Numerator number="54" plusError="0" minusError="0">4.8800814923088754e-05</Numerator>
+       <Numerator number="55" plusError="0" minusError="0">0.00019845369991786696</Numerator>
+       <Numerator number="56" plusError="0" minusError="0">0.00020766988217781285</Numerator>
+       <Numerator number="57" plusError="0" minusError="0">0.00015273020826333982</Numerator>
+       <Numerator number="58" plusError="0" minusError="0">8.869816170879125e-05</Numerator>
+       <Numerator number="59" plusError="0" minusError="0">4.147346621445046e-05</Numerator>
+       <Numerator number="60" plusError="0" minusError="0">1.5237733992851714e-05</Numerator>
+       <Numerator number="61" plusError="0" minusError="0">4.066353025622599e-06</Numerator>
+       <Numerator number="62" plusError="0" minusError="0">6.250457528974879e-07</Numerator>
+      </Coefficients>
+      <Decimation>
+       <InputSampleRate>2000</InputSampleRate>
+       <Factor>5</Factor>
+       <Offset>0</Offset>
+       <Delay>0.0155</Delay>
+       <Correction>0.0155</Correction>
+      </Decimation>
+      <StageGain>
+       <Value>1</Value>
+       <Frequency>1</Frequency>
+      </StageGain>
+     </Stage>
+     <Stage number="7">
+      <Coefficients>
+       <InputUnits>
+        <Name>count</Name>
+        <Description>digital counts</Description>
+       </InputUnits>
+       <OutputUnits>
+        <Name>count</Name>
+        <Description>digital counts</Description>
+       </OutputUnits>
+       <CfTransferFunctionType>DIGITAL</CfTransferFunctionType>
+       <Numerator number="0" plusError="0" minusError="0">-4.928312721775864e-07</Numerator>
+       <Numerator number="1" plusError="0" minusError="0">-1.3648936224722228e-06</Numerator>
+       <Numerator number="2" plusError="0" minusError="0">-2.4332974429303017e-07</Numerator>
+       <Numerator number="3" plusError="0" minusError="0">5.1911605740576904e-06</Numerator>
+       <Numerator number="4" plusError="0" minusError="0">1.044129156168016e-05</Numerator>
+       <Numerator number="5" plusError="0" minusError="0">5.279846790211707e-06</Numerator>
+       <Numerator number="6" plusError="0" minusError="0">-9.708235693146941e-06</Numerator>
+       <Numerator number="7" plusError="0" minusError="0">-1.3788854344954505e-05</Numerator>
+       <Numerator number="8" plusError="0" minusError="0">7.430122505570422e-06</Numerator>
+       <Numerator number="9" plusError="0" minusError="0">2.757767010938528e-05</Numerator>
+       <Numerator number="10" plusError="0" minusError="0">5.67135318675999e-06</Numerator>
+       <Numerator number="11" plusError="0" minusError="0">-3.9637156627676696e-05</Numerator>
+       <Numerator number="12" plusError="0" minusError="0">-3.1888638541741106e-05</Numerator>
+       <Numerator number="13" plusError="0" minusError="0">4.200141988325365e-05</Numerator>
+       <Numerator number="14" plusError="0" minusError="0">7.08876349245858e-05</Numerator>
+       <Numerator number="15" plusError="0" minusError="0">-2.3655579126153835e-05</Numerator>
+       <Numerator number="16" plusError="0" minusError="0">-0.00011565378697981367</Numerator>
+       <Numerator number="17" plusError="0" minusError="0">-2.5796771018728455e-05</Numerator>
+       <Numerator number="18" plusError="0" minusError="0">0.00015137050297689186</Numerator>
+       <Numerator number="19" plusError="0" minusError="0">0.00011186417371186019</Numerator>
+       <Numerator number="20" plusError="0" minusError="0">-0.00015590299312698907</Numerator>
+       <Numerator number="21" plusError="0" minusError="0">-0.00022990725974114245</Numerator>
+       <Numerator number="22" plusError="0" minusError="0">0.00010333593529093357</Numerator>
+       <Numerator number="23" plusError="0" minusError="0">0.0003605803724555086</Numerator>
+       <Numerator number="24" plusError="0" minusError="0">2.9244438520227837e-05</Numerator>
+       <Numerator number="25" plusError="0" minusError="0">-0.00046789121765028577</Numerator>
+       <Numerator number="26" plusError="0" minusError="0">-0.00025258267782858</Numerator>
+       <Numerator number="27" plusError="0" minusError="0">0.0005014560273468972</Numerator>
+       <Numerator number="28" plusError="0" minusError="0">0.000555199633281464</Numerator>
+       <Numerator number="29" plusError="0" minusError="0">-0.00040442561199531644</Numerator>
+       <Numerator number="30" plusError="0" minusError="0">-0.0008953939969206511</Numerator>
+       <Numerator number="31" plusError="0" minusError="0">0.00012688650112822859</Numerator>
+       <Numerator number="32" plusError="0" minusError="0">0.0011982686723850896</Numerator>
+       <Numerator number="33" plusError="0" minusError="0">0.00035670644626972634</Numerator>
+       <Numerator number="34" plusError="0" minusError="0">-0.0013607028880041252</Numerator>
+       <Numerator number="35" plusError="0" minusError="0">-0.0010293396817151878</Numerator>
+       <Numerator number="36" plusError="0" minusError="0">0.0012658905489426806</Numerator>
+       <Numerator number="37" plusError="0" minusError="0">0.0018169365351710601</Numerator>
+       <Numerator number="38" plusError="0" minusError="0">-0.000807234479594313</Numerator>
+       <Numerator number="39" plusError="0" minusError="0">-0.0025826129852170856</Numerator>
+       <Numerator number="40" plusError="0" minusError="0">-8.120761288917804e-05</Numerator>
+       <Numerator number="41" plusError="0" minusError="0">0.003133975866396081</Numerator>
+       <Numerator number="42" plusError="0" minusError="0">0.0013928389429311036</Numerator>
+       <Numerator number="43" plusError="0" minusError="0">-0.0032458793467433624</Numerator>
+       <Numerator number="44" plusError="0" minusError="0">-0.0030220136599240113</Numerator>
+       <Numerator number="45" plusError="0" minusError="0">0.0026982244243324363</Numerator>
+       <Numerator number="46" plusError="0" minusError="0">0.004750347669977774</Numerator>
+       <Numerator number="47" plusError="0" minusError="0">-0.0013248063028101049</Numerator>
+       <Numerator number="48" plusError="0" minusError="0">-0.0062520799625698075</Numerator>
+       <Numerator number="49" plusError="0" minusError="0">-0.0009339359297387869</Numerator>
+       <Numerator number="50" plusError="0" minusError="0">0.007121998765125581</Numerator>
+       <Numerator number="51" plusError="0" minusError="0">0.003983614595729899</Numerator>
+       <Numerator number="52" plusError="0" minusError="0">-0.006925314706146384</Numerator>
+       <Numerator number="53" plusError="0" minusError="0">-0.007543654639022661</Numerator>
+       <Numerator number="54" plusError="0" minusError="0">0.00526423681059624</Numerator>
+       <Numerator number="55" plusError="0" minusError="0">0.01113776194657132</Numerator>
+       <Numerator number="56" plusError="0" minusError="0">-0.001851605020923299</Numerator>
+       <Numerator number="57" plusError="0" minusError="0">-0.01410998243783119</Numerator>
+       <Numerator number="58" plusError="0" minusError="0">-0.0034209766177088637</Numerator>
+       <Numerator number="59" plusError="0" minusError="0">0.015661716446413964</Numerator>
+       <Numerator number="60" plusError="0" minusError="0">0.010433831116121527</Numerator>
+       <Numerator number="61" plusError="0" minusError="0">-0.01489364017675917</Numerator>
+       <Numerator number="62" plusError="0" minusError="0">-0.018820181290285235</Numerator>
+       <Numerator number="63" plusError="0" minusError="0">0.010816565929542218</Numerator>
+       <Numerator number="64" plusError="0" minusError="0">0.027984458626731108</Numerator>
+       <Numerator number="65" plusError="0" minusError="0">-0.0022480103479932184</Numerator>
+       <Numerator number="66" plusError="0" minusError="0">-0.03715881842950209</Numerator>
+       <Numerator number="67" plusError="0" minusError="0">-0.012645676536040366</Numerator>
+       <Numerator number="68" plusError="0" minusError="0">0.04549176654239472</Numerator>
+       <Numerator number="69" plusError="0" minusError="0">0.03811662846464684</Numerator>
+       <Numerator number="70" plusError="0" minusError="0">-0.052156515039666985</Numerator>
+       <Numerator number="71" plusError="0" minusError="0">-0.08988056615956795</Numerator>
+       <Numerator number="72" plusError="0" minusError="0">0.05646237223853923</Numerator>
+       <Numerator number="73" plusError="0" minusError="0">0.31274713129800175</Numerator>
+       <Numerator number="74" plusError="0" minusError="0">0.4420488659778931</Numerator>
+       <Numerator number="75" plusError="0" minusError="0">0.31274713129800175</Numerator>
+       <Numerator number="76" plusError="0" minusError="0">0.05646237223853923</Numerator>
+       <Numerator number="77" plusError="0" minusError="0">-0.08988056615956795</Numerator>
+       <Numerator number="78" plusError="0" minusError="0">-0.052156515039666985</Numerator>
+       <Numerator number="79" plusError="0" minusError="0">0.03811662846464684</Numerator>
+       <Numerator number="80" plusError="0" minusError="0">0.04549176654239472</Numerator>
+       <Numerator number="81" plusError="0" minusError="0">-0.012645676536040366</Numerator>
+       <Numerator number="82" plusError="0" minusError="0">-0.03715881842950209</Numerator>
+       <Numerator number="83" plusError="0" minusError="0">-0.0022480103479932184</Numerator>
+       <Numerator number="84" plusError="0" minusError="0">0.027984458626731108</Numerator>
+       <Numerator number="85" plusError="0" minusError="0">0.010816565929542218</Numerator>
+       <Numerator number="86" plusError="0" minusError="0">-0.018820181290285235</Numerator>
+       <Numerator number="87" plusError="0" minusError="0">-0.01489364017675917</Numerator>
+       <Numerator number="88" plusError="0" minusError="0">0.010433831116121527</Numerator>
+       <Numerator number="89" plusError="0" minusError="0">0.015661716446413964</Numerator>
+       <Numerator number="90" plusError="0" minusError="0">-0.0034209766177088637</Numerator>
+       <Numerator number="91" plusError="0" minusError="0">-0.01410998243783119</Numerator>
+       <Numerator number="92" plusError="0" minusError="0">-0.001851605020923299</Numerator>
+       <Numerator number="93" plusError="0" minusError="0">0.01113776194657132</Numerator>
+       <Numerator number="94" plusError="0" minusError="0">0.00526423681059624</Numerator>
+       <Numerator number="95" plusError="0" minusError="0">-0.007543654639022661</Numerator>
+       <Numerator number="96" plusError="0" minusError="0">-0.006925314706146384</Numerator>
+       <Numerator number="97" plusError="0" minusError="0">0.003983614595729899</Numerator>
+       <Numerator number="98" plusError="0" minusError="0">0.007121998765125581</Numerator>
+       <Numerator number="99" plusError="0" minusError="0">-0.0009339359297387869</Numerator>
+       <Numerator number="100" plusError="0" minusError="0">-0.0062520799625698075</Numerator>
+       <Numerator number="101" plusError="0" minusError="0">-0.0013248063028101049</Numerator>
+       <Numerator number="102" plusError="0" minusError="0">0.004750347669977774</Numerator>
+       <Numerator number="103" plusError="0" minusError="0">0.0026982244243324363</Numerator>
+       <Numerator number="104" plusError="0" minusError="0">-0.0030220136599240113</Numerator>
+       <Numerator number="105" plusError="0" minusError="0">-0.0032458793467433624</Numerator>
+       <Numerator number="106" plusError="0" minusError="0">0.0013928389429311036</Numerator>
+       <Numerator number="107" plusError="0" minusError="0">0.003133975866396081</Numerator>
+       <Numerator number="108" plusError="0" minusError="0">-8.120761288917804e-05</Numerator>
+       <Numerator number="109" plusError="0" minusError="0">-0.0025826129852170856</Numerator>
+       <Numerator number="110" plusError="0" minusError="0">-0.000807234479594313</Numerator>
+       <Numerator number="111" plusError="0" minusError="0">0.0018169365351710601</Numerator>
+       <Numerator number="112" plusError="0" minusError="0">0.0012658905489426806</Numerator>
+       <Numerator number="113" plusError="0" minusError="0">-0.0010293396817151878</Numerator>
+       <Numerator number="114" plusError="0" minusError="0">-0.0013607028880041252</Numerator>
+       <Numerator number="115" plusError="0" minusError="0">0.00035670644626972634</Numerator>
+       <Numerator number="116" plusError="0" minusError="0">0.0011982686723850896</Numerator>
+       <Numerator number="117" plusError="0" minusError="0">0.00012688650112822859</Numerator>
+       <Numerator number="118" plusError="0" minusError="0">-0.0008953939969206511</Numerator>
+       <Numerator number="119" plusError="0" minusError="0">-0.00040442561199531644</Numerator>
+       <Numerator number="120" plusError="0" minusError="0">0.000555199633281464</Numerator>
+       <Numerator number="121" plusError="0" minusError="0">0.0005014560273468972</Numerator>
+       <Numerator number="122" plusError="0" minusError="0">-0.00025258267782858</Numerator>
+       <Numerator number="123" plusError="0" minusError="0">-0.00046789121765028577</Numerator>
+       <Numerator number="124" plusError="0" minusError="0">2.9244438520227837e-05</Numerator>
+       <Numerator number="125" plusError="0" minusError="0">0.0003605803724555086</Numerator>
+       <Numerator number="126" plusError="0" minusError="0">0.00010333593529093357</Numerator>
+       <Numerator number="127" plusError="0" minusError="0">-0.00022990725974114245</Numerator>
+       <Numerator number="128" plusError="0" minusError="0">-0.00015590299312698907</Numerator>
+       <Numerator number="129" plusError="0" minusError="0">0.00011186417371186019</Numerator>
+       <Numerator number="130" plusError="0" minusError="0">0.00015137050297689186</Numerator>
+       <Numerator number="131" plusError="0" minusError="0">-2.5796771018728455e-05</Numerator>
+       <Numerator number="132" plusError="0" minusError="0">-0.00011565378697981367</Numerator>
+       <Numerator number="133" plusError="0" minusError="0">-2.3655579126153835e-05</Numerator>
+       <Numerator number="134" plusError="0" minusError="0">7.08876349245858e-05</Numerator>
+       <Numerator number="135" plusError="0" minusError="0">4.200141988325365e-05</Numerator>
+       <Numerator number="136" plusError="0" minusError="0">-3.1888638541741106e-05</Numerator>
+       <Numerator number="137" plusError="0" minusError="0">-3.9637156627676696e-05</Numerator>
+       <Numerator number="138" plusError="0" minusError="0">5.67135318675999e-06</Numerator>
+       <Numerator number="139" plusError="0" minusError="0">2.757767010938528e-05</Numerator>
+       <Numerator number="140" plusError="0" minusError="0">7.430122505570422e-06</Numerator>
+       <Numerator number="141" plusError="0" minusError="0">-1.3788854344954505e-05</Numerator>
+       <Numerator number="142" plusError="0" minusError="0">-9.708235693146941e-06</Numerator>
+       <Numerator number="143" plusError="0" minusError="0">5.279846790211707e-06</Numerator>
+       <Numerator number="144" plusError="0" minusError="0">1.044129156168016e-05</Numerator>
+       <Numerator number="145" plusError="0" minusError="0">5.1911605740576904e-06</Numerator>
+       <Numerator number="146" plusError="0" minusError="0">-2.4332974429303017e-07</Numerator>
+       <Numerator number="147" plusError="0" minusError="0">-1.3648936224722228e-06</Numerator>
+       <Numerator number="148" plusError="0" minusError="0">-4.928312721775864e-07</Numerator>
+      </Coefficients>
+      <Decimation>
+       <InputSampleRate>400</InputSampleRate>
+       <Factor>2</Factor>
+       <Offset>0</Offset>
+       <Delay>0.185</Delay>
+       <Correction>0.185</Correction>
+      </Decimation>
+      <StageGain>
+       <Value>1</Value>
+       <Frequency>1</Frequency>
+      </StageGain>
+     </Stage>
+    </Response>
+   </Channel>
+   <Channel locationCode="L0" code="HHN" startDate="2024-05-30T18:43:35Z">
+    <Latitude>34.03705</Latitude>
+    <Longitude>-118.178297</Longitude>
+    <Elevation>83.7</Elevation>
+    <Depth>0</Depth>
+    <Azimuth>0</Azimuth>
+    <Dip>0</Dip>
+    <SampleRate>200</SampleRate>
+    <Sensor>
+     <Description>Nanometrics TCH120-1 009275</Description>
+     <Manufacturer>Nanometrics</Manufacturer>
+     <Model>TCH120-1</Model>
+     <SerialNumber>009275</SerialNumber>
+    </Sensor>
+    <DataLogger>
+     <Description>Pegasus Portable Digital Recorder</Description>
+     <Manufacturer>Nanometrics</Manufacturer>
+     <Model>PGS-140</Model>
+     <SerialNumber>000697</SerialNumber>
+    </DataLogger>
+    <Response>
+     <InstrumentSensitivity>
+      <Value>2.994697576134245e+08</Value>
+      <Frequency>1</Frequency>
+      <InputUnits>
+       <Name>m/s</Name>
+       <Description>velocity in metres per second</Description>
+      </InputUnits>
+      <OutputUnits>
+       <Name>count</Name>
+       <Description>digital counts</Description>
+      </OutputUnits>
+     </InstrumentSensitivity>
+     <Stage number="1">
+      <PolesZeros>
+       <InputUnits>
+        <Name>m/s</Name>
+        <Description>velocity in metres per second</Description>
+       </InputUnits>
+       <OutputUnits>
+        <Name>V</Name>
+        <Description>voltage in volts</Description>
+       </OutputUnits>
+       <PzTransferFunctionType>LAPLACE (RADIANS/SECOND)</PzTransferFunctionType>
+       <NormalizationFactor>4.34492814617714e+17</NormalizationFactor>
+       <NormalizationFrequency>1</NormalizationFrequency>
+       <Zero number="0">
+        <Real plusError="0" minusError="0">0</Real>
+        <Imaginary plusError="0" minusError="0">0</Imaginary>
+       </Zero>
+       <Zero number="1">
+        <Real plusError="0" minusError="0">0</Real>
+        <Imaginary plusError="0" minusError="0">0</Imaginary>
+       </Zero>
+       <Zero number="2">
+        <Real plusError="0" minusError="0">-392</Real>
+        <Imaginary plusError="0" minusError="0">0</Imaginary>
+       </Zero>
+       <Zero number="3">
+        <Real plusError="0" minusError="0">-1960</Real>
+        <Imaginary plusError="0" minusError="0">0</Imaginary>
+       </Zero>
+       <Zero number="4">
+        <Real plusError="0" minusError="0">-1490</Real>
+        <Imaginary plusError="0" minusError="0">1740</Imaginary>
+       </Zero>
+       <Zero number="5">
+        <Real plusError="0" minusError="0">-1490</Real>
+        <Imaginary plusError="0" minusError="0">-1740</Imaginary>
+       </Zero>
+       <Pole number="0">
+        <Real plusError="0" minusError="0">-0.03691</Real>
+        <Imaginary plusError="0" minusError="0">0.03702</Imaginary>
+       </Pole>
+       <Pole number="1">
+        <Real plusError="0" minusError="0">-0.03691</Real>
+        <Imaginary plusError="0" minusError="0">-0.03702</Imaginary>
+       </Pole>
+       <Pole number="2">
+        <Real plusError="0" minusError="0">-343</Real>
+        <Imaginary plusError="0" minusError="0">0</Imaginary>
+       </Pole>
+       <Pole number="3">
+        <Real plusError="0" minusError="0">-370</Real>
+        <Imaginary plusError="0" minusError="0">467</Imaginary>
+       </Pole>
+       <Pole number="4">
+        <Real plusError="0" minusError="0">-370</Real>
+        <Imaginary plusError="0" minusError="0">-467</Imaginary>
+       </Pole>
+       <Pole number="5">
+        <Real plusError="0" minusError="0">-836</Real>
+        <Imaginary plusError="0" minusError="0">1522</Imaginary>
+       </Pole>
+       <Pole number="6">
+        <Real plusError="0" minusError="0">-836</Real>
+        <Imaginary plusError="0" minusError="0">-1522</Imaginary>
+       </Pole>
+       <Pole number="7">
+        <Real plusError="0" minusError="0">-4900</Real>
+        <Imaginary plusError="0" minusError="0">4700</Imaginary>
+       </Pole>
+       <Pole number="8">
+        <Real plusError="0" minusError="0">-4900</Real>
+        <Imaginary plusError="0" minusError="0">-4700</Imaginary>
+       </Pole>
+       <Pole number="9">
+        <Real plusError="0" minusError="0">-6900</Real>
+        <Imaginary plusError="0" minusError="0">0</Imaginary>
+       </Pole>
+       <Pole number="10">
+        <Real plusError="0" minusError="0">-15000</Real>
+        <Imaginary plusError="0" minusError="0">0</Imaginary>
+       </Pole>
+      </PolesZeros>
+      <StageGain>
+       <Value>754.3</Value>
+       <Frequency>1</Frequency>
+      </StageGain>
+     </Stage>
+     <Stage number="2">
+      <PolesZeros>
+       <InputUnits>
+        <Name>V</Name>
+        <Description>voltage in volts</Description>
+       </InputUnits>
+       <OutputUnits>
+        <Name>V</Name>
+        <Description>voltage in volts</Description>
+       </OutputUnits>
+       <PzTransferFunctionType>LAPLACE (RADIANS/SECOND)</PzTransferFunctionType>
+       <NormalizationFactor>1</NormalizationFactor>
+       <NormalizationFrequency>1</NormalizationFrequency>
+      </PolesZeros>
+      <StageGain>
+       <Value>0.9925419515226849</Value>
+       <Frequency>1</Frequency>
+      </StageGain>
+     </Stage>
+     <Stage number="3">
+      <PolesZeros>
+       <InputUnits>
+        <Name>V</Name>
+        <Description>voltage in volts</Description>
+       </InputUnits>
+       <OutputUnits>
+        <Name>V</Name>
+        <Description>voltage in volts</Description>
+       </OutputUnits>
+       <PzTransferFunctionType>LAPLACE (RADIANS/SECOND)</PzTransferFunctionType>
+       <NormalizationFactor>1</NormalizationFactor>
+       <NormalizationFrequency>1</NormalizationFrequency>
+      </PolesZeros>
+      <StageGain>
+       <Value>1</Value>
+       <Frequency>1</Frequency>
+      </StageGain>
+     </Stage>
+     <Stage number="4">
+      <Coefficients>
+       <InputUnits>
+        <Name>V</Name>
+        <Description>voltage in volts</Description>
+       </InputUnits>
+       <OutputUnits>
+        <Name>count</Name>
+        <Description>digital counts</Description>
+       </OutputUnits>
+       <CfTransferFunctionType>DIGITAL</CfTransferFunctionType>
+       <Numerator number="0" plusError="0" minusError="0">1</Numerator>
+      </Coefficients>
+      <Decimation>
+       <InputSampleRate>30000</InputSampleRate>
+       <Factor>1</Factor>
+       <Offset>0</Offset>
+       <Delay>0</Delay>
+       <Correction>0</Correction>
+      </Decimation>
+      <StageGain>
+       <Value>400000</Value>
+       <Frequency>1</Frequency>
+      </StageGain>
+     </Stage>
+     <Stage number="5">
+      <Coefficients>
+       <InputUnits>
+        <Name>count</Name>
+        <Description>digital counts</Description>
+       </InputUnits>
+       <OutputUnits>
+        <Name>count</Name>
+        <Description>digital counts</Description>
+       </OutputUnits>
+       <CfTransferFunctionType>DIGITAL</CfTransferFunctionType>
+       <Numerator number="0" plusError="0" minusError="0">-1.1915242202324819e-07</Numerator>
+       <Numerator number="1" plusError="0" minusError="0">-4.046015420990873e-07</Numerator>
+       <Numerator number="2" plusError="0" minusError="0">-1.0644228791158324e-06</Numerator>
+       <Numerator number="3" plusError="0" minusError="0">-2.394161512430574e-06</Numerator>
+       <Numerator number="4" plusError="0" minusError="0">-4.851174834157078e-06</Numerator>
+       <Numerator number="5" plusError="0" minusError="0">-9.100537397384457e-06</Numerator>
+       <Numerator number="6" plusError="0" minusError="0">-1.6068717835664678e-05</Numerator>
+       <Numerator number="7" plusError="0" minusError="0">-2.6996527455282132e-05</Numerator>
+       <Numerator number="8" plusError="0" minusError="0">-4.348637278945783e-05</Numerator>
+       <Numerator number="9" plusError="0" minusError="0">-6.75361420867615e-05</Numerator>
+       <Numerator number="10" plusError="0" minusError="0">-0.00010155107047352763</Numerator>
+       <Numerator number="11" plusError="0" minusError="0">-0.00014832399680325353</Numerator>
+       <Numerator number="12" plusError="0" minusError="0">-0.00021097403524294786</Numerator>
+       <Numerator number="13" plusError="0" minusError="0">-0.00029283381464063717</Numerator>
+       <Numerator number="14" plusError="0" minusError="0">-0.0003972771738782312</Numerator>
+       <Numerator number="15" plusError="0" minusError="0">-0.000527481731099103</Numerator>
+       <Numerator number="16" plusError="0" minusError="0">-0.0006861240457726855</Numerator>
+       <Numerator number="17" plusError="0" minusError="0">-0.0008750101045347955</Numerator>
+       <Numerator number="18" plusError="0" minusError="0">-0.0010946495550331352</Numerator>
+       <Numerator number="19" plusError="0" minusError="0">-0.001343788373225608</Numerator>
+       <Numerator number="20" plusError="0" minusError="0">-0.0016189210250243773</Numerator>
+       <Numerator number="21" plusError="0" minusError="0">-0.001913809949356775</Numerator>
+       <Numerator number="22" plusError="0" minusError="0">-0.0022190455152164192</Numerator>
+       <Numerator number="23" plusError="0" minusError="0">-0.0025216838859549798</Numerator>
+       <Numerator number="24" plusError="0" minusError="0">-0.002805002376935507</Numerator>
+       <Numerator number="25" plusError="0" minusError="0">-0.003048412029383815</Numerator>
+       <Numerator number="26" plusError="0" minusError="0">-0.003227563767715692</Numerator>
+       <Numerator number="27" plusError="0" minusError="0">-0.003314678638358309</Numerator>
+       <Numerator number="28" plusError="0" minusError="0">-0.003279123251384672</Numerator>
+       <Numerator number="29" plusError="0" minusError="0">-0.0030882397350994054</Numerator>
+       <Numerator number="30" plusError="0" minusError="0">-0.0027084247847946976</Numerator>
+       <Numerator number="31" plusError="0" minusError="0">-0.002106436519679319</Numerator>
+       <Numerator number="32" plusError="0" minusError="0">-0.0012508906744635347</Numerator>
+       <Numerator number="33" plusError="0" minusError="0">-0.00011389137816926379</Numerator>
+       <Numerator number="34" plusError="0" minusError="0">0.001327273494049315</Numerator>
+       <Numerator number="35" plusError="0" minusError="0">0.0030884544854313145</Numerator>
+       <Numerator number="36" plusError="0" minusError="0">0.005177071081971649</Numerator>
+       <Numerator number="37" plusError="0" minusError="0">0.007590744696366738</Numerator>
+       <Numerator number="38" plusError="0" minusError="0">0.010316226557882741</Numerator>
+       <Numerator number="39" plusError="0" minusError="0">0.013328704952193925</Numerator>
+       <Numerator number="40" plusError="0" minusError="0">0.016591562880926742</Numerator>
+       <Numerator number="41" plusError="0" minusError="0">0.020056637752646673</Numerator>
+       <Numerator number="42" plusError="0" minusError="0">0.023665011306124244</Numerator>
+       <Numerator number="43" plusError="0" minusError="0">0.027348330626526397</Numerator>
+       <Numerator number="44" plusError="0" minusError="0">0.031030632466561254</Numerator>
+       <Numerator number="45" plusError="0" minusError="0">0.03463061376277661</Numerator>
+       <Numerator number="46" plusError="0" minusError="0">0.038064264252337235</Numerator>
+       <Numerator number="47" plusError="0" minusError="0">0.041247753060231915</Numerator>
+       <Numerator number="48" plusError="0" minusError="0">0.044100442917447163</Numerator>
+       <Numerator number="49" plusError="0" minusError="0">0.04654789347766623</Numerator>
+       <Numerator number="50" plusError="0" minusError="0">0.048524711139413756</Numerator>
+       <Numerator number="51" plusError="0" minusError="0">0.049977106226086136</Numerator>
+       <Numerator number="52" plusError="0" minusError="0">0.05086503050731746</Numerator>
+       <Numerator number="53" plusError="0" minusError="0">0.05116378705747257</Numerator>
+       <Numerator number="54" plusError="0" minusError="0">0.05086503050731746</Numerator>
+       <Numerator number="55" plusError="0" minusError="0">0.049977106226086136</Numerator>
+       <Numerator number="56" plusError="0" minusError="0">0.048524711139413756</Numerator>
+       <Numerator number="57" plusError="0" minusError="0">0.04654789347766623</Numerator>
+       <Numerator number="58" plusError="0" minusError="0">0.044100442917447163</Numerator>
+       <Numerator number="59" plusError="0" minusError="0">0.041247753060231915</Numerator>
+       <Numerator number="60" plusError="0" minusError="0">0.038064264252337235</Numerator>
+       <Numerator number="61" plusError="0" minusError="0">0.03463061376277661</Numerator>
+       <Numerator number="62" plusError="0" minusError="0">0.031030632466561254</Numerator>
+       <Numerator number="63" plusError="0" minusError="0">0.027348330626526397</Numerator>
+       <Numerator number="64" plusError="0" minusError="0">0.023665011306124244</Numerator>
+       <Numerator number="65" plusError="0" minusError="0">0.020056637752646673</Numerator>
+       <Numerator number="66" plusError="0" minusError="0">0.016591562880926742</Numerator>
+       <Numerator number="67" plusError="0" minusError="0">0.013328704952193925</Numerator>
+       <Numerator number="68" plusError="0" minusError="0">0.010316226557882741</Numerator>
+       <Numerator number="69" plusError="0" minusError="0">0.007590744696366738</Numerator>
+       <Numerator number="70" plusError="0" minusError="0">0.005177071081971649</Numerator>
+       <Numerator number="71" plusError="0" minusError="0">0.0030884544854313145</Numerator>
+       <Numerator number="72" plusError="0" minusError="0">0.001327273494049315</Numerator>
+       <Numerator number="73" plusError="0" minusError="0">-0.00011389137816926379</Numerator>
+       <Numerator number="74" plusError="0" minusError="0">-0.0012508906744635347</Numerator>
+       <Numerator number="75" plusError="0" minusError="0">-0.002106436519679319</Numerator>
+       <Numerator number="76" plusError="0" minusError="0">-0.0027084247847946976</Numerator>
+       <Numerator number="77" plusError="0" minusError="0">-0.0030882397350994054</Numerator>
+       <Numerator number="78" plusError="0" minusError="0">-0.003279123251384672</Numerator>
+       <Numerator number="79" plusError="0" minusError="0">-0.003314678638358309</Numerator>
+       <Numerator number="80" plusError="0" minusError="0">-0.003227563767715692</Numerator>
+       <Numerator number="81" plusError="0" minusError="0">-0.003048412029383815</Numerator>
+       <Numerator number="82" plusError="0" minusError="0">-0.002805002376935507</Numerator>
+       <Numerator number="83" plusError="0" minusError="0">-0.0025216838859549798</Numerator>
+       <Numerator number="84" plusError="0" minusError="0">-0.0022190455152164192</Numerator>
+       <Numerator number="85" plusError="0" minusError="0">-0.001913809949356775</Numerator>
+       <Numerator number="86" plusError="0" minusError="0">-0.0016189210250243773</Numerator>
+       <Numerator number="87" plusError="0" minusError="0">-0.001343788373225608</Numerator>
+       <Numerator number="88" plusError="0" minusError="0">-0.0010946495550331352</Numerator>
+       <Numerator number="89" plusError="0" minusError="0">-0.0008750101045347955</Numerator>
+       <Numerator number="90" plusError="0" minusError="0">-0.0006861240457726855</Numerator>
+       <Numerator number="91" plusError="0" minusError="0">-0.000527481731099103</Numerator>
+       <Numerator number="92" plusError="0" minusError="0">-0.0003972771738782312</Numerator>
+       <Numerator number="93" plusError="0" minusError="0">-0.00029283381464063717</Numerator>
+       <Numerator number="94" plusError="0" minusError="0">-0.00021097403524294786</Numerator>
+       <Numerator number="95" plusError="0" minusError="0">-0.00014832399680325353</Numerator>
+       <Numerator number="96" plusError="0" minusError="0">-0.00010155107047352763</Numerator>
+       <Numerator number="97" plusError="0" minusError="0">-6.75361420867615e-05</Numerator>
+       <Numerator number="98" plusError="0" minusError="0">-4.348637278945783e-05</Numerator>
+       <Numerator number="99" plusError="0" minusError="0">-2.6996527455282132e-05</Numerator>
+       <Numerator number="100" plusError="0" minusError="0">-1.6068717835664678e-05</Numerator>
+       <Numerator number="101" plusError="0" minusError="0">-9.100537397384457e-06</Numerator>
+       <Numerator number="102" plusError="0" minusError="0">-4.851174834157078e-06</Numerator>
+       <Numerator number="103" plusError="0" minusError="0">-2.394161512430574e-06</Numerator>
+       <Numerator number="104" plusError="0" minusError="0">-1.0644228791158324e-06</Numerator>
+       <Numerator number="105" plusError="0" minusError="0">-4.046015420990873e-07</Numerator>
+       <Numerator number="106" plusError="0" minusError="0">-1.1915242202324819e-07</Numerator>
+      </Coefficients>
+      <Decimation>
+       <InputSampleRate>30000</InputSampleRate>
+       <Factor>15</Factor>
+       <Offset>0</Offset>
+       <Delay>0.0017666666666666666</Delay>
+       <Correction>0.0017666666666666666</Correction>
+      </Decimation>
+      <StageGain>
+       <Value>1</Value>
+       <Frequency>1</Frequency>
+      </StageGain>
+     </Stage>
+     <Stage number="6">
+      <Coefficients>
+       <InputUnits>
+        <Name>count</Name>
+        <Description>digital counts</Description>
+       </InputUnits>
+       <OutputUnits>
+        <Name>count</Name>
+        <Description>digital counts</Description>
+       </OutputUnits>
+       <CfTransferFunctionType>DIGITAL</CfTransferFunctionType>
+       <Numerator number="0" plusError="0" minusError="0">6.250457528974879e-07</Numerator>
+       <Numerator number="1" plusError="0" minusError="0">4.066353025622599e-06</Numerator>
+       <Numerator number="2" plusError="0" minusError="0">1.5237733992851714e-05</Numerator>
+       <Numerator number="3" plusError="0" minusError="0">4.147346621445046e-05</Numerator>
+       <Numerator number="4" plusError="0" minusError="0">8.869816170879125e-05</Numerator>
+       <Numerator number="5" plusError="0" minusError="0">0.00015273020826333982</Numerator>
+       <Numerator number="6" plusError="0" minusError="0">0.00020766988217781285</Numerator>
+       <Numerator number="7" plusError="0" minusError="0">0.00019845369991786696</Numerator>
+       <Numerator number="8" plusError="0" minusError="0">4.8800814923088754e-05</Numerator>
+       <Numerator number="9" plusError="0" minusError="0">-0.00030560446155512296</Numerator>
+       <Numerator number="10" plusError="0" minusError="0">-0.000859429270176589</Numerator>
+       <Numerator number="11" plusError="0" minusError="0">-0.0014751718768686206</Numerator>
+       <Numerator number="12" plusError="0" minusError="0">-0.0018548757210812283</Numerator>
+       <Numerator number="13" plusError="0" minusError="0">-0.0015914377648684234</Numerator>
+       <Numerator number="14" plusError="0" minusError="0">-0.00032502372609524726</Numerator>
+       <Numerator number="15" plusError="0" minusError="0">0.002018903783987657</Numerator>
+       <Numerator number="16" plusError="0" minusError="0">0.0049971940851897215</Numerator>
+       <Numerator number="17" plusError="0" minusError="0">0.007556747221955823</Numerator>
+       <Numerator number="18" plusError="0" minusError="0">0.008211272985739121</Numerator>
+       <Numerator number="19" plusError="0" minusError="0">0.005536131701332664</Numerator>
+       <Numerator number="20" plusError="0" minusError="0">-0.00111134362124062</Numerator>
+       <Numerator number="21" plusError="0" minusError="0">-0.01089038054167128</Numerator>
+       <Numerator number="22" plusError="0" minusError="0">-0.02112460175485532</Numerator>
+       <Numerator number="23" plusError="0" minusError="0">-0.02758436656772834</Numerator>
+       <Numerator number="24" plusError="0" minusError="0">-0.025494684028686446</Numerator>
+       <Numerator number="25" plusError="0" minusError="0">-0.011069430176427076</Numerator>
+       <Numerator number="26" plusError="0" minusError="0">0.016900991469107333</Numerator>
+       <Numerator number="27" plusError="0" minusError="0">0.05600881579938804</Numerator>
+       <Numerator number="28" plusError="0" minusError="0">0.1002310572179174</Numerator>
+       <Numerator number="29" plusError="0" minusError="0">0.14114267357947802</Numerator>
+       <Numerator number="30" plusError="0" minusError="0">0.17006716456603635</Numerator>
+       <Numerator number="31" plusError="0" minusError="0">0.18051027383258295</Numerator>
+       <Numerator number="32" plusError="0" minusError="0">0.17006716456603635</Numerator>
+       <Numerator number="33" plusError="0" minusError="0">0.14114267357947802</Numerator>
+       <Numerator number="34" plusError="0" minusError="0">0.1002310572179174</Numerator>
+       <Numerator number="35" plusError="0" minusError="0">0.05600881579938804</Numerator>
+       <Numerator number="36" plusError="0" minusError="0">0.016900991469107333</Numerator>
+       <Numerator number="37" plusError="0" minusError="0">-0.011069430176427076</Numerator>
+       <Numerator number="38" plusError="0" minusError="0">-0.025494684028686446</Numerator>
+       <Numerator number="39" plusError="0" minusError="0">-0.02758436656772834</Numerator>
+       <Numerator number="40" plusError="0" minusError="0">-0.02112460175485532</Numerator>
+       <Numerator number="41" plusError="0" minusError="0">-0.01089038054167128</Numerator>
+       <Numerator number="42" plusError="0" minusError="0">-0.00111134362124062</Numerator>
+       <Numerator number="43" plusError="0" minusError="0">0.005536131701332664</Numerator>
+       <Numerator number="44" plusError="0" minusError="0">0.008211272985739121</Numerator>
+       <Numerator number="45" plusError="0" minusError="0">0.007556747221955823</Numerator>
+       <Numerator number="46" plusError="0" minusError="0">0.0049971940851897215</Numerator>
+       <Numerator number="47" plusError="0" minusError="0">0.002018903783987657</Numerator>
+       <Numerator number="48" plusError="0" minusError="0">-0.00032502372609524726</Numerator>
+       <Numerator number="49" plusError="0" minusError="0">-0.0015914377648684234</Numerator>
+       <Numerator number="50" plusError="0" minusError="0">-0.0018548757210812283</Numerator>
+       <Numerator number="51" plusError="0" minusError="0">-0.0014751718768686206</Numerator>
+       <Numerator number="52" plusError="0" minusError="0">-0.000859429270176589</Numerator>
+       <Numerator number="53" plusError="0" minusError="0">-0.00030560446155512296</Numerator>
+       <Numerator number="54" plusError="0" minusError="0">4.8800814923088754e-05</Numerator>
+       <Numerator number="55" plusError="0" minusError="0">0.00019845369991786696</Numerator>
+       <Numerator number="56" plusError="0" minusError="0">0.00020766988217781285</Numerator>
+       <Numerator number="57" plusError="0" minusError="0">0.00015273020826333982</Numerator>
+       <Numerator number="58" plusError="0" minusError="0">8.869816170879125e-05</Numerator>
+       <Numerator number="59" plusError="0" minusError="0">4.147346621445046e-05</Numerator>
+       <Numerator number="60" plusError="0" minusError="0">1.5237733992851714e-05</Numerator>
+       <Numerator number="61" plusError="0" minusError="0">4.066353025622599e-06</Numerator>
+       <Numerator number="62" plusError="0" minusError="0">6.250457528974879e-07</Numerator>
+      </Coefficients>
+      <Decimation>
+       <InputSampleRate>2000</InputSampleRate>
+       <Factor>5</Factor>
+       <Offset>0</Offset>
+       <Delay>0.0155</Delay>
+       <Correction>0.0155</Correction>
+      </Decimation>
+      <StageGain>
+       <Value>1</Value>
+       <Frequency>1</Frequency>
+      </StageGain>
+     </Stage>
+     <Stage number="7">
+      <Coefficients>
+       <InputUnits>
+        <Name>count</Name>
+        <Description>digital counts</Description>
+       </InputUnits>
+       <OutputUnits>
+        <Name>count</Name>
+        <Description>digital counts</Description>
+       </OutputUnits>
+       <CfTransferFunctionType>DIGITAL</CfTransferFunctionType>
+       <Numerator number="0" plusError="0" minusError="0">-4.928312721775864e-07</Numerator>
+       <Numerator number="1" plusError="0" minusError="0">-1.3648936224722228e-06</Numerator>
+       <Numerator number="2" plusError="0" minusError="0">-2.4332974429303017e-07</Numerator>
+       <Numerator number="3" plusError="0" minusError="0">5.1911605740576904e-06</Numerator>
+       <Numerator number="4" plusError="0" minusError="0">1.044129156168016e-05</Numerator>
+       <Numerator number="5" plusError="0" minusError="0">5.279846790211707e-06</Numerator>
+       <Numerator number="6" plusError="0" minusError="0">-9.708235693146941e-06</Numerator>
+       <Numerator number="7" plusError="0" minusError="0">-1.3788854344954505e-05</Numerator>
+       <Numerator number="8" plusError="0" minusError="0">7.430122505570422e-06</Numerator>
+       <Numerator number="9" plusError="0" minusError="0">2.757767010938528e-05</Numerator>
+       <Numerator number="10" plusError="0" minusError="0">5.67135318675999e-06</Numerator>
+       <Numerator number="11" plusError="0" minusError="0">-3.9637156627676696e-05</Numerator>
+       <Numerator number="12" plusError="0" minusError="0">-3.1888638541741106e-05</Numerator>
+       <Numerator number="13" plusError="0" minusError="0">4.200141988325365e-05</Numerator>
+       <Numerator number="14" plusError="0" minusError="0">7.08876349245858e-05</Numerator>
+       <Numerator number="15" plusError="0" minusError="0">-2.3655579126153835e-05</Numerator>
+       <Numerator number="16" plusError="0" minusError="0">-0.00011565378697981367</Numerator>
+       <Numerator number="17" plusError="0" minusError="0">-2.5796771018728455e-05</Numerator>
+       <Numerator number="18" plusError="0" minusError="0">0.00015137050297689186</Numerator>
+       <Numerator number="19" plusError="0" minusError="0">0.00011186417371186019</Numerator>
+       <Numerator number="20" plusError="0" minusError="0">-0.00015590299312698907</Numerator>
+       <Numerator number="21" plusError="0" minusError="0">-0.00022990725974114245</Numerator>
+       <Numerator number="22" plusError="0" minusError="0">0.00010333593529093357</Numerator>
+       <Numerator number="23" plusError="0" minusError="0">0.0003605803724555086</Numerator>
+       <Numerator number="24" plusError="0" minusError="0">2.9244438520227837e-05</Numerator>
+       <Numerator number="25" plusError="0" minusError="0">-0.00046789121765028577</Numerator>
+       <Numerator number="26" plusError="0" minusError="0">-0.00025258267782858</Numerator>
+       <Numerator number="27" plusError="0" minusError="0">0.0005014560273468972</Numerator>
+       <Numerator number="28" plusError="0" minusError="0">0.000555199633281464</Numerator>
+       <Numerator number="29" plusError="0" minusError="0">-0.00040442561199531644</Numerator>
+       <Numerator number="30" plusError="0" minusError="0">-0.0008953939969206511</Numerator>
+       <Numerator number="31" plusError="0" minusError="0">0.00012688650112822859</Numerator>
+       <Numerator number="32" plusError="0" minusError="0">0.0011982686723850896</Numerator>
+       <Numerator number="33" plusError="0" minusError="0">0.00035670644626972634</Numerator>
+       <Numerator number="34" plusError="0" minusError="0">-0.0013607028880041252</Numerator>
+       <Numerator number="35" plusError="0" minusError="0">-0.0010293396817151878</Numerator>
+       <Numerator number="36" plusError="0" minusError="0">0.0012658905489426806</Numerator>
+       <Numerator number="37" plusError="0" minusError="0">0.0018169365351710601</Numerator>
+       <Numerator number="38" plusError="0" minusError="0">-0.000807234479594313</Numerator>
+       <Numerator number="39" plusError="0" minusError="0">-0.0025826129852170856</Numerator>
+       <Numerator number="40" plusError="0" minusError="0">-8.120761288917804e-05</Numerator>
+       <Numerator number="41" plusError="0" minusError="0">0.003133975866396081</Numerator>
+       <Numerator number="42" plusError="0" minusError="0">0.0013928389429311036</Numerator>
+       <Numerator number="43" plusError="0" minusError="0">-0.0032458793467433624</Numerator>
+       <Numerator number="44" plusError="0" minusError="0">-0.0030220136599240113</Numerator>
+       <Numerator number="45" plusError="0" minusError="0">0.0026982244243324363</Numerator>
+       <Numerator number="46" plusError="0" minusError="0">0.004750347669977774</Numerator>
+       <Numerator number="47" plusError="0" minusError="0">-0.0013248063028101049</Numerator>
+       <Numerator number="48" plusError="0" minusError="0">-0.0062520799625698075</Numerator>
+       <Numerator number="49" plusError="0" minusError="0">-0.0009339359297387869</Numerator>
+       <Numerator number="50" plusError="0" minusError="0">0.007121998765125581</Numerator>
+       <Numerator number="51" plusError="0" minusError="0">0.003983614595729899</Numerator>
+       <Numerator number="52" plusError="0" minusError="0">-0.006925314706146384</Numerator>
+       <Numerator number="53" plusError="0" minusError="0">-0.007543654639022661</Numerator>
+       <Numerator number="54" plusError="0" minusError="0">0.00526423681059624</Numerator>
+       <Numerator number="55" plusError="0" minusError="0">0.01113776194657132</Numerator>
+       <Numerator number="56" plusError="0" minusError="0">-0.001851605020923299</Numerator>
+       <Numerator number="57" plusError="0" minusError="0">-0.01410998243783119</Numerator>
+       <Numerator number="58" plusError="0" minusError="0">-0.0034209766177088637</Numerator>
+       <Numerator number="59" plusError="0" minusError="0">0.015661716446413964</Numerator>
+       <Numerator number="60" plusError="0" minusError="0">0.010433831116121527</Numerator>
+       <Numerator number="61" plusError="0" minusError="0">-0.01489364017675917</Numerator>
+       <Numerator number="62" plusError="0" minusError="0">-0.018820181290285235</Numerator>
+       <Numerator number="63" plusError="0" minusError="0">0.010816565929542218</Numerator>
+       <Numerator number="64" plusError="0" minusError="0">0.027984458626731108</Numerator>
+       <Numerator number="65" plusError="0" minusError="0">-0.0022480103479932184</Numerator>
+       <Numerator number="66" plusError="0" minusError="0">-0.03715881842950209</Numerator>
+       <Numerator number="67" plusError="0" minusError="0">-0.012645676536040366</Numerator>
+       <Numerator number="68" plusError="0" minusError="0">0.04549176654239472</Numerator>
+       <Numerator number="69" plusError="0" minusError="0">0.03811662846464684</Numerator>
+       <Numerator number="70" plusError="0" minusError="0">-0.052156515039666985</Numerator>
+       <Numerator number="71" plusError="0" minusError="0">-0.08988056615956795</Numerator>
+       <Numerator number="72" plusError="0" minusError="0">0.05646237223853923</Numerator>
+       <Numerator number="73" plusError="0" minusError="0">0.31274713129800175</Numerator>
+       <Numerator number="74" plusError="0" minusError="0">0.4420488659778931</Numerator>
+       <Numerator number="75" plusError="0" minusError="0">0.31274713129800175</Numerator>
+       <Numerator number="76" plusError="0" minusError="0">0.05646237223853923</Numerator>
+       <Numerator number="77" plusError="0" minusError="0">-0.08988056615956795</Numerator>
+       <Numerator number="78" plusError="0" minusError="0">-0.052156515039666985</Numerator>
+       <Numerator number="79" plusError="0" minusError="0">0.03811662846464684</Numerator>
+       <Numerator number="80" plusError="0" minusError="0">0.04549176654239472</Numerator>
+       <Numerator number="81" plusError="0" minusError="0">-0.012645676536040366</Numerator>
+       <Numerator number="82" plusError="0" minusError="0">-0.03715881842950209</Numerator>
+       <Numerator number="83" plusError="0" minusError="0">-0.0022480103479932184</Numerator>
+       <Numerator number="84" plusError="0" minusError="0">0.027984458626731108</Numerator>
+       <Numerator number="85" plusError="0" minusError="0">0.010816565929542218</Numerator>
+       <Numerator number="86" plusError="0" minusError="0">-0.018820181290285235</Numerator>
+       <Numerator number="87" plusError="0" minusError="0">-0.01489364017675917</Numerator>
+       <Numerator number="88" plusError="0" minusError="0">0.010433831116121527</Numerator>
+       <Numerator number="89" plusError="0" minusError="0">0.015661716446413964</Numerator>
+       <Numerator number="90" plusError="0" minusError="0">-0.0034209766177088637</Numerator>
+       <Numerator number="91" plusError="0" minusError="0">-0.01410998243783119</Numerator>
+       <Numerator number="92" plusError="0" minusError="0">-0.001851605020923299</Numerator>
+       <Numerator number="93" plusError="0" minusError="0">0.01113776194657132</Numerator>
+       <Numerator number="94" plusError="0" minusError="0">0.00526423681059624</Numerator>
+       <Numerator number="95" plusError="0" minusError="0">-0.007543654639022661</Numerator>
+       <Numerator number="96" plusError="0" minusError="0">-0.006925314706146384</Numerator>
+       <Numerator number="97" plusError="0" minusError="0">0.003983614595729899</Numerator>
+       <Numerator number="98" plusError="0" minusError="0">0.007121998765125581</Numerator>
+       <Numerator number="99" plusError="0" minusError="0">-0.0009339359297387869</Numerator>
+       <Numerator number="100" plusError="0" minusError="0">-0.0062520799625698075</Numerator>
+       <Numerator number="101" plusError="0" minusError="0">-0.0013248063028101049</Numerator>
+       <Numerator number="102" plusError="0" minusError="0">0.004750347669977774</Numerator>
+       <Numerator number="103" plusError="0" minusError="0">0.0026982244243324363</Numerator>
+       <Numerator number="104" plusError="0" minusError="0">-0.0030220136599240113</Numerator>
+       <Numerator number="105" plusError="0" minusError="0">-0.0032458793467433624</Numerator>
+       <Numerator number="106" plusError="0" minusError="0">0.0013928389429311036</Numerator>
+       <Numerator number="107" plusError="0" minusError="0">0.003133975866396081</Numerator>
+       <Numerator number="108" plusError="0" minusError="0">-8.120761288917804e-05</Numerator>
+       <Numerator number="109" plusError="0" minusError="0">-0.0025826129852170856</Numerator>
+       <Numerator number="110" plusError="0" minusError="0">-0.000807234479594313</Numerator>
+       <Numerator number="111" plusError="0" minusError="0">0.0018169365351710601</Numerator>
+       <Numerator number="112" plusError="0" minusError="0">0.0012658905489426806</Numerator>
+       <Numerator number="113" plusError="0" minusError="0">-0.0010293396817151878</Numerator>
+       <Numerator number="114" plusError="0" minusError="0">-0.0013607028880041252</Numerator>
+       <Numerator number="115" plusError="0" minusError="0">0.00035670644626972634</Numerator>
+       <Numerator number="116" plusError="0" minusError="0">0.0011982686723850896</Numerator>
+       <Numerator number="117" plusError="0" minusError="0">0.00012688650112822859</Numerator>
+       <Numerator number="118" plusError="0" minusError="0">-0.0008953939969206511</Numerator>
+       <Numerator number="119" plusError="0" minusError="0">-0.00040442561199531644</Numerator>
+       <Numerator number="120" plusError="0" minusError="0">0.000555199633281464</Numerator>
+       <Numerator number="121" plusError="0" minusError="0">0.0005014560273468972</Numerator>
+       <Numerator number="122" plusError="0" minusError="0">-0.00025258267782858</Numerator>
+       <Numerator number="123" plusError="0" minusError="0">-0.00046789121765028577</Numerator>
+       <Numerator number="124" plusError="0" minusError="0">2.9244438520227837e-05</Numerator>
+       <Numerator number="125" plusError="0" minusError="0">0.0003605803724555086</Numerator>
+       <Numerator number="126" plusError="0" minusError="0">0.00010333593529093357</Numerator>
+       <Numerator number="127" plusError="0" minusError="0">-0.00022990725974114245</Numerator>
+       <Numerator number="128" plusError="0" minusError="0">-0.00015590299312698907</Numerator>
+       <Numerator number="129" plusError="0" minusError="0">0.00011186417371186019</Numerator>
+       <Numerator number="130" plusError="0" minusError="0">0.00015137050297689186</Numerator>
+       <Numerator number="131" plusError="0" minusError="0">-2.5796771018728455e-05</Numerator>
+       <Numerator number="132" plusError="0" minusError="0">-0.00011565378697981367</Numerator>
+       <Numerator number="133" plusError="0" minusError="0">-2.3655579126153835e-05</Numerator>
+       <Numerator number="134" plusError="0" minusError="0">7.08876349245858e-05</Numerator>
+       <Numerator number="135" plusError="0" minusError="0">4.200141988325365e-05</Numerator>
+       <Numerator number="136" plusError="0" minusError="0">-3.1888638541741106e-05</Numerator>
+       <Numerator number="137" plusError="0" minusError="0">-3.9637156627676696e-05</Numerator>
+       <Numerator number="138" plusError="0" minusError="0">5.67135318675999e-06</Numerator>
+       <Numerator number="139" plusError="0" minusError="0">2.757767010938528e-05</Numerator>
+       <Numerator number="140" plusError="0" minusError="0">7.430122505570422e-06</Numerator>
+       <Numerator number="141" plusError="0" minusError="0">-1.3788854344954505e-05</Numerator>
+       <Numerator number="142" plusError="0" minusError="0">-9.708235693146941e-06</Numerator>
+       <Numerator number="143" plusError="0" minusError="0">5.279846790211707e-06</Numerator>
+       <Numerator number="144" plusError="0" minusError="0">1.044129156168016e-05</Numerator>
+       <Numerator number="145" plusError="0" minusError="0">5.1911605740576904e-06</Numerator>
+       <Numerator number="146" plusError="0" minusError="0">-2.4332974429303017e-07</Numerator>
+       <Numerator number="147" plusError="0" minusError="0">-1.3648936224722228e-06</Numerator>
+       <Numerator number="148" plusError="0" minusError="0">-4.928312721775864e-07</Numerator>
+      </Coefficients>
+      <Decimation>
+       <InputSampleRate>400</InputSampleRate>
+       <Factor>2</Factor>
+       <Offset>0</Offset>
+       <Delay>0.185</Delay>
+       <Correction>0.185</Correction>
+      </Decimation>
+      <StageGain>
+       <Value>1</Value>
+       <Frequency>1</Frequency>
+      </StageGain>
+     </Stage>
+    </Response>
+   </Channel>
+   <Channel locationCode="L0" code="HHE" startDate="2024-05-30T18:43:35Z">
+    <Latitude>34.03705</Latitude>
+    <Longitude>-118.178297</Longitude>
+    <Elevation>83.7</Elevation>
+    <Depth>0</Depth>
+    <Azimuth>90</Azimuth>
+    <Dip>0</Dip>
+    <SampleRate>200</SampleRate>
+    <Sensor>
+     <Description>Nanometrics TCH120-1 009275</Description>
+     <Manufacturer>Nanometrics</Manufacturer>
+     <Model>TCH120-1</Model>
+     <SerialNumber>009275</SerialNumber>
+    </Sensor>
+    <DataLogger>
+     <Description>Pegasus Portable Digital Recorder</Description>
+     <Manufacturer>Nanometrics</Manufacturer>
+     <Model>PGS-140</Model>
+     <SerialNumber>000697</SerialNumber>
+    </DataLogger>
+    <Response>
+     <InstrumentSensitivity>
+      <Value>2.994697576134245e+08</Value>
+      <Frequency>1</Frequency>
+      <InputUnits>
+       <Name>m/s</Name>
+       <Description>velocity in metres per second</Description>
+      </InputUnits>
+      <OutputUnits>
+       <Name>count</Name>
+       <Description>digital counts</Description>
+      </OutputUnits>
+     </InstrumentSensitivity>
+     <Stage number="1">
+      <PolesZeros>
+       <InputUnits>
+        <Name>m/s</Name>
+        <Description>velocity in metres per second</Description>
+       </InputUnits>
+       <OutputUnits>
+        <Name>V</Name>
+        <Description>voltage in volts</Description>
+       </OutputUnits>
+       <PzTransferFunctionType>LAPLACE (RADIANS/SECOND)</PzTransferFunctionType>
+       <NormalizationFactor>4.34492814617714e+17</NormalizationFactor>
+       <NormalizationFrequency>1</NormalizationFrequency>
+       <Zero number="0">
+        <Real plusError="0" minusError="0">0</Real>
+        <Imaginary plusError="0" minusError="0">0</Imaginary>
+       </Zero>
+       <Zero number="1">
+        <Real plusError="0" minusError="0">0</Real>
+        <Imaginary plusError="0" minusError="0">0</Imaginary>
+       </Zero>
+       <Zero number="2">
+        <Real plusError="0" minusError="0">-392</Real>
+        <Imaginary plusError="0" minusError="0">0</Imaginary>
+       </Zero>
+       <Zero number="3">
+        <Real plusError="0" minusError="0">-1960</Real>
+        <Imaginary plusError="0" minusError="0">0</Imaginary>
+       </Zero>
+       <Zero number="4">
+        <Real plusError="0" minusError="0">-1490</Real>
+        <Imaginary plusError="0" minusError="0">1740</Imaginary>
+       </Zero>
+       <Zero number="5">
+        <Real plusError="0" minusError="0">-1490</Real>
+        <Imaginary plusError="0" minusError="0">-1740</Imaginary>
+       </Zero>
+       <Pole number="0">
+        <Real plusError="0" minusError="0">-0.03691</Real>
+        <Imaginary plusError="0" minusError="0">0.03702</Imaginary>
+       </Pole>
+       <Pole number="1">
+        <Real plusError="0" minusError="0">-0.03691</Real>
+        <Imaginary plusError="0" minusError="0">-0.03702</Imaginary>
+       </Pole>
+       <Pole number="2">
+        <Real plusError="0" minusError="0">-343</Real>
+        <Imaginary plusError="0" minusError="0">0</Imaginary>
+       </Pole>
+       <Pole number="3">
+        <Real plusError="0" minusError="0">-370</Real>
+        <Imaginary plusError="0" minusError="0">467</Imaginary>
+       </Pole>
+       <Pole number="4">
+        <Real plusError="0" minusError="0">-370</Real>
+        <Imaginary plusError="0" minusError="0">-467</Imaginary>
+       </Pole>
+       <Pole number="5">
+        <Real plusError="0" minusError="0">-836</Real>
+        <Imaginary plusError="0" minusError="0">1522</Imaginary>
+       </Pole>
+       <Pole number="6">
+        <Real plusError="0" minusError="0">-836</Real>
+        <Imaginary plusError="0" minusError="0">-1522</Imaginary>
+       </Pole>
+       <Pole number="7">
+        <Real plusError="0" minusError="0">-4900</Real>
+        <Imaginary plusError="0" minusError="0">4700</Imaginary>
+       </Pole>
+       <Pole number="8">
+        <Real plusError="0" minusError="0">-4900</Real>
+        <Imaginary plusError="0" minusError="0">-4700</Imaginary>
+       </Pole>
+       <Pole number="9">
+        <Real plusError="0" minusError="0">-6900</Real>
+        <Imaginary plusError="0" minusError="0">0</Imaginary>
+       </Pole>
+       <Pole number="10">
+        <Real plusError="0" minusError="0">-15000</Real>
+        <Imaginary plusError="0" minusError="0">0</Imaginary>
+       </Pole>
+      </PolesZeros>
+      <StageGain>
+       <Value>754.3</Value>
+       <Frequency>1</Frequency>
+      </StageGain>
+     </Stage>
+     <Stage number="2">
+      <PolesZeros>
+       <InputUnits>
+        <Name>V</Name>
+        <Description>voltage in volts</Description>
+       </InputUnits>
+       <OutputUnits>
+        <Name>V</Name>
+        <Description>voltage in volts</Description>
+       </OutputUnits>
+       <PzTransferFunctionType>LAPLACE (RADIANS/SECOND)</PzTransferFunctionType>
+       <NormalizationFactor>1</NormalizationFactor>
+       <NormalizationFrequency>1</NormalizationFrequency>
+      </PolesZeros>
+      <StageGain>
+       <Value>0.9925419515226849</Value>
+       <Frequency>1</Frequency>
+      </StageGain>
+     </Stage>
+     <Stage number="3">
+      <PolesZeros>
+       <InputUnits>
+        <Name>V</Name>
+        <Description>voltage in volts</Description>
+       </InputUnits>
+       <OutputUnits>
+        <Name>V</Name>
+        <Description>voltage in volts</Description>
+       </OutputUnits>
+       <PzTransferFunctionType>LAPLACE (RADIANS/SECOND)</PzTransferFunctionType>
+       <NormalizationFactor>1</NormalizationFactor>
+       <NormalizationFrequency>1</NormalizationFrequency>
+      </PolesZeros>
+      <StageGain>
+       <Value>1</Value>
+       <Frequency>1</Frequency>
+      </StageGain>
+     </Stage>
+     <Stage number="4">
+      <Coefficients>
+       <InputUnits>
+        <Name>V</Name>
+        <Description>voltage in volts</Description>
+       </InputUnits>
+       <OutputUnits>
+        <Name>count</Name>
+        <Description>digital counts</Description>
+       </OutputUnits>
+       <CfTransferFunctionType>DIGITAL</CfTransferFunctionType>
+       <Numerator number="0" plusError="0" minusError="0">1</Numerator>
+      </Coefficients>
+      <Decimation>
+       <InputSampleRate>30000</InputSampleRate>
+       <Factor>1</Factor>
+       <Offset>0</Offset>
+       <Delay>0</Delay>
+       <Correction>0</Correction>
+      </Decimation>
+      <StageGain>
+       <Value>400000</Value>
+       <Frequency>1</Frequency>
+      </StageGain>
+     </Stage>
+     <Stage number="5">
+      <Coefficients>
+       <InputUnits>
+        <Name>count</Name>
+        <Description>digital counts</Description>
+       </InputUnits>
+       <OutputUnits>
+        <Name>count</Name>
+        <Description>digital counts</Description>
+       </OutputUnits>
+       <CfTransferFunctionType>DIGITAL</CfTransferFunctionType>
+       <Numerator number="0" plusError="0" minusError="0">-1.1915242202324819e-07</Numerator>
+       <Numerator number="1" plusError="0" minusError="0">-4.046015420990873e-07</Numerator>
+       <Numerator number="2" plusError="0" minusError="0">-1.0644228791158324e-06</Numerator>
+       <Numerator number="3" plusError="0" minusError="0">-2.394161512430574e-06</Numerator>
+       <Numerator number="4" plusError="0" minusError="0">-4.851174834157078e-06</Numerator>
+       <Numerator number="5" plusError="0" minusError="0">-9.100537397384457e-06</Numerator>
+       <Numerator number="6" plusError="0" minusError="0">-1.6068717835664678e-05</Numerator>
+       <Numerator number="7" plusError="0" minusError="0">-2.6996527455282132e-05</Numerator>
+       <Numerator number="8" plusError="0" minusError="0">-4.348637278945783e-05</Numerator>
+       <Numerator number="9" plusError="0" minusError="0">-6.75361420867615e-05</Numerator>
+       <Numerator number="10" plusError="0" minusError="0">-0.00010155107047352763</Numerator>
+       <Numerator number="11" plusError="0" minusError="0">-0.00014832399680325353</Numerator>
+       <Numerator number="12" plusError="0" minusError="0">-0.00021097403524294786</Numerator>
+       <Numerator number="13" plusError="0" minusError="0">-0.00029283381464063717</Numerator>
+       <Numerator number="14" plusError="0" minusError="0">-0.0003972771738782312</Numerator>
+       <Numerator number="15" plusError="0" minusError="0">-0.000527481731099103</Numerator>
+       <Numerator number="16" plusError="0" minusError="0">-0.0006861240457726855</Numerator>
+       <Numerator number="17" plusError="0" minusError="0">-0.0008750101045347955</Numerator>
+       <Numerator number="18" plusError="0" minusError="0">-0.0010946495550331352</Numerator>
+       <Numerator number="19" plusError="0" minusError="0">-0.001343788373225608</Numerator>
+       <Numerator number="20" plusError="0" minusError="0">-0.0016189210250243773</Numerator>
+       <Numerator number="21" plusError="0" minusError="0">-0.001913809949356775</Numerator>
+       <Numerator number="22" plusError="0" minusError="0">-0.0022190455152164192</Numerator>
+       <Numerator number="23" plusError="0" minusError="0">-0.0025216838859549798</Numerator>
+       <Numerator number="24" plusError="0" minusError="0">-0.002805002376935507</Numerator>
+       <Numerator number="25" plusError="0" minusError="0">-0.003048412029383815</Numerator>
+       <Numerator number="26" plusError="0" minusError="0">-0.003227563767715692</Numerator>
+       <Numerator number="27" plusError="0" minusError="0">-0.003314678638358309</Numerator>
+       <Numerator number="28" plusError="0" minusError="0">-0.003279123251384672</Numerator>
+       <Numerator number="29" plusError="0" minusError="0">-0.0030882397350994054</Numerator>
+       <Numerator number="30" plusError="0" minusError="0">-0.0027084247847946976</Numerator>
+       <Numerator number="31" plusError="0" minusError="0">-0.002106436519679319</Numerator>
+       <Numerator number="32" plusError="0" minusError="0">-0.0012508906744635347</Numerator>
+       <Numerator number="33" plusError="0" minusError="0">-0.00011389137816926379</Numerator>
+       <Numerator number="34" plusError="0" minusError="0">0.001327273494049315</Numerator>
+       <Numerator number="35" plusError="0" minusError="0">0.0030884544854313145</Numerator>
+       <Numerator number="36" plusError="0" minusError="0">0.005177071081971649</Numerator>
+       <Numerator number="37" plusError="0" minusError="0">0.007590744696366738</Numerator>
+       <Numerator number="38" plusError="0" minusError="0">0.010316226557882741</Numerator>
+       <Numerator number="39" plusError="0" minusError="0">0.013328704952193925</Numerator>
+       <Numerator number="40" plusError="0" minusError="0">0.016591562880926742</Numerator>
+       <Numerator number="41" plusError="0" minusError="0">0.020056637752646673</Numerator>
+       <Numerator number="42" plusError="0" minusError="0">0.023665011306124244</Numerator>
+       <Numerator number="43" plusError="0" minusError="0">0.027348330626526397</Numerator>
+       <Numerator number="44" plusError="0" minusError="0">0.031030632466561254</Numerator>
+       <Numerator number="45" plusError="0" minusError="0">0.03463061376277661</Numerator>
+       <Numerator number="46" plusError="0" minusError="0">0.038064264252337235</Numerator>
+       <Numerator number="47" plusError="0" minusError="0">0.041247753060231915</Numerator>
+       <Numerator number="48" plusError="0" minusError="0">0.044100442917447163</Numerator>
+       <Numerator number="49" plusError="0" minusError="0">0.04654789347766623</Numerator>
+       <Numerator number="50" plusError="0" minusError="0">0.048524711139413756</Numerator>
+       <Numerator number="51" plusError="0" minusError="0">0.049977106226086136</Numerator>
+       <Numerator number="52" plusError="0" minusError="0">0.05086503050731746</Numerator>
+       <Numerator number="53" plusError="0" minusError="0">0.05116378705747257</Numerator>
+       <Numerator number="54" plusError="0" minusError="0">0.05086503050731746</Numerator>
+       <Numerator number="55" plusError="0" minusError="0">0.049977106226086136</Numerator>
+       <Numerator number="56" plusError="0" minusError="0">0.048524711139413756</Numerator>
+       <Numerator number="57" plusError="0" minusError="0">0.04654789347766623</Numerator>
+       <Numerator number="58" plusError="0" minusError="0">0.044100442917447163</Numerator>
+       <Numerator number="59" plusError="0" minusError="0">0.041247753060231915</Numerator>
+       <Numerator number="60" plusError="0" minusError="0">0.038064264252337235</Numerator>
+       <Numerator number="61" plusError="0" minusError="0">0.03463061376277661</Numerator>
+       <Numerator number="62" plusError="0" minusError="0">0.031030632466561254</Numerator>
+       <Numerator number="63" plusError="0" minusError="0">0.027348330626526397</Numerator>
+       <Numerator number="64" plusError="0" minusError="0">0.023665011306124244</Numerator>
+       <Numerator number="65" plusError="0" minusError="0">0.020056637752646673</Numerator>
+       <Numerator number="66" plusError="0" minusError="0">0.016591562880926742</Numerator>
+       <Numerator number="67" plusError="0" minusError="0">0.013328704952193925</Numerator>
+       <Numerator number="68" plusError="0" minusError="0">0.010316226557882741</Numerator>
+       <Numerator number="69" plusError="0" minusError="0">0.007590744696366738</Numerator>
+       <Numerator number="70" plusError="0" minusError="0">0.005177071081971649</Numerator>
+       <Numerator number="71" plusError="0" minusError="0">0.0030884544854313145</Numerator>
+       <Numerator number="72" plusError="0" minusError="0">0.001327273494049315</Numerator>
+       <Numerator number="73" plusError="0" minusError="0">-0.00011389137816926379</Numerator>
+       <Numerator number="74" plusError="0" minusError="0">-0.0012508906744635347</Numerator>
+       <Numerator number="75" plusError="0" minusError="0">-0.002106436519679319</Numerator>
+       <Numerator number="76" plusError="0" minusError="0">-0.0027084247847946976</Numerator>
+       <Numerator number="77" plusError="0" minusError="0">-0.0030882397350994054</Numerator>
+       <Numerator number="78" plusError="0" minusError="0">-0.003279123251384672</Numerator>
+       <Numerator number="79" plusError="0" minusError="0">-0.003314678638358309</Numerator>
+       <Numerator number="80" plusError="0" minusError="0">-0.003227563767715692</Numerator>
+       <Numerator number="81" plusError="0" minusError="0">-0.003048412029383815</Numerator>
+       <Numerator number="82" plusError="0" minusError="0">-0.002805002376935507</Numerator>
+       <Numerator number="83" plusError="0" minusError="0">-0.0025216838859549798</Numerator>
+       <Numerator number="84" plusError="0" minusError="0">-0.0022190455152164192</Numerator>
+       <Numerator number="85" plusError="0" minusError="0">-0.001913809949356775</Numerator>
+       <Numerator number="86" plusError="0" minusError="0">-0.0016189210250243773</Numerator>
+       <Numerator number="87" plusError="0" minusError="0">-0.001343788373225608</Numerator>
+       <Numerator number="88" plusError="0" minusError="0">-0.0010946495550331352</Numerator>
+       <Numerator number="89" plusError="0" minusError="0">-0.0008750101045347955</Numerator>
+       <Numerator number="90" plusError="0" minusError="0">-0.0006861240457726855</Numerator>
+       <Numerator number="91" plusError="0" minusError="0">-0.000527481731099103</Numerator>
+       <Numerator number="92" plusError="0" minusError="0">-0.0003972771738782312</Numerator>
+       <Numerator number="93" plusError="0" minusError="0">-0.00029283381464063717</Numerator>
+       <Numerator number="94" plusError="0" minusError="0">-0.00021097403524294786</Numerator>
+       <Numerator number="95" plusError="0" minusError="0">-0.00014832399680325353</Numerator>
+       <Numerator number="96" plusError="0" minusError="0">-0.00010155107047352763</Numerator>
+       <Numerator number="97" plusError="0" minusError="0">-6.75361420867615e-05</Numerator>
+       <Numerator number="98" plusError="0" minusError="0">-4.348637278945783e-05</Numerator>
+       <Numerator number="99" plusError="0" minusError="0">-2.6996527455282132e-05</Numerator>
+       <Numerator number="100" plusError="0" minusError="0">-1.6068717835664678e-05</Numerator>
+       <Numerator number="101" plusError="0" minusError="0">-9.100537397384457e-06</Numerator>
+       <Numerator number="102" plusError="0" minusError="0">-4.851174834157078e-06</Numerator>
+       <Numerator number="103" plusError="0" minusError="0">-2.394161512430574e-06</Numerator>
+       <Numerator number="104" plusError="0" minusError="0">-1.0644228791158324e-06</Numerator>
+       <Numerator number="105" plusError="0" minusError="0">-4.046015420990873e-07</Numerator>
+       <Numerator number="106" plusError="0" minusError="0">-1.1915242202324819e-07</Numerator>
+      </Coefficients>
+      <Decimation>
+       <InputSampleRate>30000</InputSampleRate>
+       <Factor>15</Factor>
+       <Offset>0</Offset>
+       <Delay>0.0017666666666666666</Delay>
+       <Correction>0.0017666666666666666</Correction>
+      </Decimation>
+      <StageGain>
+       <Value>1</Value>
+       <Frequency>1</Frequency>
+      </StageGain>
+     </Stage>
+     <Stage number="6">
+      <Coefficients>
+       <InputUnits>
+        <Name>count</Name>
+        <Description>digital counts</Description>
+       </InputUnits>
+       <OutputUnits>
+        <Name>count</Name>
+        <Description>digital counts</Description>
+       </OutputUnits>
+       <CfTransferFunctionType>DIGITAL</CfTransferFunctionType>
+       <Numerator number="0" plusError="0" minusError="0">6.250457528974879e-07</Numerator>
+       <Numerator number="1" plusError="0" minusError="0">4.066353025622599e-06</Numerator>
+       <Numerator number="2" plusError="0" minusError="0">1.5237733992851714e-05</Numerator>
+       <Numerator number="3" plusError="0" minusError="0">4.147346621445046e-05</Numerator>
+       <Numerator number="4" plusError="0" minusError="0">8.869816170879125e-05</Numerator>
+       <Numerator number="5" plusError="0" minusError="0">0.00015273020826333982</Numerator>
+       <Numerator number="6" plusError="0" minusError="0">0.00020766988217781285</Numerator>
+       <Numerator number="7" plusError="0" minusError="0">0.00019845369991786696</Numerator>
+       <Numerator number="8" plusError="0" minusError="0">4.8800814923088754e-05</Numerator>
+       <Numerator number="9" plusError="0" minusError="0">-0.00030560446155512296</Numerator>
+       <Numerator number="10" plusError="0" minusError="0">-0.000859429270176589</Numerator>
+       <Numerator number="11" plusError="0" minusError="0">-0.0014751718768686206</Numerator>
+       <Numerator number="12" plusError="0" minusError="0">-0.0018548757210812283</Numerator>
+       <Numerator number="13" plusError="0" minusError="0">-0.0015914377648684234</Numerator>
+       <Numerator number="14" plusError="0" minusError="0">-0.00032502372609524726</Numerator>
+       <Numerator number="15" plusError="0" minusError="0">0.002018903783987657</Numerator>
+       <Numerator number="16" plusError="0" minusError="0">0.0049971940851897215</Numerator>
+       <Numerator number="17" plusError="0" minusError="0">0.007556747221955823</Numerator>
+       <Numerator number="18" plusError="0" minusError="0">0.008211272985739121</Numerator>
+       <Numerator number="19" plusError="0" minusError="0">0.005536131701332664</Numerator>
+       <Numerator number="20" plusError="0" minusError="0">-0.00111134362124062</Numerator>
+       <Numerator number="21" plusError="0" minusError="0">-0.01089038054167128</Numerator>
+       <Numerator number="22" plusError="0" minusError="0">-0.02112460175485532</Numerator>
+       <Numerator number="23" plusError="0" minusError="0">-0.02758436656772834</Numerator>
+       <Numerator number="24" plusError="0" minusError="0">-0.025494684028686446</Numerator>
+       <Numerator number="25" plusError="0" minusError="0">-0.011069430176427076</Numerator>
+       <Numerator number="26" plusError="0" minusError="0">0.016900991469107333</Numerator>
+       <Numerator number="27" plusError="0" minusError="0">0.05600881579938804</Numerator>
+       <Numerator number="28" plusError="0" minusError="0">0.1002310572179174</Numerator>
+       <Numerator number="29" plusError="0" minusError="0">0.14114267357947802</Numerator>
+       <Numerator number="30" plusError="0" minusError="0">0.17006716456603635</Numerator>
+       <Numerator number="31" plusError="0" minusError="0">0.18051027383258295</Numerator>
+       <Numerator number="32" plusError="0" minusError="0">0.17006716456603635</Numerator>
+       <Numerator number="33" plusError="0" minusError="0">0.14114267357947802</Numerator>
+       <Numerator number="34" plusError="0" minusError="0">0.1002310572179174</Numerator>
+       <Numerator number="35" plusError="0" minusError="0">0.05600881579938804</Numerator>
+       <Numerator number="36" plusError="0" minusError="0">0.016900991469107333</Numerator>
+       <Numerator number="37" plusError="0" minusError="0">-0.011069430176427076</Numerator>
+       <Numerator number="38" plusError="0" minusError="0">-0.025494684028686446</Numerator>
+       <Numerator number="39" plusError="0" minusError="0">-0.02758436656772834</Numerator>
+       <Numerator number="40" plusError="0" minusError="0">-0.02112460175485532</Numerator>
+       <Numerator number="41" plusError="0" minusError="0">-0.01089038054167128</Numerator>
+       <Numerator number="42" plusError="0" minusError="0">-0.00111134362124062</Numerator>
+       <Numerator number="43" plusError="0" minusError="0">0.005536131701332664</Numerator>
+       <Numerator number="44" plusError="0" minusError="0">0.008211272985739121</Numerator>
+       <Numerator number="45" plusError="0" minusError="0">0.007556747221955823</Numerator>
+       <Numerator number="46" plusError="0" minusError="0">0.0049971940851897215</Numerator>
+       <Numerator number="47" plusError="0" minusError="0">0.002018903783987657</Numerator>
+       <Numerator number="48" plusError="0" minusError="0">-0.00032502372609524726</Numerator>
+       <Numerator number="49" plusError="0" minusError="0">-0.0015914377648684234</Numerator>
+       <Numerator number="50" plusError="0" minusError="0">-0.0018548757210812283</Numerator>
+       <Numerator number="51" plusError="0" minusError="0">-0.0014751718768686206</Numerator>
+       <Numerator number="52" plusError="0" minusError="0">-0.000859429270176589</Numerator>
+       <Numerator number="53" plusError="0" minusError="0">-0.00030560446155512296</Numerator>
+       <Numerator number="54" plusError="0" minusError="0">4.8800814923088754e-05</Numerator>
+       <Numerator number="55" plusError="0" minusError="0">0.00019845369991786696</Numerator>
+       <Numerator number="56" plusError="0" minusError="0">0.00020766988217781285</Numerator>
+       <Numerator number="57" plusError="0" minusError="0">0.00015273020826333982</Numerator>
+       <Numerator number="58" plusError="0" minusError="0">8.869816170879125e-05</Numerator>
+       <Numerator number="59" plusError="0" minusError="0">4.147346621445046e-05</Numerator>
+       <Numerator number="60" plusError="0" minusError="0">1.5237733992851714e-05</Numerator>
+       <Numerator number="61" plusError="0" minusError="0">4.066353025622599e-06</Numerator>
+       <Numerator number="62" plusError="0" minusError="0">6.250457528974879e-07</Numerator>
+      </Coefficients>
+      <Decimation>
+       <InputSampleRate>2000</InputSampleRate>
+       <Factor>5</Factor>
+       <Offset>0</Offset>
+       <Delay>0.0155</Delay>
+       <Correction>0.0155</Correction>
+      </Decimation>
+      <StageGain>
+       <Value>1</Value>
+       <Frequency>1</Frequency>
+      </StageGain>
+     </Stage>
+     <Stage number="7">
+      <Coefficients>
+       <InputUnits>
+        <Name>count</Name>
+        <Description>digital counts</Description>
+       </InputUnits>
+       <OutputUnits>
+        <Name>count</Name>
+        <Description>digital counts</Description>
+       </OutputUnits>
+       <CfTransferFunctionType>DIGITAL</CfTransferFunctionType>
+       <Numerator number="0" plusError="0" minusError="0">-4.928312721775864e-07</Numerator>
+       <Numerator number="1" plusError="0" minusError="0">-1.3648936224722228e-06</Numerator>
+       <Numerator number="2" plusError="0" minusError="0">-2.4332974429303017e-07</Numerator>
+       <Numerator number="3" plusError="0" minusError="0">5.1911605740576904e-06</Numerator>
+       <Numerator number="4" plusError="0" minusError="0">1.044129156168016e-05</Numerator>
+       <Numerator number="5" plusError="0" minusError="0">5.279846790211707e-06</Numerator>
+       <Numerator number="6" plusError="0" minusError="0">-9.708235693146941e-06</Numerator>
+       <Numerator number="7" plusError="0" minusError="0">-1.3788854344954505e-05</Numerator>
+       <Numerator number="8" plusError="0" minusError="0">7.430122505570422e-06</Numerator>
+       <Numerator number="9" plusError="0" minusError="0">2.757767010938528e-05</Numerator>
+       <Numerator number="10" plusError="0" minusError="0">5.67135318675999e-06</Numerator>
+       <Numerator number="11" plusError="0" minusError="0">-3.9637156627676696e-05</Numerator>
+       <Numerator number="12" plusError="0" minusError="0">-3.1888638541741106e-05</Numerator>
+       <Numerator number="13" plusError="0" minusError="0">4.200141988325365e-05</Numerator>
+       <Numerator number="14" plusError="0" minusError="0">7.08876349245858e-05</Numerator>
+       <Numerator number="15" plusError="0" minusError="0">-2.3655579126153835e-05</Numerator>
+       <Numerator number="16" plusError="0" minusError="0">-0.00011565378697981367</Numerator>
+       <Numerator number="17" plusError="0" minusError="0">-2.5796771018728455e-05</Numerator>
+       <Numerator number="18" plusError="0" minusError="0">0.00015137050297689186</Numerator>
+       <Numerator number="19" plusError="0" minusError="0">0.00011186417371186019</Numerator>
+       <Numerator number="20" plusError="0" minusError="0">-0.00015590299312698907</Numerator>
+       <Numerator number="21" plusError="0" minusError="0">-0.00022990725974114245</Numerator>
+       <Numerator number="22" plusError="0" minusError="0">0.00010333593529093357</Numerator>
+       <Numerator number="23" plusError="0" minusError="0">0.0003605803724555086</Numerator>
+       <Numerator number="24" plusError="0" minusError="0">2.9244438520227837e-05</Numerator>
+       <Numerator number="25" plusError="0" minusError="0">-0.00046789121765028577</Numerator>
+       <Numerator number="26" plusError="0" minusError="0">-0.00025258267782858</Numerator>
+       <Numerator number="27" plusError="0" minusError="0">0.0005014560273468972</Numerator>
+       <Numerator number="28" plusError="0" minusError="0">0.000555199633281464</Numerator>
+       <Numerator number="29" plusError="0" minusError="0">-0.00040442561199531644</Numerator>
+       <Numerator number="30" plusError="0" minusError="0">-0.0008953939969206511</Numerator>
+       <Numerator number="31" plusError="0" minusError="0">0.00012688650112822859</Numerator>
+       <Numerator number="32" plusError="0" minusError="0">0.0011982686723850896</Numerator>
+       <Numerator number="33" plusError="0" minusError="0">0.00035670644626972634</Numerator>
+       <Numerator number="34" plusError="0" minusError="0">-0.0013607028880041252</Numerator>
+       <Numerator number="35" plusError="0" minusError="0">-0.0010293396817151878</Numerator>
+       <Numerator number="36" plusError="0" minusError="0">0.0012658905489426806</Numerator>
+       <Numerator number="37" plusError="0" minusError="0">0.0018169365351710601</Numerator>
+       <Numerator number="38" plusError="0" minusError="0">-0.000807234479594313</Numerator>
+       <Numerator number="39" plusError="0" minusError="0">-0.0025826129852170856</Numerator>
+       <Numerator number="40" plusError="0" minusError="0">-8.120761288917804e-05</Numerator>
+       <Numerator number="41" plusError="0" minusError="0">0.003133975866396081</Numerator>
+       <Numerator number="42" plusError="0" minusError="0">0.0013928389429311036</Numerator>
+       <Numerator number="43" plusError="0" minusError="0">-0.0032458793467433624</Numerator>
+       <Numerator number="44" plusError="0" minusError="0">-0.0030220136599240113</Numerator>
+       <Numerator number="45" plusError="0" minusError="0">0.0026982244243324363</Numerator>
+       <Numerator number="46" plusError="0" minusError="0">0.004750347669977774</Numerator>
+       <Numerator number="47" plusError="0" minusError="0">-0.0013248063028101049</Numerator>
+       <Numerator number="48" plusError="0" minusError="0">-0.0062520799625698075</Numerator>
+       <Numerator number="49" plusError="0" minusError="0">-0.0009339359297387869</Numerator>
+       <Numerator number="50" plusError="0" minusError="0">0.007121998765125581</Numerator>
+       <Numerator number="51" plusError="0" minusError="0">0.003983614595729899</Numerator>
+       <Numerator number="52" plusError="0" minusError="0">-0.006925314706146384</Numerator>
+       <Numerator number="53" plusError="0" minusError="0">-0.007543654639022661</Numerator>
+       <Numerator number="54" plusError="0" minusError="0">0.00526423681059624</Numerator>
+       <Numerator number="55" plusError="0" minusError="0">0.01113776194657132</Numerator>
+       <Numerator number="56" plusError="0" minusError="0">-0.001851605020923299</Numerator>
+       <Numerator number="57" plusError="0" minusError="0">-0.01410998243783119</Numerator>
+       <Numerator number="58" plusError="0" minusError="0">-0.0034209766177088637</Numerator>
+       <Numerator number="59" plusError="0" minusError="0">0.015661716446413964</Numerator>
+       <Numerator number="60" plusError="0" minusError="0">0.010433831116121527</Numerator>
+       <Numerator number="61" plusError="0" minusError="0">-0.01489364017675917</Numerator>
+       <Numerator number="62" plusError="0" minusError="0">-0.018820181290285235</Numerator>
+       <Numerator number="63" plusError="0" minusError="0">0.010816565929542218</Numerator>
+       <Numerator number="64" plusError="0" minusError="0">0.027984458626731108</Numerator>
+       <Numerator number="65" plusError="0" minusError="0">-0.0022480103479932184</Numerator>
+       <Numerator number="66" plusError="0" minusError="0">-0.03715881842950209</Numerator>
+       <Numerator number="67" plusError="0" minusError="0">-0.012645676536040366</Numerator>
+       <Numerator number="68" plusError="0" minusError="0">0.04549176654239472</Numerator>
+       <Numerator number="69" plusError="0" minusError="0">0.03811662846464684</Numerator>
+       <Numerator number="70" plusError="0" minusError="0">-0.052156515039666985</Numerator>
+       <Numerator number="71" plusError="0" minusError="0">-0.08988056615956795</Numerator>
+       <Numerator number="72" plusError="0" minusError="0">0.05646237223853923</Numerator>
+       <Numerator number="73" plusError="0" minusError="0">0.31274713129800175</Numerator>
+       <Numerator number="74" plusError="0" minusError="0">0.4420488659778931</Numerator>
+       <Numerator number="75" plusError="0" minusError="0">0.31274713129800175</Numerator>
+       <Numerator number="76" plusError="0" minusError="0">0.05646237223853923</Numerator>
+       <Numerator number="77" plusError="0" minusError="0">-0.08988056615956795</Numerator>
+       <Numerator number="78" plusError="0" minusError="0">-0.052156515039666985</Numerator>
+       <Numerator number="79" plusError="0" minusError="0">0.03811662846464684</Numerator>
+       <Numerator number="80" plusError="0" minusError="0">0.04549176654239472</Numerator>
+       <Numerator number="81" plusError="0" minusError="0">-0.012645676536040366</Numerator>
+       <Numerator number="82" plusError="0" minusError="0">-0.03715881842950209</Numerator>
+       <Numerator number="83" plusError="0" minusError="0">-0.0022480103479932184</Numerator>
+       <Numerator number="84" plusError="0" minusError="0">0.027984458626731108</Numerator>
+       <Numerator number="85" plusError="0" minusError="0">0.010816565929542218</Numerator>
+       <Numerator number="86" plusError="0" minusError="0">-0.018820181290285235</Numerator>
+       <Numerator number="87" plusError="0" minusError="0">-0.01489364017675917</Numerator>
+       <Numerator number="88" plusError="0" minusError="0">0.010433831116121527</Numerator>
+       <Numerator number="89" plusError="0" minusError="0">0.015661716446413964</Numerator>
+       <Numerator number="90" plusError="0" minusError="0">-0.0034209766177088637</Numerator>
+       <Numerator number="91" plusError="0" minusError="0">-0.01410998243783119</Numerator>
+       <Numerator number="92" plusError="0" minusError="0">-0.001851605020923299</Numerator>
+       <Numerator number="93" plusError="0" minusError="0">0.01113776194657132</Numerator>
+       <Numerator number="94" plusError="0" minusError="0">0.00526423681059624</Numerator>
+       <Numerator number="95" plusError="0" minusError="0">-0.007543654639022661</Numerator>
+       <Numerator number="96" plusError="0" minusError="0">-0.006925314706146384</Numerator>
+       <Numerator number="97" plusError="0" minusError="0">0.003983614595729899</Numerator>
+       <Numerator number="98" plusError="0" minusError="0">0.007121998765125581</Numerator>
+       <Numerator number="99" plusError="0" minusError="0">-0.0009339359297387869</Numerator>
+       <Numerator number="100" plusError="0" minusError="0">-0.0062520799625698075</Numerator>
+       <Numerator number="101" plusError="0" minusError="0">-0.0013248063028101049</Numerator>
+       <Numerator number="102" plusError="0" minusError="0">0.004750347669977774</Numerator>
+       <Numerator number="103" plusError="0" minusError="0">0.0026982244243324363</Numerator>
+       <Numerator number="104" plusError="0" minusError="0">-0.0030220136599240113</Numerator>
+       <Numerator number="105" plusError="0" minusError="0">-0.0032458793467433624</Numerator>
+       <Numerator number="106" plusError="0" minusError="0">0.0013928389429311036</Numerator>
+       <Numerator number="107" plusError="0" minusError="0">0.003133975866396081</Numerator>
+       <Numerator number="108" plusError="0" minusError="0">-8.120761288917804e-05</Numerator>
+       <Numerator number="109" plusError="0" minusError="0">-0.0025826129852170856</Numerator>
+       <Numerator number="110" plusError="0" minusError="0">-0.000807234479594313</Numerator>
+       <Numerator number="111" plusError="0" minusError="0">0.0018169365351710601</Numerator>
+       <Numerator number="112" plusError="0" minusError="0">0.0012658905489426806</Numerator>
+       <Numerator number="113" plusError="0" minusError="0">-0.0010293396817151878</Numerator>
+       <Numerator number="114" plusError="0" minusError="0">-0.0013607028880041252</Numerator>
+       <Numerator number="115" plusError="0" minusError="0">0.00035670644626972634</Numerator>
+       <Numerator number="116" plusError="0" minusError="0">0.0011982686723850896</Numerator>
+       <Numerator number="117" plusError="0" minusError="0">0.00012688650112822859</Numerator>
+       <Numerator number="118" plusError="0" minusError="0">-0.0008953939969206511</Numerator>
+       <Numerator number="119" plusError="0" minusError="0">-0.00040442561199531644</Numerator>
+       <Numerator number="120" plusError="0" minusError="0">0.000555199633281464</Numerator>
+       <Numerator number="121" plusError="0" minusError="0">0.0005014560273468972</Numerator>
+       <Numerator number="122" plusError="0" minusError="0">-0.00025258267782858</Numerator>
+       <Numerator number="123" plusError="0" minusError="0">-0.00046789121765028577</Numerator>
+       <Numerator number="124" plusError="0" minusError="0">2.9244438520227837e-05</Numerator>
+       <Numerator number="125" plusError="0" minusError="0">0.0003605803724555086</Numerator>
+       <Numerator number="126" plusError="0" minusError="0">0.00010333593529093357</Numerator>
+       <Numerator number="127" plusError="0" minusError="0">-0.00022990725974114245</Numerator>
+       <Numerator number="128" plusError="0" minusError="0">-0.00015590299312698907</Numerator>
+       <Numerator number="129" plusError="0" minusError="0">0.00011186417371186019</Numerator>
+       <Numerator number="130" plusError="0" minusError="0">0.00015137050297689186</Numerator>
+       <Numerator number="131" plusError="0" minusError="0">-2.5796771018728455e-05</Numerator>
+       <Numerator number="132" plusError="0" minusError="0">-0.00011565378697981367</Numerator>
+       <Numerator number="133" plusError="0" minusError="0">-2.3655579126153835e-05</Numerator>
+       <Numerator number="134" plusError="0" minusError="0">7.08876349245858e-05</Numerator>
+       <Numerator number="135" plusError="0" minusError="0">4.200141988325365e-05</Numerator>
+       <Numerator number="136" plusError="0" minusError="0">-3.1888638541741106e-05</Numerator>
+       <Numerator number="137" plusError="0" minusError="0">-3.9637156627676696e-05</Numerator>
+       <Numerator number="138" plusError="0" minusError="0">5.67135318675999e-06</Numerator>
+       <Numerator number="139" plusError="0" minusError="0">2.757767010938528e-05</Numerator>
+       <Numerator number="140" plusError="0" minusError="0">7.430122505570422e-06</Numerator>
+       <Numerator number="141" plusError="0" minusError="0">-1.3788854344954505e-05</Numerator>
+       <Numerator number="142" plusError="0" minusError="0">-9.708235693146941e-06</Numerator>
+       <Numerator number="143" plusError="0" minusError="0">5.279846790211707e-06</Numerator>
+       <Numerator number="144" plusError="0" minusError="0">1.044129156168016e-05</Numerator>
+       <Numerator number="145" plusError="0" minusError="0">5.1911605740576904e-06</Numerator>
+       <Numerator number="146" plusError="0" minusError="0">-2.4332974429303017e-07</Numerator>
+       <Numerator number="147" plusError="0" minusError="0">-1.3648936224722228e-06</Numerator>
+       <Numerator number="148" plusError="0" minusError="0">-4.928312721775864e-07</Numerator>
+      </Coefficients>
+      <Decimation>
+       <InputSampleRate>400</InputSampleRate>
+       <Factor>2</Factor>
+       <Offset>0</Offset>
+       <Delay>0.185</Delay>
+       <Correction>0.185</Correction>
+      </Decimation>
+      <StageGain>
+       <Value>1</Value>
+       <Frequency>1</Frequency>
+      </StageGain>
+     </Stage>
+    </Response>
+   </Channel>
+   <Channel locationCode="" code="ATU" startDate="2024-05-30T18:43:35Z">
+    <Description>Time Uncertainty</Description>
+    <Latitude>34.03705</Latitude>
+    <Longitude>-118.178297</Longitude>
+    <Elevation>83.7</Elevation>
+    <Depth>0</Depth>
+    <Azimuth>0</Azimuth>
+    <Dip>0</Dip>
+    <Type>HEALTH</Type>
+    <SampleRate>0.1</SampleRate>
+    <CalibrationUnits>
+     <Name>second</Name>
+    </CalibrationUnits>
+    <Sensor>
+     <Description>Pegasus Portable Digital Recorder</Description>
+     <Manufacturer>Nanometrics</Manufacturer>
+     <Model>PGS-140</Model>
+     <SerialNumber>000697</SerialNumber>
+    </Sensor>
+    <DataLogger>
+     <Description>Pegasus Portable Digital Recorder</Description>
+     <Manufacturer>Nanometrics</Manufacturer>
+     <Model>PGS-140</Model>
+     <SerialNumber>000697</SerialNumber>
+    </DataLogger>
+    <Response>
+     <InstrumentSensitivity>
+      <Value>1e+06</Value>
+      <Frequency>0.025</Frequency>
+      <InputUnits>
+       <Name>second</Name>
+      </InputUnits>
+      <OutputUnits>
+       <Name>count</Name>
+       <Description>digital counts</Description>
+      </OutputUnits>
+     </InstrumentSensitivity>
+     <Stage number="1">
+      <StageGain>
+       <Value>1</Value>
+       <Frequency>0.025</Frequency>
+      </StageGain>
+     </Stage>
+     <Stage number="2">
+      <Coefficients>
+       <InputUnits>
+        <Name>second</Name>
+       </InputUnits>
+       <OutputUnits>
+        <Name>count</Name>
+        <Description>digital counts</Description>
+       </OutputUnits>
+       <CfTransferFunctionType>DIGITAL</CfTransferFunctionType>
+      </Coefficients>
+      <Decimation>
+       <InputSampleRate>0.1</InputSampleRate>
+       <Factor>1</Factor>
+       <Offset>0</Offset>
+       <Delay>0</Delay>
+       <Correction>0</Correction>
+      </Decimation>
+      <StageGain>
+       <Value>1e+06</Value>
+       <Frequency>0.025</Frequency>
+      </StageGain>
+     </Stage>
+    </Response>
+   </Channel>
+   <Channel locationCode="" code="VAN" startDate="2024-05-30T18:43:35Z">
+    <Description>GNSS Antenna Status</Description>
+    <Latitude>34.03705</Latitude>
+    <Longitude>-118.178297</Longitude>
+    <Elevation>83.7</Elevation>
+    <Depth>0</Depth>
+    <Azimuth>0</Azimuth>
+    <Dip>0</Dip>
+    <Type>HEALTH</Type>
+    <SampleRate>0.1</SampleRate>
+    <CalibrationUnits>
+     <Name>second</Name>
+    </CalibrationUnits>
+    <Sensor>
+     <Description>Pegasus Portable Digital Recorder</Description>
+     <Manufacturer>Nanometrics</Manufacturer>
+     <Model>PGS-140</Model>
+     <SerialNumber>000697</SerialNumber>
+    </Sensor>
+    <DataLogger>
+     <Description>Pegasus Portable Digital Recorder</Description>
+     <Manufacturer>Nanometrics</Manufacturer>
+     <Model>PGS-140</Model>
+     <SerialNumber>000697</SerialNumber>
+    </DataLogger>
+    <Response>
+     <InstrumentSensitivity>
+      <Value>1</Value>
+      <Frequency>0.025</Frequency>
+      <InputUnits>
+       <Name>second</Name>
+      </InputUnits>
+      <OutputUnits>
+       <Name>count</Name>
+       <Description>digital counts</Description>
+      </OutputUnits>
+     </InstrumentSensitivity>
+     <Stage number="1">
+      <StageGain>
+       <Value>1</Value>
+       <Frequency>0.025</Frequency>
+      </StageGain>
+     </Stage>
+     <Stage number="2">
+      <Coefficients>
+       <InputUnits>
+        <Name>second</Name>
+       </InputUnits>
+       <OutputUnits>
+        <Name>count</Name>
+        <Description>digital counts</Description>
+       </OutputUnits>
+       <CfTransferFunctionType>DIGITAL</CfTransferFunctionType>
+      </Coefficients>
+      <Decimation>
+       <InputSampleRate>0.1</InputSampleRate>
+       <Factor>1</Factor>
+       <Offset>0</Offset>
+       <Delay>0</Delay>
+       <Correction>0</Correction>
+      </Decimation>
+      <StageGain>
+       <Value>1</Value>
+       <Frequency>0.025</Frequency>
+      </StageGain>
+     </Stage>
+    </Response>
+   </Channel>
+   <Channel locationCode="" code="VCE" startDate="2024-05-30T18:43:35Z">
+    <Description>System Clock Error</Description>
+    <Latitude>34.03705</Latitude>
+    <Longitude>-118.178297</Longitude>
+    <Elevation>83.7</Elevation>
+    <Depth>0</Depth>
+    <Azimuth>0</Azimuth>
+    <Dip>0</Dip>
+    <Type>HEALTH</Type>
+    <SampleRate>0.1</SampleRate>
+    <CalibrationUnits>
+     <Name>second</Name>
+    </CalibrationUnits>
+    <Sensor>
+     <Description>Pegasus Portable Digital Recorder</Description>
+     <Manufacturer>Nanometrics</Manufacturer>
+     <Model>PGS-140</Model>
+     <SerialNumber>000697</SerialNumber>
+    </Sensor>
+    <DataLogger>
+     <Description>Pegasus Portable Digital Recorder</Description>
+     <Manufacturer>Nanometrics</Manufacturer>
+     <Model>PGS-140</Model>
+     <SerialNumber>000697</SerialNumber>
+    </DataLogger>
+    <Response>
+     <InstrumentSensitivity>
+      <Value>1e+06</Value>
+      <Frequency>0.025</Frequency>
+      <InputUnits>
+       <Name>second</Name>
+      </InputUnits>
+      <OutputUnits>
+       <Name>count</Name>
+       <Description>digital counts</Description>
+      </OutputUnits>
+     </InstrumentSensitivity>
+     <Stage number="1">
+      <StageGain>
+       <Value>1</Value>
+       <Frequency>0.025</Frequency>
+      </StageGain>
+     </Stage>
+     <Stage number="2">
+      <Coefficients>
+       <InputUnits>
+        <Name>second</Name>
+       </InputUnits>
+       <OutputUnits>
+        <Name>count</Name>
+        <Description>digital counts</Description>
+       </OutputUnits>
+       <CfTransferFunctionType>DIGITAL</CfTransferFunctionType>
+      </Coefficients>
+      <Decimation>
+       <InputSampleRate>0.1</InputSampleRate>
+       <Factor>1</Factor>
+       <Offset>0</Offset>
+       <Delay>0</Delay>
+       <Correction>0</Correction>
+      </Decimation>
+      <StageGain>
+       <Value>1e+06</Value>
+       <Frequency>0.025</Frequency>
+      </StageGain>
+     </Stage>
+    </Response>
+   </Channel>
+   <Channel locationCode="" code="VCO" startDate="2024-05-30T18:43:35Z">
+    <Description>VCXO Control Setpoint</Description>
+    <Latitude>34.03705</Latitude>
+    <Longitude>-118.178297</Longitude>
+    <Elevation>83.7</Elevation>
+    <Depth>0</Depth>
+    <Azimuth>0</Azimuth>
+    <Dip>0</Dip>
+    <Type>HEALTH</Type>
+    <SampleRate>0.1</SampleRate>
+    <CalibrationUnits>
+     <Name>count</Name>
+    </CalibrationUnits>
+    <Sensor>
+     <Description>Pegasus Portable Digital Recorder</Description>
+     <Manufacturer>Nanometrics</Manufacturer>
+     <Model>PGS-140</Model>
+     <SerialNumber>000697</SerialNumber>
+    </Sensor>
+    <DataLogger>
+     <Description>Pegasus Portable Digital Recorder</Description>
+     <Manufacturer>Nanometrics</Manufacturer>
+     <Model>PGS-140</Model>
+     <SerialNumber>000697</SerialNumber>
+    </DataLogger>
+    <Response>
+     <InstrumentSensitivity>
+      <Value>1</Value>
+      <Frequency>0.025</Frequency>
+      <InputUnits>
+       <Name>count</Name>
+      </InputUnits>
+      <OutputUnits>
+       <Name>count</Name>
+       <Description>digital counts</Description>
+      </OutputUnits>
+     </InstrumentSensitivity>
+     <Stage number="1">
+      <StageGain>
+       <Value>1</Value>
+       <Frequency>0.025</Frequency>
+      </StageGain>
+     </Stage>
+     <Stage number="2">
+      <Coefficients>
+       <InputUnits>
+        <Name>count</Name>
+       </InputUnits>
+       <OutputUnits>
+        <Name>count</Name>
+        <Description>digital counts</Description>
+       </OutputUnits>
+       <CfTransferFunctionType>DIGITAL</CfTransferFunctionType>
+      </Coefficients>
+      <Decimation>
+       <InputSampleRate>0.1</InputSampleRate>
+       <Factor>1</Factor>
+       <Offset>0</Offset>
+       <Delay>0</Delay>
+       <Correction>0</Correction>
+      </Decimation>
+      <StageGain>
+       <Value>1</Value>
+       <Frequency>0.025</Frequency>
+      </StageGain>
+     </Stage>
+    </Response>
+   </Channel>
+   <Channel locationCode="" code="VCQ" startDate="2024-05-30T18:43:35Z">
+    <Description>Clock Quality</Description>
+    <Latitude>34.03705</Latitude>
+    <Longitude>-118.178297</Longitude>
+    <Elevation>83.7</Elevation>
+    <Depth>0</Depth>
+    <Azimuth>0</Azimuth>
+    <Dip>0</Dip>
+    <Type>HEALTH</Type>
+    <SampleRate>0.1</SampleRate>
+    <CalibrationUnits>
+     <Name>percent</Name>
+    </CalibrationUnits>
+    <Sensor>
+     <Description>Pegasus Portable Digital Recorder</Description>
+     <Manufacturer>Nanometrics</Manufacturer>
+     <Model>PGS-140</Model>
+     <SerialNumber>000697</SerialNumber>
+    </Sensor>
+    <DataLogger>
+     <Description>Pegasus Portable Digital Recorder</Description>
+     <Manufacturer>Nanometrics</Manufacturer>
+     <Model>PGS-140</Model>
+     <SerialNumber>000697</SerialNumber>
+    </DataLogger>
+    <Response>
+     <InstrumentSensitivity>
+      <Value>1</Value>
+      <Frequency>0.025</Frequency>
+      <InputUnits>
+       <Name>percent</Name>
+      </InputUnits>
+      <OutputUnits>
+       <Name>count</Name>
+       <Description>digital counts</Description>
+      </OutputUnits>
+     </InstrumentSensitivity>
+     <Stage number="1">
+      <StageGain>
+       <Value>1</Value>
+       <Frequency>0.025</Frequency>
+      </StageGain>
+     </Stage>
+     <Stage number="2">
+      <Coefficients>
+       <InputUnits>
+        <Name>percent</Name>
+       </InputUnits>
+       <OutputUnits>
+        <Name>count</Name>
+        <Description>digital counts</Description>
+       </OutputUnits>
+       <CfTransferFunctionType>DIGITAL</CfTransferFunctionType>
+      </Coefficients>
+      <Decimation>
+       <InputSampleRate>0.1</InputSampleRate>
+       <Factor>1</Factor>
+       <Offset>0</Offset>
+       <Delay>0</Delay>
+       <Correction>0</Correction>
+      </Decimation>
+      <StageGain>
+       <Value>1</Value>
+       <Frequency>0.025</Frequency>
+      </StageGain>
+     </Stage>
+    </Response>
+   </Channel>
+   <Channel locationCode="" code="VDP" startDate="2024-05-30T18:43:35Z">
+    <Description>System Pressure</Description>
+    <Latitude>34.03705</Latitude>
+    <Longitude>-118.178297</Longitude>
+    <Elevation>83.7</Elevation>
+    <Depth>0</Depth>
+    <Azimuth>0</Azimuth>
+    <Dip>0</Dip>
+    <Type>HEALTH</Type>
+    <SampleRate>0.1</SampleRate>
+    <CalibrationUnits>
+     <Name>pascal</Name>
+    </CalibrationUnits>
+    <Sensor>
+     <Description>Pegasus Portable Digital Recorder</Description>
+     <Manufacturer>Nanometrics</Manufacturer>
+     <Model>PGS-140</Model>
+     <SerialNumber>000697</SerialNumber>
+    </Sensor>
+    <DataLogger>
+     <Description>Pegasus Portable Digital Recorder</Description>
+     <Manufacturer>Nanometrics</Manufacturer>
+     <Model>PGS-140</Model>
+     <SerialNumber>000697</SerialNumber>
+    </DataLogger>
+    <Response>
+     <InstrumentSensitivity>
+      <Value>1</Value>
+      <Frequency>0.025</Frequency>
+      <InputUnits>
+       <Name>pascal</Name>
+      </InputUnits>
+      <OutputUnits>
+       <Name>count</Name>
+       <Description>digital counts</Description>
+      </OutputUnits>
+     </InstrumentSensitivity>
+     <Stage number="1">
+      <StageGain>
+       <Value>1</Value>
+       <Frequency>0.025</Frequency>
+      </StageGain>
+     </Stage>
+     <Stage number="2">
+      <Coefficients>
+       <InputUnits>
+        <Name>pascal</Name>
+       </InputUnits>
+       <OutputUnits>
+        <Name>count</Name>
+        <Description>digital counts</Description>
+       </OutputUnits>
+       <CfTransferFunctionType>DIGITAL</CfTransferFunctionType>
+      </Coefficients>
+      <Decimation>
+       <InputSampleRate>0.1</InputSampleRate>
+       <Factor>1</Factor>
+       <Offset>0</Offset>
+       <Delay>0</Delay>
+       <Correction>0</Correction>
+      </Decimation>
+      <StageGain>
+       <Value>1</Value>
+       <Frequency>0.025</Frequency>
+      </StageGain>
+     </Stage>
+    </Response>
+   </Channel>
+   <Channel locationCode="" code="VDT" startDate="2024-05-30T18:43:35Z">
+    <Description>System Temperature</Description>
+    <Latitude>34.03705</Latitude>
+    <Longitude>-118.178297</Longitude>
+    <Elevation>83.7</Elevation>
+    <Depth>0</Depth>
+    <Azimuth>0</Azimuth>
+    <Dip>0</Dip>
+    <Type>HEALTH</Type>
+    <SampleRate>0.1</SampleRate>
+    <CalibrationUnits>
+     <Name>celsius</Name>
+    </CalibrationUnits>
+    <Sensor>
+     <Description>Pegasus Portable Digital Recorder</Description>
+     <Manufacturer>Nanometrics</Manufacturer>
+     <Model>PGS-140</Model>
+     <SerialNumber>000697</SerialNumber>
+    </Sensor>
+    <DataLogger>
+     <Description>Pegasus Portable Digital Recorder</Description>
+     <Manufacturer>Nanometrics</Manufacturer>
+     <Model>PGS-140</Model>
+     <SerialNumber>000697</SerialNumber>
+    </DataLogger>
+    <Response>
+     <InstrumentSensitivity>
+      <Value>100</Value>
+      <Frequency>0.025</Frequency>
+      <InputUnits>
+       <Name>celsius</Name>
+      </InputUnits>
+      <OutputUnits>
+       <Name>count</Name>
+       <Description>digital counts</Description>
+      </OutputUnits>
+     </InstrumentSensitivity>
+     <Stage number="1">
+      <StageGain>
+       <Value>1</Value>
+       <Frequency>0.025</Frequency>
+      </StageGain>
+     </Stage>
+     <Stage number="2">
+      <Coefficients>
+       <InputUnits>
+        <Name>celsius</Name>
+       </InputUnits>
+       <OutputUnits>
+        <Name>count</Name>
+        <Description>digital counts</Description>
+       </OutputUnits>
+       <CfTransferFunctionType>DIGITAL</CfTransferFunctionType>
+      </Coefficients>
+      <Decimation>
+       <InputSampleRate>0.1</InputSampleRate>
+       <Factor>1</Factor>
+       <Offset>0</Offset>
+       <Delay>0</Delay>
+       <Correction>0</Correction>
+      </Decimation>
+      <StageGain>
+       <Value>100</Value>
+       <Frequency>0.025</Frequency>
+      </StageGain>
+     </Stage>
+    </Response>
+   </Channel>
+   <Channel locationCode="" code="VE1" startDate="2024-05-30T18:43:35Z">
+    <Description>System Current</Description>
+    <Latitude>34.03705</Latitude>
+    <Longitude>-118.178297</Longitude>
+    <Elevation>83.7</Elevation>
+    <Depth>0</Depth>
+    <Azimuth>0</Azimuth>
+    <Dip>0</Dip>
+    <Type>HEALTH</Type>
+    <SampleRate>0.1</SampleRate>
+    <CalibrationUnits>
+     <Name>ampere</Name>
+    </CalibrationUnits>
+    <Sensor>
+     <Description>Pegasus Portable Digital Recorder</Description>
+     <Manufacturer>Nanometrics</Manufacturer>
+     <Model>PGS-140</Model>
+     <SerialNumber>000697</SerialNumber>
+    </Sensor>
+    <DataLogger>
+     <Description>Pegasus Portable Digital Recorder</Description>
+     <Manufacturer>Nanometrics</Manufacturer>
+     <Model>PGS-140</Model>
+     <SerialNumber>000697</SerialNumber>
+    </DataLogger>
+    <Response>
+     <InstrumentSensitivity>
+      <Value>1e+06</Value>
+      <Frequency>0.025</Frequency>
+      <InputUnits>
+       <Name>ampere</Name>
+      </InputUnits>
+      <OutputUnits>
+       <Name>count</Name>
+       <Description>digital counts</Description>
+      </OutputUnits>
+     </InstrumentSensitivity>
+     <Stage number="1">
+      <StageGain>
+       <Value>1</Value>
+       <Frequency>0.025</Frequency>
+      </StageGain>
+     </Stage>
+     <Stage number="2">
+      <Coefficients>
+       <InputUnits>
+        <Name>ampere</Name>
+       </InputUnits>
+       <OutputUnits>
+        <Name>count</Name>
+        <Description>digital counts</Description>
+       </OutputUnits>
+       <CfTransferFunctionType>DIGITAL</CfTransferFunctionType>
+      </Coefficients>
+      <Decimation>
+       <InputSampleRate>0.1</InputSampleRate>
+       <Factor>1</Factor>
+       <Offset>0</Offset>
+       <Delay>0</Delay>
+       <Correction>0</Correction>
+      </Decimation>
+      <StageGain>
+       <Value>1e+06</Value>
+       <Frequency>0.025</Frequency>
+      </StageGain>
+     </Stage>
+    </Response>
+   </Channel>
+   <Channel locationCode="" code="VE2" startDate="2024-05-30T18:43:35Z">
+    <Description>System Current</Description>
+    <Latitude>34.03705</Latitude>
+    <Longitude>-118.178297</Longitude>
+    <Elevation>83.7</Elevation>
+    <Depth>0</Depth>
+    <Azimuth>0</Azimuth>
+    <Dip>0</Dip>
+    <Type>HEALTH</Type>
+    <SampleRate>0.1</SampleRate>
+    <CalibrationUnits>
+     <Name>ampere</Name>
+    </CalibrationUnits>
+    <Sensor>
+     <Description>Pegasus Portable Digital Recorder</Description>
+     <Manufacturer>Nanometrics</Manufacturer>
+     <Model>PGS-140</Model>
+     <SerialNumber>000697</SerialNumber>
+    </Sensor>
+    <DataLogger>
+     <Description>Pegasus Portable Digital Recorder</Description>
+     <Manufacturer>Nanometrics</Manufacturer>
+     <Model>PGS-140</Model>
+     <SerialNumber>000697</SerialNumber>
+    </DataLogger>
+    <Response>
+     <InstrumentSensitivity>
+      <Value>1e+06</Value>
+      <Frequency>0.025</Frequency>
+      <InputUnits>
+       <Name>ampere</Name>
+      </InputUnits>
+      <OutputUnits>
+       <Name>count</Name>
+       <Description>digital counts</Description>
+      </OutputUnits>
+     </InstrumentSensitivity>
+     <Stage number="1">
+      <StageGain>
+       <Value>1</Value>
+       <Frequency>0.025</Frequency>
+      </StageGain>
+     </Stage>
+     <Stage number="2">
+      <Coefficients>
+       <InputUnits>
+        <Name>ampere</Name>
+       </InputUnits>
+       <OutputUnits>
+        <Name>count</Name>
+        <Description>digital counts</Description>
+       </OutputUnits>
+       <CfTransferFunctionType>DIGITAL</CfTransferFunctionType>
+      </Coefficients>
+      <Decimation>
+       <InputSampleRate>0.1</InputSampleRate>
+       <Factor>1</Factor>
+       <Offset>0</Offset>
+       <Delay>0</Delay>
+       <Correction>0</Correction>
+      </Decimation>
+      <StageGain>
+       <Value>1e+06</Value>
+       <Frequency>0.025</Frequency>
+      </StageGain>
+     </Stage>
+    </Response>
+   </Channel>
+   <Channel locationCode="" code="VEI" startDate="2024-05-30T18:43:35Z">
+    <Description>System Voltage</Description>
+    <Latitude>34.03705</Latitude>
+    <Longitude>-118.178297</Longitude>
+    <Elevation>83.7</Elevation>
+    <Depth>0</Depth>
+    <Azimuth>0</Azimuth>
+    <Dip>0</Dip>
+    <Type>HEALTH</Type>
+    <SampleRate>0.1</SampleRate>
+    <CalibrationUnits>
+     <Name>volt</Name>
+    </CalibrationUnits>
+    <Sensor>
+     <Description>Pegasus Portable Digital Recorder</Description>
+     <Manufacturer>Nanometrics</Manufacturer>
+     <Model>PGS-140</Model>
+     <SerialNumber>000697</SerialNumber>
+    </Sensor>
+    <DataLogger>
+     <Description>Pegasus Portable Digital Recorder</Description>
+     <Manufacturer>Nanometrics</Manufacturer>
+     <Model>PGS-140</Model>
+     <SerialNumber>000697</SerialNumber>
+    </DataLogger>
+    <Response>
+     <InstrumentSensitivity>
+      <Value>1000</Value>
+      <Frequency>0.025</Frequency>
+      <InputUnits>
+       <Name>volt</Name>
+      </InputUnits>
+      <OutputUnits>
+       <Name>count</Name>
+       <Description>digital counts</Description>
+      </OutputUnits>
+     </InstrumentSensitivity>
+     <Stage number="1">
+      <StageGain>
+       <Value>1</Value>
+       <Frequency>0.025</Frequency>
+      </StageGain>
+     </Stage>
+     <Stage number="2">
+      <Coefficients>
+       <InputUnits>
+        <Name>volt</Name>
+       </InputUnits>
+       <OutputUnits>
+        <Name>count</Name>
+        <Description>digital counts</Description>
+       </OutputUnits>
+       <CfTransferFunctionType>DIGITAL</CfTransferFunctionType>
+      </Coefficients>
+      <Decimation>
+       <InputSampleRate>0.1</InputSampleRate>
+       <Factor>1</Factor>
+       <Offset>0</Offset>
+       <Delay>0</Delay>
+       <Correction>0</Correction>
+      </Decimation>
+      <StageGain>
+       <Value>1000</Value>
+       <Frequency>0.025</Frequency>
+      </StageGain>
+     </Stage>
+    </Response>
+   </Channel>
+   <Channel locationCode="" code="VEL" startDate="2024-05-30T18:43:35Z">
+    <Description>GNSS Elevation</Description>
+    <Latitude>34.03705</Latitude>
+    <Longitude>-118.178297</Longitude>
+    <Elevation>83.7</Elevation>
+    <Depth>0</Depth>
+    <Azimuth>0</Azimuth>
+    <Dip>0</Dip>
+    <Type>HEALTH</Type>
+    <SampleRate>0.1</SampleRate>
+    <CalibrationUnits>
+     <Name>meter</Name>
+    </CalibrationUnits>
+    <Sensor>
+     <Description>Pegasus Portable Digital Recorder</Description>
+     <Manufacturer>Nanometrics</Manufacturer>
+     <Model>PGS-140</Model>
+     <SerialNumber>000697</SerialNumber>
+    </Sensor>
+    <DataLogger>
+     <Description>Pegasus Portable Digital Recorder</Description>
+     <Manufacturer>Nanometrics</Manufacturer>
+     <Model>PGS-140</Model>
+     <SerialNumber>000697</SerialNumber>
+    </DataLogger>
+    <Response>
+     <InstrumentSensitivity>
+      <Value>1</Value>
+      <Frequency>0.025</Frequency>
+      <InputUnits>
+       <Name>meter</Name>
+      </InputUnits>
+      <OutputUnits>
+       <Name>count</Name>
+       <Description>digital counts</Description>
+      </OutputUnits>
+     </InstrumentSensitivity>
+     <Stage number="1">
+      <StageGain>
+       <Value>1</Value>
+       <Frequency>0.025</Frequency>
+      </StageGain>
+     </Stage>
+     <Stage number="2">
+      <Coefficients>
+       <InputUnits>
+        <Name>meter</Name>
+       </InputUnits>
+       <OutputUnits>
+        <Name>count</Name>
+        <Description>digital counts</Description>
+       </OutputUnits>
+       <CfTransferFunctionType>DIGITAL</CfTransferFunctionType>
+      </Coefficients>
+      <Decimation>
+       <InputSampleRate>0.1</InputSampleRate>
+       <Factor>1</Factor>
+       <Offset>0</Offset>
+       <Delay>0</Delay>
+       <Correction>0</Correction>
+      </Decimation>
+      <StageGain>
+       <Value>1</Value>
+       <Frequency>0.025</Frequency>
+      </StageGain>
+     </Stage>
+    </Response>
+   </Channel>
+   <Channel locationCode="" code="VGT" startDate="2024-05-30T18:43:35Z">
+    <Description>GNSS Time</Description>
+    <Latitude>34.03705</Latitude>
+    <Longitude>-118.178297</Longitude>
+    <Elevation>83.7</Elevation>
+    <Depth>0</Depth>
+    <Azimuth>0</Azimuth>
+    <Dip>0</Dip>
+    <Type>HEALTH</Type>
+    <SampleRate>0.1</SampleRate>
+    <CalibrationUnits>
+     <Name>second</Name>
+    </CalibrationUnits>
+    <Sensor>
+     <Description>Pegasus Portable Digital Recorder</Description>
+     <Manufacturer>Nanometrics</Manufacturer>
+     <Model>PGS-140</Model>
+     <SerialNumber>000697</SerialNumber>
+    </Sensor>
+    <DataLogger>
+     <Description>Pegasus Portable Digital Recorder</Description>
+     <Manufacturer>Nanometrics</Manufacturer>
+     <Model>PGS-140</Model>
+     <SerialNumber>000697</SerialNumber>
+    </DataLogger>
+    <Response>
+     <InstrumentSensitivity>
+      <Value>1</Value>
+      <Frequency>0.025</Frequency>
+      <InputUnits>
+       <Name>second</Name>
+      </InputUnits>
+      <OutputUnits>
+       <Name>count</Name>
+       <Description>digital counts</Description>
+      </OutputUnits>
+     </InstrumentSensitivity>
+     <Stage number="1">
+      <StageGain>
+       <Value>1</Value>
+       <Frequency>0.025</Frequency>
+      </StageGain>
+     </Stage>
+     <Stage number="2">
+      <Coefficients>
+       <InputUnits>
+        <Name>second</Name>
+       </InputUnits>
+       <OutputUnits>
+        <Name>count</Name>
+        <Description>digital counts</Description>
+       </OutputUnits>
+       <CfTransferFunctionType>DIGITAL</CfTransferFunctionType>
+      </Coefficients>
+      <Decimation>
+       <InputSampleRate>0.1</InputSampleRate>
+       <Factor>1</Factor>
+       <Offset>0</Offset>
+       <Delay>0</Delay>
+       <Correction>0</Correction>
+      </Decimation>
+      <StageGain>
+       <Value>1</Value>
+       <Frequency>0.025</Frequency>
+      </StageGain>
+     </Stage>
+    </Response>
+   </Channel>
+   <Channel locationCode="" code="VLA" startDate="2024-05-30T18:43:35Z">
+    <Description>GNSS Latitude</Description>
+    <Latitude>34.03705</Latitude>
+    <Longitude>-118.178297</Longitude>
+    <Elevation>83.7</Elevation>
+    <Depth>0</Depth>
+    <Azimuth>0</Azimuth>
+    <Dip>0</Dip>
+    <Type>HEALTH</Type>
+    <SampleRate>0.1</SampleRate>
+    <CalibrationUnits>
+     <Name>degree</Name>
+    </CalibrationUnits>
+    <Sensor>
+     <Description>Pegasus Portable Digital Recorder</Description>
+     <Manufacturer>Nanometrics</Manufacturer>
+     <Model>PGS-140</Model>
+     <SerialNumber>000697</SerialNumber>
+    </Sensor>
+    <DataLogger>
+     <Description>Pegasus Portable Digital Recorder</Description>
+     <Manufacturer>Nanometrics</Manufacturer>
+     <Model>PGS-140</Model>
+     <SerialNumber>000697</SerialNumber>
+    </DataLogger>
+    <Response>
+     <InstrumentSensitivity>
+      <Value>1e+06</Value>
+      <Frequency>0.025</Frequency>
+      <InputUnits>
+       <Name>degree</Name>
+      </InputUnits>
+      <OutputUnits>
+       <Name>count</Name>
+       <Description>digital counts</Description>
+      </OutputUnits>
+     </InstrumentSensitivity>
+     <Stage number="1">
+      <StageGain>
+       <Value>1</Value>
+       <Frequency>0.025</Frequency>
+      </StageGain>
+     </Stage>
+     <Stage number="2">
+      <Coefficients>
+       <InputUnits>
+        <Name>degree</Name>
+       </InputUnits>
+       <OutputUnits>
+        <Name>count</Name>
+        <Description>digital counts</Description>
+       </OutputUnits>
+       <CfTransferFunctionType>DIGITAL</CfTransferFunctionType>
+      </Coefficients>
+      <Decimation>
+       <InputSampleRate>0.1</InputSampleRate>
+       <Factor>1</Factor>
+       <Offset>0</Offset>
+       <Delay>0</Delay>
+       <Correction>0</Correction>
+      </Decimation>
+      <StageGain>
+       <Value>1e+06</Value>
+       <Frequency>0.025</Frequency>
+      </StageGain>
+     </Stage>
+    </Response>
+   </Channel>
+   <Channel locationCode="" code="VLO" startDate="2024-05-30T18:43:35Z">
+    <Description>GNSS Longitude</Description>
+    <Latitude>34.03705</Latitude>
+    <Longitude>-118.178297</Longitude>
+    <Elevation>83.7</Elevation>
+    <Depth>0</Depth>
+    <Azimuth>0</Azimuth>
+    <Dip>0</Dip>
+    <Type>HEALTH</Type>
+    <SampleRate>0.1</SampleRate>
+    <CalibrationUnits>
+     <Name>degree</Name>
+    </CalibrationUnits>
+    <Sensor>
+     <Description>Pegasus Portable Digital Recorder</Description>
+     <Manufacturer>Nanometrics</Manufacturer>
+     <Model>PGS-140</Model>
+     <SerialNumber>000697</SerialNumber>
+    </Sensor>
+    <DataLogger>
+     <Description>Pegasus Portable Digital Recorder</Description>
+     <Manufacturer>Nanometrics</Manufacturer>
+     <Model>PGS-140</Model>
+     <SerialNumber>000697</SerialNumber>
+    </DataLogger>
+    <Response>
+     <InstrumentSensitivity>
+      <Value>1e+06</Value>
+      <Frequency>0.025</Frequency>
+      <InputUnits>
+       <Name>degree</Name>
+      </InputUnits>
+      <OutputUnits>
+       <Name>count</Name>
+       <Description>digital counts</Description>
+      </OutputUnits>
+     </InstrumentSensitivity>
+     <Stage number="1">
+      <StageGain>
+       <Value>1</Value>
+       <Frequency>0.025</Frequency>
+      </StageGain>
+     </Stage>
+     <Stage number="2">
+      <Coefficients>
+       <InputUnits>
+        <Name>degree</Name>
+       </InputUnits>
+       <OutputUnits>
+        <Name>count</Name>
+        <Description>digital counts</Description>
+       </OutputUnits>
+       <CfTransferFunctionType>DIGITAL</CfTransferFunctionType>
+      </Coefficients>
+      <Decimation>
+       <InputSampleRate>0.1</InputSampleRate>
+       <Factor>1</Factor>
+       <Offset>0</Offset>
+       <Delay>0</Delay>
+       <Correction>0</Correction>
+      </Decimation>
+      <StageGain>
+       <Value>1e+06</Value>
+       <Frequency>0.025</Frequency>
+      </StageGain>
+     </Stage>
+    </Response>
+   </Channel>
+   <Channel locationCode="" code="VM1" startDate="2024-05-30T18:43:35Z">
+    <Description>Sensor 1 SOH</Description>
+    <Latitude>34.03705</Latitude>
+    <Longitude>-118.178297</Longitude>
+    <Elevation>83.7</Elevation>
+    <Depth>0</Depth>
+    <Azimuth>0</Azimuth>
+    <Dip>0</Dip>
+    <Type>HEALTH</Type>
+    <SampleRate>0.1</SampleRate>
+    <CalibrationUnits>
+     <Name>volt</Name>
+    </CalibrationUnits>
+    <Sensor>
+     <Description>Pegasus Portable Digital Recorder</Description>
+     <Manufacturer>Nanometrics</Manufacturer>
+     <Model>PGS-140</Model>
+     <SerialNumber>000697</SerialNumber>
+    </Sensor>
+    <DataLogger>
+     <Description>Pegasus Portable Digital Recorder</Description>
+     <Manufacturer>Nanometrics</Manufacturer>
+     <Model>PGS-140</Model>
+     <SerialNumber>000697</SerialNumber>
+    </DataLogger>
+    <Response>
+     <InstrumentSensitivity>
+      <Value>1000</Value>
+      <Frequency>0.025</Frequency>
+      <InputUnits>
+       <Name>volt</Name>
+      </InputUnits>
+      <OutputUnits>
+       <Name>count</Name>
+       <Description>digital counts</Description>
+      </OutputUnits>
+     </InstrumentSensitivity>
+     <Stage number="1">
+      <StageGain>
+       <Value>1</Value>
+       <Frequency>0.025</Frequency>
+      </StageGain>
+     </Stage>
+     <Stage number="2">
+      <Coefficients>
+       <InputUnits>
+        <Name>volt</Name>
+       </InputUnits>
+       <OutputUnits>
+        <Name>count</Name>
+        <Description>digital counts</Description>
+       </OutputUnits>
+       <CfTransferFunctionType>DIGITAL</CfTransferFunctionType>
+      </Coefficients>
+      <Decimation>
+       <InputSampleRate>0.1</InputSampleRate>
+       <Factor>1</Factor>
+       <Offset>0</Offset>
+       <Delay>0</Delay>
+       <Correction>0</Correction>
+      </Decimation>
+      <StageGain>
+       <Value>1000</Value>
+       <Frequency>0.025</Frequency>
+      </StageGain>
+     </Stage>
+    </Response>
+   </Channel>
+   <Channel locationCode="" code="VM2" startDate="2024-05-30T18:43:35Z">
+    <Description>Sensor 2 SOH</Description>
+    <Latitude>34.03705</Latitude>
+    <Longitude>-118.178297</Longitude>
+    <Elevation>83.7</Elevation>
+    <Depth>0</Depth>
+    <Azimuth>0</Azimuth>
+    <Dip>0</Dip>
+    <Type>HEALTH</Type>
+    <SampleRate>0.1</SampleRate>
+    <CalibrationUnits>
+     <Name>volt</Name>
+    </CalibrationUnits>
+    <Sensor>
+     <Description>Pegasus Portable Digital Recorder</Description>
+     <Manufacturer>Nanometrics</Manufacturer>
+     <Model>PGS-140</Model>
+     <SerialNumber>000697</SerialNumber>
+    </Sensor>
+    <DataLogger>
+     <Description>Pegasus Portable Digital Recorder</Description>
+     <Manufacturer>Nanometrics</Manufacturer>
+     <Model>PGS-140</Model>
+     <SerialNumber>000697</SerialNumber>
+    </DataLogger>
+    <Response>
+     <InstrumentSensitivity>
+      <Value>1000</Value>
+      <Frequency>0.025</Frequency>
+      <InputUnits>
+       <Name>volt</Name>
+      </InputUnits>
+      <OutputUnits>
+       <Name>count</Name>
+       <Description>digital counts</Description>
+      </OutputUnits>
+     </InstrumentSensitivity>
+     <Stage number="1">
+      <StageGain>
+       <Value>1</Value>
+       <Frequency>0.025</Frequency>
+      </StageGain>
+     </Stage>
+     <Stage number="2">
+      <Coefficients>
+       <InputUnits>
+        <Name>volt</Name>
+       </InputUnits>
+       <OutputUnits>
+        <Name>count</Name>
+        <Description>digital counts</Description>
+       </OutputUnits>
+       <CfTransferFunctionType>DIGITAL</CfTransferFunctionType>
+      </Coefficients>
+      <Decimation>
+       <InputSampleRate>0.1</InputSampleRate>
+       <Factor>1</Factor>
+       <Offset>0</Offset>
+       <Delay>0</Delay>
+       <Correction>0</Correction>
+      </Decimation>
+      <StageGain>
+       <Value>1000</Value>
+       <Frequency>0.025</Frequency>
+      </StageGain>
+     </Stage>
+    </Response>
+   </Channel>
+   <Channel locationCode="" code="VM3" startDate="2024-05-30T18:43:35Z">
+    <Description>Sensor 3 SOH</Description>
+    <Latitude>34.03705</Latitude>
+    <Longitude>-118.178297</Longitude>
+    <Elevation>83.7</Elevation>
+    <Depth>0</Depth>
+    <Azimuth>0</Azimuth>
+    <Dip>0</Dip>
+    <Type>HEALTH</Type>
+    <SampleRate>0.1</SampleRate>
+    <CalibrationUnits>
+     <Name>volt</Name>
+    </CalibrationUnits>
+    <Sensor>
+     <Description>Pegasus Portable Digital Recorder</Description>
+     <Manufacturer>Nanometrics</Manufacturer>
+     <Model>PGS-140</Model>
+     <SerialNumber>000697</SerialNumber>
+    </Sensor>
+    <DataLogger>
+     <Description>Pegasus Portable Digital Recorder</Description>
+     <Manufacturer>Nanometrics</Manufacturer>
+     <Model>PGS-140</Model>
+     <SerialNumber>000697</SerialNumber>
+    </DataLogger>
+    <Response>
+     <InstrumentSensitivity>
+      <Value>1000</Value>
+      <Frequency>0.025</Frequency>
+      <InputUnits>
+       <Name>volt</Name>
+      </InputUnits>
+      <OutputUnits>
+       <Name>count</Name>
+       <Description>digital counts</Description>
+      </OutputUnits>
+     </InstrumentSensitivity>
+     <Stage number="1">
+      <StageGain>
+       <Value>1</Value>
+       <Frequency>0.025</Frequency>
+      </StageGain>
+     </Stage>
+     <Stage number="2">
+      <Coefficients>
+       <InputUnits>
+        <Name>volt</Name>
+       </InputUnits>
+       <OutputUnits>
+        <Name>count</Name>
+        <Description>digital counts</Description>
+       </OutputUnits>
+       <CfTransferFunctionType>DIGITAL</CfTransferFunctionType>
+      </Coefficients>
+      <Decimation>
+       <InputSampleRate>0.1</InputSampleRate>
+       <Factor>1</Factor>
+       <Offset>0</Offset>
+       <Delay>0</Delay>
+       <Correction>0</Correction>
+      </Decimation>
+      <StageGain>
+       <Value>1000</Value>
+       <Frequency>0.025</Frequency>
+      </StageGain>
+     </Stage>
+    </Response>
+   </Channel>
+   <Channel locationCode="" code="VM4" startDate="2024-05-30T18:43:35Z">
+    <Description>Sensor 4 SOH</Description>
+    <Latitude>34.03705</Latitude>
+    <Longitude>-118.178297</Longitude>
+    <Elevation>83.7</Elevation>
+    <Depth>0</Depth>
+    <Azimuth>0</Azimuth>
+    <Dip>0</Dip>
+    <Type>HEALTH</Type>
+    <SampleRate>0.1</SampleRate>
+    <CalibrationUnits>
+     <Name>volt</Name>
+    </CalibrationUnits>
+    <Sensor>
+     <Description>Pegasus Portable Digital Recorder</Description>
+     <Manufacturer>Nanometrics</Manufacturer>
+     <Model>PGS-140</Model>
+     <SerialNumber>000697</SerialNumber>
+    </Sensor>
+    <DataLogger>
+     <Description>Pegasus Portable Digital Recorder</Description>
+     <Manufacturer>Nanometrics</Manufacturer>
+     <Model>PGS-140</Model>
+     <SerialNumber>000697</SerialNumber>
+    </DataLogger>
+    <Response>
+     <InstrumentSensitivity>
+      <Value>1000</Value>
+      <Frequency>0.025</Frequency>
+      <InputUnits>
+       <Name>volt</Name>
+      </InputUnits>
+      <OutputUnits>
+       <Name>count</Name>
+       <Description>digital counts</Description>
+      </OutputUnits>
+     </InstrumentSensitivity>
+     <Stage number="1">
+      <StageGain>
+       <Value>1</Value>
+       <Frequency>0.025</Frequency>
+      </StageGain>
+     </Stage>
+     <Stage number="2">
+      <Coefficients>
+       <InputUnits>
+        <Name>volt</Name>
+       </InputUnits>
+       <OutputUnits>
+        <Name>count</Name>
+        <Description>digital counts</Description>
+       </OutputUnits>
+       <CfTransferFunctionType>DIGITAL</CfTransferFunctionType>
+      </Coefficients>
+      <Decimation>
+       <InputSampleRate>0.1</InputSampleRate>
+       <Factor>1</Factor>
+       <Offset>0</Offset>
+       <Delay>0</Delay>
+       <Correction>0</Correction>
+      </Decimation>
+      <StageGain>
+       <Value>1000</Value>
+       <Frequency>0.025</Frequency>
+      </StageGain>
+     </Stage>
+    </Response>
+   </Channel>
+   <Channel locationCode="" code="VPH" startDate="2024-05-30T18:43:35Z">
+    <Description>GNSS HDOP</Description>
+    <Latitude>34.03705</Latitude>
+    <Longitude>-118.178297</Longitude>
+    <Elevation>83.7</Elevation>
+    <Depth>0</Depth>
+    <Azimuth>0</Azimuth>
+    <Dip>0</Dip>
+    <Type>HEALTH</Type>
+    <SampleRate>0.1</SampleRate>
+    <Sensor>
+     <Description>Pegasus Portable Digital Recorder</Description>
+     <Manufacturer>Nanometrics</Manufacturer>
+     <Model>PGS-140</Model>
+     <SerialNumber>000697</SerialNumber>
+    </Sensor>
+    <DataLogger>
+     <Description>Pegasus Portable Digital Recorder</Description>
+     <Manufacturer>Nanometrics</Manufacturer>
+     <Model>PGS-140</Model>
+     <SerialNumber>000697</SerialNumber>
+    </DataLogger>
+    <Response>
+     <InstrumentSensitivity>
+      <Value>1000</Value>
+      <Frequency>0.025</Frequency>
+      <InputUnits>
+       <Name>count</Name>
+       <Description>digital counts</Description>
+      </InputUnits>
+      <OutputUnits>
+       <Name>count</Name>
+       <Description>digital counts</Description>
+      </OutputUnits>
+     </InstrumentSensitivity>
+     <Stage number="1">
+      <StageGain>
+       <Value>1</Value>
+       <Frequency>0.025</Frequency>
+      </StageGain>
+     </Stage>
+     <Stage number="2">
+      <Coefficients>
+       <InputUnits>
+        <Name>count</Name>
+        <Description>digital counts</Description>
+       </InputUnits>
+       <OutputUnits>
+        <Name>count</Name>
+        <Description>digital counts</Description>
+       </OutputUnits>
+       <CfTransferFunctionType>DIGITAL</CfTransferFunctionType>
+      </Coefficients>
+      <Decimation>
+       <InputSampleRate>0.1</InputSampleRate>
+       <Factor>1</Factor>
+       <Offset>0</Offset>
+       <Delay>0</Delay>
+       <Correction>0</Correction>
+      </Decimation>
+      <StageGain>
+       <Value>1000</Value>
+       <Frequency>0.025</Frequency>
+      </StageGain>
+     </Stage>
+    </Response>
+   </Channel>
+   <Channel locationCode="" code="VPL" startDate="2024-05-30T18:43:35Z">
+    <Description>VCXO PLL Status</Description>
+    <Latitude>34.03705</Latitude>
+    <Longitude>-118.178297</Longitude>
+    <Elevation>83.7</Elevation>
+    <Depth>0</Depth>
+    <Azimuth>0</Azimuth>
+    <Dip>0</Dip>
+    <Type>HEALTH</Type>
+    <SampleRate>0.1</SampleRate>
+    <Sensor>
+     <Description>Pegasus Portable Digital Recorder</Description>
+     <Manufacturer>Nanometrics</Manufacturer>
+     <Model>PGS-140</Model>
+     <SerialNumber>000697</SerialNumber>
+    </Sensor>
+    <DataLogger>
+     <Description>Pegasus Portable Digital Recorder</Description>
+     <Manufacturer>Nanometrics</Manufacturer>
+     <Model>PGS-140</Model>
+     <SerialNumber>000697</SerialNumber>
+    </DataLogger>
+    <Response>
+     <InstrumentSensitivity>
+      <Value>1</Value>
+      <Frequency>0.025</Frequency>
+      <InputUnits>
+       <Name>count</Name>
+       <Description>digital counts</Description>
+      </InputUnits>
+      <OutputUnits>
+       <Name>count</Name>
+       <Description>digital counts</Description>
+      </OutputUnits>
+     </InstrumentSensitivity>
+     <Stage number="1">
+      <StageGain>
+       <Value>1</Value>
+       <Frequency>0.025</Frequency>
+      </StageGain>
+     </Stage>
+     <Stage number="2">
+      <Coefficients>
+       <InputUnits>
+        <Name>count</Name>
+        <Description>digital counts</Description>
+       </InputUnits>
+       <OutputUnits>
+        <Name>count</Name>
+        <Description>digital counts</Description>
+       </OutputUnits>
+       <CfTransferFunctionType>DIGITAL</CfTransferFunctionType>
+      </Coefficients>
+      <Decimation>
+       <InputSampleRate>0.1</InputSampleRate>
+       <Factor>1</Factor>
+       <Offset>0</Offset>
+       <Delay>0</Delay>
+       <Correction>0</Correction>
+      </Decimation>
+      <StageGain>
+       <Value>1</Value>
+       <Frequency>0.025</Frequency>
+      </StageGain>
+     </Stage>
+    </Response>
+   </Channel>
+   <Channel locationCode="" code="VPP" startDate="2024-05-30T18:43:35Z">
+    <Description>GNSS PDOP</Description>
+    <Latitude>34.03705</Latitude>
+    <Longitude>-118.178297</Longitude>
+    <Elevation>83.7</Elevation>
+    <Depth>0</Depth>
+    <Azimuth>0</Azimuth>
+    <Dip>0</Dip>
+    <Type>HEALTH</Type>
+    <SampleRate>0.1</SampleRate>
+    <Sensor>
+     <Description>Pegasus Portable Digital Recorder</Description>
+     <Manufacturer>Nanometrics</Manufacturer>
+     <Model>PGS-140</Model>
+     <SerialNumber>000697</SerialNumber>
+    </Sensor>
+    <DataLogger>
+     <Description>Pegasus Portable Digital Recorder</Description>
+     <Manufacturer>Nanometrics</Manufacturer>
+     <Model>PGS-140</Model>
+     <SerialNumber>000697</SerialNumber>
+    </DataLogger>
+    <Response>
+     <InstrumentSensitivity>
+      <Value>1000</Value>
+      <Frequency>0.025</Frequency>
+      <InputUnits>
+       <Name>count</Name>
+       <Description>digital counts</Description>
+      </InputUnits>
+      <OutputUnits>
+       <Name>count</Name>
+       <Description>digital counts</Description>
+      </OutputUnits>
+     </InstrumentSensitivity>
+     <Stage number="1">
+      <StageGain>
+       <Value>1</Value>
+       <Frequency>0.025</Frequency>
+      </StageGain>
+     </Stage>
+     <Stage number="2">
+      <Coefficients>
+       <InputUnits>
+        <Name>count</Name>
+        <Description>digital counts</Description>
+       </InputUnits>
+       <OutputUnits>
+        <Name>count</Name>
+        <Description>digital counts</Description>
+       </OutputUnits>
+       <CfTransferFunctionType>DIGITAL</CfTransferFunctionType>
+      </Coefficients>
+      <Decimation>
+       <InputSampleRate>0.1</InputSampleRate>
+       <Factor>1</Factor>
+       <Offset>0</Offset>
+       <Delay>0</Delay>
+       <Correction>0</Correction>
+      </Decimation>
+      <StageGain>
+       <Value>1000</Value>
+       <Frequency>0.025</Frequency>
+      </StageGain>
+     </Stage>
+    </Response>
+   </Channel>
+   <Channel locationCode="" code="VPV" startDate="2024-05-30T18:43:35Z">
+    <Description>GNSS VDOP</Description>
+    <Latitude>34.03705</Latitude>
+    <Longitude>-118.178297</Longitude>
+    <Elevation>83.7</Elevation>
+    <Depth>0</Depth>
+    <Azimuth>0</Azimuth>
+    <Dip>0</Dip>
+    <Type>HEALTH</Type>
+    <SampleRate>0.1</SampleRate>
+    <Sensor>
+     <Description>Pegasus Portable Digital Recorder</Description>
+     <Manufacturer>Nanometrics</Manufacturer>
+     <Model>PGS-140</Model>
+     <SerialNumber>000697</SerialNumber>
+    </Sensor>
+    <DataLogger>
+     <Description>Pegasus Portable Digital Recorder</Description>
+     <Manufacturer>Nanometrics</Manufacturer>
+     <Model>PGS-140</Model>
+     <SerialNumber>000697</SerialNumber>
+    </DataLogger>
+    <Response>
+     <InstrumentSensitivity>
+      <Value>1000</Value>
+      <Frequency>0.025</Frequency>
+      <InputUnits>
+       <Name>count</Name>
+       <Description>digital counts</Description>
+      </InputUnits>
+      <OutputUnits>
+       <Name>count</Name>
+       <Description>digital counts</Description>
+      </OutputUnits>
+     </InstrumentSensitivity>
+     <Stage number="1">
+      <StageGain>
+       <Value>1</Value>
+       <Frequency>0.025</Frequency>
+      </StageGain>
+     </Stage>
+     <Stage number="2">
+      <Coefficients>
+       <InputUnits>
+        <Name>count</Name>
+        <Description>digital counts</Description>
+       </InputUnits>
+       <OutputUnits>
+        <Name>count</Name>
+        <Description>digital counts</Description>
+       </OutputUnits>
+       <CfTransferFunctionType>DIGITAL</CfTransferFunctionType>
+      </Coefficients>
+      <Decimation>
+       <InputSampleRate>0.1</InputSampleRate>
+       <Factor>1</Factor>
+       <Offset>0</Offset>
+       <Delay>0</Delay>
+       <Correction>0</Correction>
+      </Decimation>
+      <StageGain>
+       <Value>1000</Value>
+       <Frequency>0.025</Frequency>
+      </StageGain>
+     </Stage>
+    </Response>
+   </Channel>
+   <Channel locationCode="" code="VNS" startDate="2024-05-30T18:43:35Z">
+    <Description>GNSS Number of Satellites</Description>
+    <Latitude>34.03705</Latitude>
+    <Longitude>-118.178297</Longitude>
+    <Elevation>83.7</Elevation>
+    <Depth>0</Depth>
+    <Azimuth>0</Azimuth>
+    <Dip>0</Dip>
+    <Type>HEALTH</Type>
+    <SampleRate>0.1</SampleRate>
+    <Sensor>
+     <Description>Pegasus Portable Digital Recorder</Description>
+     <Manufacturer>Nanometrics</Manufacturer>
+     <Model>PGS-140</Model>
+     <SerialNumber>000697</SerialNumber>
+    </Sensor>
+    <DataLogger>
+     <Description>Pegasus Portable Digital Recorder</Description>
+     <Manufacturer>Nanometrics</Manufacturer>
+     <Model>PGS-140</Model>
+     <SerialNumber>000697</SerialNumber>
+    </DataLogger>
+    <Response>
+     <InstrumentSensitivity>
+      <Value>1</Value>
+      <Frequency>0.025</Frequency>
+      <InputUnits>
+       <Name>count</Name>
+       <Description>digital counts</Description>
+      </InputUnits>
+      <OutputUnits>
+       <Name>count</Name>
+       <Description>digital counts</Description>
+      </OutputUnits>
+     </InstrumentSensitivity>
+     <Stage number="1">
+      <StageGain>
+       <Value>1</Value>
+       <Frequency>0.025</Frequency>
+      </StageGain>
+     </Stage>
+     <Stage number="2">
+      <Coefficients>
+       <InputUnits>
+        <Name>count</Name>
+        <Description>digital counts</Description>
+       </InputUnits>
+       <OutputUnits>
+        <Name>count</Name>
+        <Description>digital counts</Description>
+       </OutputUnits>
+       <CfTransferFunctionType>DIGITAL</CfTransferFunctionType>
+      </Coefficients>
+      <Decimation>
+       <InputSampleRate>0.1</InputSampleRate>
+       <Factor>1</Factor>
+       <Offset>0</Offset>
+       <Delay>0</Delay>
+       <Correction>0</Correction>
+      </Decimation>
+      <StageGain>
+       <Value>1</Value>
+       <Frequency>0.025</Frequency>
+      </StageGain>
+     </Stage>
+    </Response>
+   </Channel>
+   <Channel locationCode="" code="VST" startDate="2024-05-30T18:43:35Z">
+    <Description>GNSS Position Fix Status</Description>
+    <Latitude>34.03705</Latitude>
+    <Longitude>-118.178297</Longitude>
+    <Elevation>83.7</Elevation>
+    <Depth>0</Depth>
+    <Azimuth>0</Azimuth>
+    <Dip>0</Dip>
+    <Type>HEALTH</Type>
+    <SampleRate>0.1</SampleRate>
+    <Sensor>
+     <Description>Pegasus Portable Digital Recorder</Description>
+     <Manufacturer>Nanometrics</Manufacturer>
+     <Model>PGS-140</Model>
+     <SerialNumber>000697</SerialNumber>
+    </Sensor>
+    <DataLogger>
+     <Description>Pegasus Portable Digital Recorder</Description>
+     <Manufacturer>Nanometrics</Manufacturer>
+     <Model>PGS-140</Model>
+     <SerialNumber>000697</SerialNumber>
+    </DataLogger>
+    <Response>
+     <InstrumentSensitivity>
+      <Value>1</Value>
+      <Frequency>0.025</Frequency>
+      <InputUnits>
+       <Name>count</Name>
+       <Description>digital counts</Description>
+      </InputUnits>
+      <OutputUnits>
+       <Name>count</Name>
+       <Description>digital counts</Description>
+      </OutputUnits>
+     </InstrumentSensitivity>
+     <Stage number="1">
+      <StageGain>
+       <Value>1</Value>
+       <Frequency>0.025</Frequency>
+      </StageGain>
+     </Stage>
+     <Stage number="2">
+      <Coefficients>
+       <InputUnits>
+        <Name>count</Name>
+        <Description>digital counts</Description>
+       </InputUnits>
+       <OutputUnits>
+        <Name>count</Name>
+        <Description>digital counts</Description>
+       </OutputUnits>
+       <CfTransferFunctionType>DIGITAL</CfTransferFunctionType>
+      </Coefficients>
+      <Decimation>
+       <InputSampleRate>0.1</InputSampleRate>
+       <Factor>1</Factor>
+       <Offset>0</Offset>
+       <Delay>0</Delay>
+       <Correction>0</Correction>
+      </Decimation>
+      <StageGain>
+       <Value>1</Value>
+       <Frequency>0.025</Frequency>
+      </StageGain>
+     </Stage>
+    </Response>
+   </Channel>
+  </Station>
+ </Network>
+</FDSNStationXML>
