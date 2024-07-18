@@ -1,16 +1,19 @@
 import pytest
 import pandas as pd
+import os
 from hvsrprocpy import HvsrMetaTools
 
 @pytest.fixture
 def setup_test_data():
-    # Setup any test data or directories here
-    test_dir = 'test_data'  # Replace with your test data directory
-    yield test_dir
+    # Determine the path to the current directory where this test file is located
+    current_dir = os.path.dirname(os.path.abspath(__file__))
+    test_data_dir = os.path.join(current_dir, 'test_data')
+    yield test_data_dir
 
 def test_process_xml_file(setup_test_data):
-    xml_file = 'example.xml'  # Replace with a valid XML file path in your test data directory
-    sta, cha = HvsrMetaTools.process_xml_file(f'{setup_test_data}/{xml_file}')
+    xml_file = 'example.xml'  # Located in the test_data directory
+    xml_file_path = os.path.join(setup_test_data, xml_file)
+    sta, cha = HvsrMetaTools.process_xml_file(xml_file_path)
     assert sta is not None
     assert cha is not None
 
@@ -36,11 +39,13 @@ def test_process_hvsr_metadata_single_site():
     assert len(df) == 1
 
 def test_create_mean_curves_csv(setup_test_data):
-    df = HvsrMetaTools.create_mean_curves_csv(setup_test_data, 'test_mean_curves.csv', 'additional_path')
+    add_sim_path = 'additional_path'
+    df = HvsrMetaTools.create_mean_curves_csv(setup_test_data, 'test_mean_curves.csv', add_sim_path)
     assert df is not None
     assert isinstance(df, pd.DataFrame)
 
 def test_combine_metadata(setup_test_data):
-    df = HvsrMetaTools.combine_metadata(setup_test_data, 'additional_path')
+    add_sim_path = 'additional_path'
+    df = HvsrMetaTools.combine_metadata(setup_test_data, add_sim_path)
     assert df is not None
     assert isinstance(df, pd.DataFrame)
