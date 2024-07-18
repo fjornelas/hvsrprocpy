@@ -13,4 +13,4 @@ cli:
       report_type: "json"
       
   ignore:
-    - "hvsrprocall.py"
+    - "**/hvsrprocall.py"
