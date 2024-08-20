@@ -15,3 +15,4 @@ parts:
   - caption: Examples
     chapters:
     - file: example/hvsrprocpy_example
+    - file: example/hvsrprocpy step-by-step example
