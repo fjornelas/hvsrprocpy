@@ -36,7 +36,7 @@ setup(
     author='Francisco Javier Ornelas',
     author_email='jornela1@g.ucla.edu',
     classifiers=[
-        'Development Status :: 4 - Beta',
+        'Development Status :: 5 - Production/Stable',
 
         'Intended Audience :: Developers',
         'Intended Audience :: Education',
