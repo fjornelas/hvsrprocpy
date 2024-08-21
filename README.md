@@ -132,7 +132,7 @@ Examples of these can be found under the examples folder in the Github repositor
 If you use hvsrprocpy (directly or as a dependency of another package) for work resulting in an academic publication or
 other instances, we would appreciate if you cite the following:
 
-> Ornelas, F. J. G., Wang, P., Brandenberg, S. J., & Stewart, J. P. (2024). fjornelas/hvsrprocpy: hvsrprocpy (v1.0.0). Zenodo. https://doi.org/10.5281/zenodo.12672550
+> Ornelas, F. J. G., Wang, P., Brandenberg, S. J., & Stewart, J. P. (2024). fjornelas/hvsrprocpy: hvsrprocpy (v1.1.0). Zenodo. https://doi.org/10.5281/zenodo.12672550
 
 # Issues
 
@@ -143,7 +143,7 @@ Please report any issues or leave comments on the <a href="https://github.com/fj
 ## License
 
 This project has been licensed under [![The GNU General Public License v3.0](https://www.gnu.org/graphics/gplv3-88x31.png "The GNU General Public License v3.0")](https://www.gnu.org/licenses/gpl-3.0.en.html)
-more information about the license can be found here <a href="https://github.com/fjornelas/hvsrprocpy/blob/0.1.0/LICENSE" target="_blank">[LICENSE]</a>.
+more information about the license can be found here <a href="https://github.com/fjornelas/hvsrprocpy/blob/main/LICENSE" target="_blank">[LICENSE]</a>.
 
 ## Acknowledgements
 
