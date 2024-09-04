@@ -5,13 +5,13 @@ version: v1.1.0
 doi: 10.5281/zenodo.13352470
 authors:
   - family-names: Ornelas
-    given-names: F. J. G.
+    given-names: Francisco Javier G.
   - family-names: Wang
-    given-names: P.
+    given-names: Pengfei
   - family-names: Brandenberg
-    given-names: S. J.
+    given-names: Scott J.
   - family-names: Stewart
-    given-names: J. P.
+    given-names: Jonathan P.
 date-released: 2024-09-04
 repository-code: https://doi.org/10.5281/zenodo.13352470
 ---
