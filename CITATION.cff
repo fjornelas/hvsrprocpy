@@ -1,5 +1,6 @@
 ---
 cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
 title: fjornelas/hvsrprocpy: v1.1.0
 version: v1.1.0
 doi: 10.5281/zenodo.13352470
