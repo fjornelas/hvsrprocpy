@@ -132,7 +132,7 @@ Examples of these can be found under the examples folder in the Github repositor
 If you use hvsrprocpy (directly or as a dependency of another package) for work resulting in an academic publication or
 other instances, we would appreciate if you cite the following:
 
-> Ornelas, F. J. G., Wang, P., Brandenberg, S. J., & Stewart, J. P. (2024). fjornelas/hvsrprocpy: v1.1.0 (v1.1.0). Zenodo. https://doi.org/10.5281/zenodo.13352470
+> Ornelas, F. J. G., Wang, P., Brandenberg, S. J., & Stewart, J. P. (2024). hvsrprocpy (Version 1.1.0) [Computer software]. https://doi.org/10.5281/zenodo.13352470
 
 # Issues
 
