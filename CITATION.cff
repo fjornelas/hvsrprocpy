@@ -1,0 +1,17 @@
+---
+cff-version: 1.2.0
+title: fjornelas/hvsrprocpy: v1.1.0
+version: v1.1.0
+doi: 10.5281/zenodo.13352470
+authors:
+  - family-names: Ornelas
+    given-names: F. J. G.
+  - family-names: Wang
+    given-names: P.
+  - family-names: Brandenberg
+    given-names: S. J.
+  - family-names: Stewart
+    given-names: J. P.
+date-released: 2024-09-04
+repository-code: https://doi.org/10.5281/zenodo.13352470
+---
